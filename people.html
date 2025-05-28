@@ -1,0 +1,755 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#101518]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h2 class="text-[#101518] text-lg font-bold leading-tight tracking-[-0.015em]">NGCN</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#101518] text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-[#101518] text-sm font-medium leading-normal" href="#">Research</a>
+              <a class="text-[#101518] text-sm font-medium leading-normal" href="#">People</a>
+              <a class="text-[#101518] text-sm font-medium leading-normal" href="#">Publications</a>
+              <a class="text-[#101518] text-sm font-medium leading-normal" href="#">News</a>
+              <a class="text-[#101518] text-sm font-medium leading-normal" href="#">Contact</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#eaedf1] text-[#101518] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-[#101518]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#eaedf1] text-[#101518] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-[#101518]" data-icon="List" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKp93A0a87Zv9drqmYSPrDR8aIpXi1VU3cbzEta8yYUdoE0vaSQBv_dNuKGQVvcEumCGtLEypiCMT3gssFMe8sZgvuxllTKMjmNaxfoG0PdauAvjb_exWFfpFzO9CwuhV3pCu5hpPQl8SiTo5xLvauW3isfrd6eeDNxysPeBGnTtW4woDxW7jbzYL5z7XOyneblSoPHof4tZZWwRWKlysdELPVwEFMDXMbFStRpCZE6NffBTextfhnO9ns68oErxvCXrwy0kBev-yf");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk2DySYP-5CKEo8VTWEzMib99OwgCm2CWAWUL5FCPQvdzfoDhbyU73v7eOWxrN3ZyXsDK-w9LvpT1iOwLJ-pEFEuY4cVoXd2ImKZysRGXkwZRpzB_HcVguquPI7MEBQ1GoCJawiLgOSQZ9Mqp0NGdEHNAefQG4aDSwtBOUtEXfKxINaM1iVnDrCtoNK11Jv-hclG5Vu4Suh0KBrwfXeiMFeOHAAIaXnUiTpus2IjASbOkwWVTEhqlqvRs6S5etsxdeFuXAHKPP1z9r");'
+                >
+                  <div class="flex flex-col gap-2 text-left">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Next Gen Computing and Networking
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      NGCN is a research group led by Prof. Desikan, focusing on cutting-edge advancements in computing and networking technologies. Our team of over 100 student
+                      researchers is dedicated to exploring and developing innovative solutions for the next generation of computing and communication systems.
+                    </h2>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Learn More</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#101518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Team</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA04zdRgxsAqyAneKCNwuvSYi0b0FWfouwrgQRWCx_2xeL091SeFk_hIDiUxZx4IAstJvs4nnX_nWTJcguAiZ21HQGGS7Oe6X_yAmBvomTJz1NnsJ6nQzGho2bz5GZhL1WOuHxR9YV9OktfD4kWSRAfZNWzmtjufG9vtcHmX2O1rNIZn2yKcP3nI8euyUIg_R0Ex0Kgpi2kF4eKq8416L35Sos3VFhXgCrm9DkwlwntdcWNoML9nOMNeOKfyuhsBwAH6EuRnUOYCYZ3");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Aiden Carter</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cloud Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGFu2r6F_Tdv4HplQMfAqzNwwUU2jIytpkgPgLEXyLDntvyf08RgWefzc6mlS09tLUgY8n6mgE4jcissHttPAOhiQbldvTGp8EVbLKURdabKcnvg_FiOST2ZwKawT93or7lVol5QIrIVYxe21oUmhqyEBqzDrWHsobt89ghqPR52hG-hGSc3jgGPv6bmmeG4oDNkOiyQxUQ8yJpNqDpTK4riXKQzAgpiMiyG7mxKuBCYAgkycC62pxgzTl-kJlRJ1PFClLND8MCIf2");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Olivia Bennett</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Network Security</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoig5c84gDFOHHLcN00Ufmirv37dUFPFeCKhLktdAv_4frBIc1fmDmtFSSepfvxege0Qwv8g1h7oJBPCHoDvK19PuOgmsfmx52qE8FT4tVnuj73dpFN5LbYZL39TbgI6pdJZXZ6J9X9XMortqsO5Mu_f_rx2r8GEZ4qnDygo1iTNThw0S1CMWLQWaQ8zyyz0Mvcb4e_1z2l1HgeT3NhQJpkhTDswPFpAoMGOMgt1ZRVqJfdn5CFWJvkfSEHfdJtA-pbqoVKiXMzw3_");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Ethan Harper</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: AI and Machine Learning</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkaUmC_sNJOIWLDA1Vj_aoj3ZwWUXVUlLJ7DhzhpwMYFc4i80nsPaThHBN8AgJcvXqn3tGqeo7YQn9K8Bk7inzGm8BzlRStYt3hUJ9E4sbMGI8vyEpam8il39oEIO_dLcbHbVbV3kAg7AACwAJnZ6WhoSwZ_cNMep8GxYl4sWzVTybw-So4m8XhoCCv8Wjj1hyCOjwiNXnZUoEpg3KCcV5wN7z6e4dUg8wOx8aXkRSkfMWeztyBqM3jk-fzvVjua8--f_cOtyD2lwS");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Sophia Evans</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Data Science</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmBsgLeD3jKiub_Fk-_wGAwyxb81N2jDm0MY0OizRx5cS-j4-ZI_ao9IKq9KRYhRETsYrRloGiUOQolZBFUN9JBYx3dajQEC2i7ELQ-Ty1jpPKck1JBZFIOazUbo8w-FTfD7mIICJh98Ra7rCFL4t1HFlfbvQvGoggznaK_rIO40knGfgxcL2mmobdj0DM7FPLwuNeB7hnx1qFVLrrHdPj85jv63PsW8bl9TNPQ0e4vwkEHmcQOSJ6-8X6mHRyYKlpTVyfoK-b-jH9");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Liam Foster</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Mobile Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwenbPCDW6dcCT3LPwkoBJr1UrR6L_NjzgbBSBqf6xBV4pNgPDBQRqID_jH9Nmo4sNLB6VxbAp7wErwhS6SIGciuaEYA_OhYjffyoFn_2bEoQIb4ymrWvNgHriC0lghc9NI1JP2u_UoIcvfYZatkHikloDL74ExhzQM45l86I7mdfkqRD0SQr31H866r7Y17MOKupdqHGBLagxuZeSxcj2Y1LRMWqtZGGv9iZuPQyDU_3PhWnWB3MeIqXVQUgQ4AHrnGSm8ZTe6ldX");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Isabella Reed</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: IoT</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuTG2Wt6YqIN-mhu5yUb0-I2CSLoxProe0JGbjd7yFuu_9GL0nJb-paKTqGgJGPanH8XSIJ05fvCxqQKTXKAojWZRVCFjwVIdaaNug_GKKB7tEil1CyyfKTR-JpgSprBVjG9scdol4oASkaXtIIvuj2pe6v0QShaaWbkMBYpIhO2gwhh6Mp1uXrn9018G2eOIONmlruMqO7lLi9XX8JxINLg3rCm2JhMsa9a5EC_0oIyHer79yyXGAGrKQekW8HAo80N13ftA-AFoH");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Noah Morgan</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cybersecurity</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRrJx7UG6h97_n-U2b-ka8QzbyOKhxIjN4II0e-9lmcVILLggminRYAjQ-qVmreFHyI4FITmfno0cix5yzWerRnMvumltK9eHAKPeqmE4cG069J-UTFRRTcksLYfOyGGVbrpLsVtYTc9YPNTqtzFAV7lk1Vc0gDuuhYz88GaN37UhKZ4tCqKzqLNH8h_ceeSZXNDUzxWz34oQZJBTz0p92itVihZorPw1C3xnhjo6HL_5XfHtcWyKenuA8-U_vtfPYAU3KW55mQuq0");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Ava Hughes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Software Engineering</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6pptA6DFLnwgIxELDISCDrYo6wxo6Y-O1B2DgR_HIaU2Wcl-c1GCdURHW7u-hTV7_9wUuATZv7GVlS69UDuzeeluR3PUwsW3sS8a7EPnBEseNlDOw7PplJEXMWtMCFzw-iMHKDDFagFhBKAjoKUP_3Xi7lwgJ1bgHVpoJjj1c1iqiuFOPX3Q9oGl8w1V1NRfAt1HlAGxxr6jOf-lXhLldR0Cf-Gf6hbS8l_t3vLtnCSsmf2hT1eYD4UiZriqg2zmIyAelKNGV5x3r");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Jackson Cole</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Distributed Systems</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA210Fz0L9jq9CSb2vVhuvbK0xkTQ3CNjzUBvzoi5Ug9EJaBnCfM4Q2cBny8S7YJBr2i4kFUkueEiRgwskHHcSGupOkvnao-Afz3RKjTdf6ruwtHAI3v4JTj3ptK0DIfL7_62Yycfl5YsEO3MpshfvthfosGx_Cj4xpFTwR-XT0FEBQD013VtxIaU0uP4Kyn_-nknsA0FgFti1Ito9hZdZuUdKKWUsKTSQVv2PfaxqWOOxLNCpe-YeCxbiFWm9d0tvlIxtLadXWE_lm");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Mia Hayes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Quantum Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwHVwp_A7ErmR7qacH9qmC9QGpjvtOUk-dV8csrlj2mMkpmFPFJrwbePe0bUr7FuXm6WAJxL8B5U5Os3u_fEUfzrUcAPEaDdAuEiLcuNrcbxLU8EGCw5Al6sGZYSqUHKkOd8jOCWaq7CNqXpjUoNWxQsY-Os6Dtzz10LgliFgf0icykQpT3rZ_TEu1ckYu1IHEEQMkZ3Mo6Wo4T2vFod27sm-TflXmCF8Y-1SSfXgXy-bFI5Xj5oeG7XaYVWML5NhGU_d4K0yVh6rn");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Lucas Parker</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cloud Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBR-3h6-asGIemldNTgbaayuLnUwNFCzMgGx9jiCnNCu8kx_NOHjeXtwOkIMdONJxCqnJaYQCpGoOzqRe_j_wYKYp1St-m1q_pauQ8IlhogL3tQxBTlxw0WG_9Q_REQdaxZPw1unq4_2LANxdu1BGbeJd5WOWAHo3jKhbUy_AdhxPRUVr07L9HbYuoBVk2xtexpZvrfKysOCgD3_KmFw9f1ebcAiqTaKm3EA1HA4sk2onhbzASHwCW8U-2Uz6leVN7TY47_iCVRvxDq");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Chloe Bennett</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Network Security</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiEdfy1PjpXiWBEoCVsSAAWvidXDuFOEK4_Gh3y0uYOTomZ5GUEzslD3pmk3uRG7XIb5nwSsqgsbtPqZ76TUtvPvZdgzedcwq9ke6CXXsjR8dSI25xVcNJP1M1p8-ZGfMf4nlKvEK88AqPktvSffAK8E0rda2hJAoxgN7yClDmvSjFRGym2ECoy6bxgHCRG1tPE6MeMPNE-aV6fCaZWC5praFXl01ejd1XgSNDRQhgK5mEWsDf0kURMHO4Scyd1THLfCo3e5FMjwgl");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Owen Carter</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: AI and Machine Learning</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBx6PCADsvimsxx0UCrOTEQWG6b-sSz32WS0sZNkySm6Qi23lXuxHi68FAXO_nUF7nZOvHUElJjqKXXaiU5s6I3zzf7pg3n8Hbm1TKI2f2pxaWJPlIzz3pNm9hARESoF66ONx8V-drHYjXhr-5X0Ja8wZIXlEsvF2qhBLA6YuQZaATinkKtE3PJjPujupGz8gtsF9M9zsy6mzisr2Uv143gJ0nzBhRHZb8ccUOTXLkPbFBj1fiYt8sDcfo6lTIcyMq15jyKECCk3s2f");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Ella Foster</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Data Science</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiF1cq15oHPIKQB13YTPBu_f11e6Ktli4FWS_d21PZSRa0L5kbFvMBhZmCHdPmmZmaetfx6SOctyql5aIMWIFlP7wYh8tIRgRQGsBjCh27lihniHSRjknSabopy5or4dNCk4UY1KR2Br75NpMEHVOnC7Hj1FQDzk6jzBgZiQrBB8ml01xj4wh1zVEOjldbpuwQbDIRTe_oojNsTy3Qdu01HGo6eAxX8rrIQ5S1q24cYUY1MTfY7nTuM7x9JWk1ihe-KzTuZYa_KTw3");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Caleb Harper</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Mobile Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBv20NgJg0yIFoKrb3bP3gXdpIjIrID98YHjv6WRTSI-g77tNI0jiVgv7ryodPySAsYll3rMvtLBVSMge_qfFklybWbGQvif6lui6AkLiMTSHbrdX8HwXh4R1Qr_dfnAU7_gcpTr74bQuO-Qe8Uj2gd78SyKWQ4bZCRefPRsHyOefkX2asIkXBsLbWMREpZ1i8XhNUYpXygXpDYFyEdU0XPpRB94FxC2lpc9VdW_Jmueucy3ekww2K8qnNwQQW8ZgjI2GeMp_M6qCBA");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Grace Hughes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: IoT</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMhYr2HdRsE6mS81vQuyDg9SoOxykxL1DyPDwkuZdaI6Ftfl8xfGU1Bzhx21P6ziRNnLDIoqegsUS2sGaPkC6TTGRifsLaGp9gDvigrr0G6QPRjuZc6TKobY3b0EqE6IkBZrCIhDt0_FUWJFPe6u9Eu5dwIXZRGUgxsB1HpUiHcBbyAwD7nJwJvYWTltTWU1nODnV3LwHCGOv9MU1Z0DLcPEbkTqbN9NVWHiO8MSnmf8O-s_Ssrp4PvCVMkS9aFHp3qsjs1ntXTTQ7");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Henry Cole</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cybersecurity</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzTsR2tMBWKTKHLm9l9WalxwjpMu1aUB4zkfTir5aRWA7tXJTK1eWEJ_vanEvusEjcepwyQd97XC3m9nr5g306Co4-5ciWhG8LPE477avj2GnAWRArk4wZElSkpTWA3i3aXYwlLCJWuN43WMbngrCShFbw0fkS90RH946iYtkTrXjtYnjIgZa51YSo_F-hwJM_YsP4uAVNSKbmpLVAAbC3Pc_OfXyJbPa5lBv4XzpLuj4Q5-dsTDfD0o_nzi90wdjC0Om6BaTg5-Jg");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Lily Hayes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Software Engineering</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzT78g5uwbB3l1CQQJCWbIV2Gq3mRv6L-C7jKkc9Dq1UisIs2DYrOs6XTDg3HIxu0Ius4ki7kuTipgv8OYiSsEbLKSkU3Plp_MUpnlo7jO7qHgpKtR1W_bhWC-bVKYX3bULvwz03LgeEmvo0iKI2PP91OnlV9ieyL4LHcT539ksvCsXkavMgejS5SOi19EYcouEvYTXQC6MelPeDTZKABkBwwTTtvvFeYVUNi014gDUeCDy1ww9-hUYncrkWGKMep-8jvhYbFM5OBX");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Daniel Parker</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Distributed Systems</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxgd1imSYjeXUQG0jfhzqPaWdjRRTYBZAUXsfGectb06Q4eN5HSIxXnbO7VL0JhqJubfj8QLl8MLjExqVVPGuI7eW4c9kvGI2rhFZuUszTxbWf0Fj06F8gAgS1t9NQwW0JvUZg6XxXk6OjvkBjuPhvmkwWbfzmaj84Ry-KZKz55jDOH_C7OmEhkaCn4r9vvzsae-SRt55kb5_vzPawoUqzQVZx-aSV2bFboIGooQCzSP4MLSoQvA_AZhUDvfwgtRyodPtd7dy_dpjQ");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Zoe Bennett</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Quantum Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBs1XLKKulWW0hdhLGAnr5qx0xAVjEkZCJO4StFsy6XNr7u2pLbAEucvmfH_1NPfF9OMpX66fg4yKUeEFzaExv5OJAit2JSLbb3y9KCQoTVwy3wglojSNEXfcIkj1eu7wN17TeTE-DbzpsYPtfCI2aH0q9rJxExHZ9f9gYrtMjcUPrCmiCXDCVR9p-4QL8LRt4RC1NUk5CoB0B25TNZzgHue1SvKjPMgoyfpzwZDC5Gb5nJqFCROVvn9w7_ou1dMWMD_Qw6d-HZtCI");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Samuel Carter</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cloud Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYfBXRY9FQx_LovjMTbqbSwcou1tZnIlcxPwSETKFYu6TrNy4-vvKleVqGove1-GrWSwCqRK5k9_qDzyFkBsKTahkCOznlE-FRkGrs3K22KZVhZ5Qec2qPdYB41lAC0ajKtjanqujqYc3PFany8d3tyalnPlkbs0Sw1z5TthknpvILs4XAXihbmEhXAjiPXmlUGCxZhA8tz1k_NUYIYGU7SnbxcvsSm2mjl3sljZrFGuw9O7qd6hGxEBMo7M1OsBG8oQUgt25AKKFW");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Hannah Foster</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Network Security</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVhHQG4R8RjPrDVZ5_iEJeNep68Ga_OpNM4xawvIy_LXGFUAJywuKc6-nhfbInannbdVm1jOYICp2X2yudWoleg49djrofpaH-NYL-ykpVKKmYHNd06Y34nv5Yqid3jDCRVmuZh7e3MTTF6T4iVmIDvBnq_M-uQcIvXOq6IQylAswKHRFrPfaVa-cnQKN0Kha-6zRgP5C82K2Y4tIa7gQQR71vlSgn1a0AWbMjxaMWqvSpCGqeNdZvuLSGm4M0LDRoC7ENoawKWAd3");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Isaac Harper</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: AI and Machine Learning</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVXrweKQVtPuxVHMpGKb2LC8QZBQmR8hXEw7-OcbMz-mohhTHz2M3KCzxLjeb-WY-Ws-7seJjzCwHoPh5qq7FAsVjZuuAQJoqWFu3gEckERr2owaAIUglKe2XYej0YhSXd5o3p8PkavNJXYvOyuoujyjdGr3OymFWdS4ZlPBVhiK-PyunLT96uqpxGnPCvqixy_mMUJMtat5W7HR13hzD6bByTt681j8983Gl9juFGR4ANeI4P8UDDuSM7DFudLBnhnra6qTx7HdX3");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Scarlett Hughes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Data Science</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBG-s2EriCjeZa2PLEd_ySzttlJr5MLz3Kn-MTokXTuV-g6s4-PaT7--KhnC1_muwa1KLMyrImb-EPvu4J_Qi26yOSdtOhETiTztHwypboK8QPEUk111MSDPUKsFHh3OC0fED2IjDRH-pZmRDTSkA56pxntFu2Bgp14Zw7aaDKHBd3lzYjYysPkjFGNnNdR3xsVtC7D06xDP5-v-_O4hx4svyLMyh7BQrk-1vuhb-bwcK0zmXjo-WNRyPwCMGPvhrJBzcvTHs_EFeH2");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Wyatt Cole</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Mobile Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGmr8GFvsC_Le4dZxLf14kJYrYar3oyK8nFCZD-mzvH2FF4IAizBIxS6mxhLtbpHZXyvtCTwpds_PDfhbc_tcOWIFhj9neQUlmjgeW8HN0qnn5ogZi6Y1I21OfKqknPyzYey1fxVlv5FwoaxcChVq8K9zy0GA_971h_ZW4viQItm46aKZvSDxSenTrLbyyWAdQPp31yEqXSDcdSXEoZ0A-F9Ahi9UmOCjv5AmjSoGQWIHnwf-sjEiIhK96_9tCKu74PnEY0xlausnw");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Stella Hayes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: IoT</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAM893Ogi5SaY_cnR3-4DLCdDy2coobDWimMG6QL65LqaAXIVGtvM83hxXO7wc6w5Omq47JxRhphASlflotzBDX3uwmNL9hNSVVPSn7pRlcr3ExRAUdfsSedjd9_gwwGmR0k2n-IsW-Z7hdLl2gbVWBFT0ehyYH8SiI5KpYqXT0LV9kdRpuuXuFRHB4Q3q3AYCJmyb2NjK2o7umYHbSFuNnZMPHqignRcGCaOQmHEqRABZLwQ9CpF1Dppp9EXbetOUqloe73DRPfiFw");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Gabriel Parker</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cybersecurity</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzd38mnh-m8w0SVFhm3vWkpx8rAFZ8Z992Z-VLZEGXC9tOe0n6FITAJ2pzgRP8tly5uQ0uKoQfWlRAts9AVlznOgG9kSbY2WNl-MyveJUkfYiXArejXt0WC4VqCkVHffxt4cPOL6SMJhLvRDd1uT8A5Zi3XeXS6yILIoIc3aiLDnnrjQU_70L42YVg2DxIHHCKyJpGXzRiD-VTUxdXo259e4VUAgBtXDayN9s0A5rOryl54ankwPg1lqdEIO0PRxaOr46OeDlQf-fx");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Nora Bennett</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Software Engineering</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrCs6-c8034DkeFpz9WQO2VFG3xlJEVyKXZ1qtR70CjCM-FRws32VjAnk9S7a2t51HHPXCUoZalgqUjUpr5UPTWiiMyGbAGV2AOm29w9-4LIR9BAvA_CSkeFqHT1kMkBFxBcftRxy5DKUayUH1_pb1jw-9qgV6nDkoU34KmHULn8iGeXY5SiEe9T7kGwVKCyWlD2zcsji8QdQ8fh7kCXARcdhM92YC_tw9zn3MU3CwkBrrVVeVpIVcngwixdcm8JqINaTH538OMzGi");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Elijah Carter</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Distributed Systems</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKJPuP0ltxcZhpqzZGRTPgBmVNJb40PXYMCOBByl5N_Tz-Q6t8lTnfHA_4s6r7RAi1i8Nq9sae8HjT93c80eCwyFUHuH8tJ9kRZmjVobA1XMDNthKdGVpZqx6_ikpUfCr88PBfSJcecflYwuTvm56kLgYFEBqls4iAmuY48XGEmvfGhtsc14kyttfHtR9aiOoin11rQGkKhDoceAHiaZ-4H0aq-6-qOrfnNJiHMCXvx_LPqeFojZpsaY9eHpZSuISa9Ny_Fi9K7RXS");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Aubrey Foster</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Quantum Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACpDupDFRjLMDQ2maj69dqXW8Gsi-xyG1cLKpsAajbbmgef8QrBjk1tHrpqd7t9pUugnPNNq0iVZE7aXUeefYIQqLeJCcODEfP5DRpRx59XFeiWv_RrgBIhnaRV-6qUrJBBwSat6ogk-WIy0p7KIpPXDwGECVVMyy3GbiVdWix4Fb0HS2JmFthkvNbiuNB6UPxUnDhQ93_RESt88VpfSVfGypI6-eQnnnd9PQy2RNpBt7TThREHVUCtThQ0RlDL84YVj6wPHkHHdO1");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Levi Harper</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cloud Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZKmjLtGkN66wPoLGG8avVbeVqcODcukv6OIDKpiUEg02KUFWKC6bBQzpfglCcpC3479e1MMGPKHZdnlq0S6Qx4_4sTr6R0_EVIZPclOF3BvWcW4TSNho_3HjHRHXvA0F8VzXNwye2WM353Z3hq64Ueuo-vyzRG5CehgTdyGGJ2zjqIP9DPTYKuz29dLljmnawzDRdcCGf7H7dzGmBKsAuPnEOWMFF-pxtE1qqGBhItfMV037Spi6iEFDd4HYeswB4zFcGvJUFfhe_");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Claire Hughes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Network Security</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqBybJyYaoqXlYhenrkrhOM-NmjWOC7ijEFILiBeGKdyEnBfv40UZ7pwqQaMQLQmCIoNp8PuVFVdEI-MDs9qduOUsqeeq8xsGTwAFd6tsqztsVksvyFQ5TM50yaLbVDNPWDTR2Ezs48_TM47frMksCe5Kp55EX2SrcoP8roO-QFsMD1x1fGSucL3SxwNJHxLZ5oeP0pB01V3Z5ozi-mmiGgAp53VYbAM0US5XCmm3FrESIhVEuTwwdn4qHLy-32V1jcPlhz9Kv_Sdl");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Julian Cole</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: AI and Machine Learning</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByxzzASQGZGihNgIv-sfuXiWf6jZo8i2isLde6GManIMh4DX2QVsID8SBAVl9wMCjutAC9mov21b3WyAncJl5Y89Hw7pNA4erCP5mIV19UtoPxSRGGYNlk74a0Veeg-I-m6dKHuLzek4RddbwoIyBe0KYU7GIVj_s9roJHVMDQcAhyFV0LROT6UobwE160cQNqJNrrpEFS9OoHEjuj9kAsLfZ56WK8O0OtaKd0G2ojlswiIWghSE5BiazHQLaHJNaOHcSyD4RPgSLL");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Violet Hayes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Data Science</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDs0DJFYGf30aVlyO4QnLvdC8bP-06lRku4nVWvtUdR7hch7MIzJD6QaTVHWvJWjAmIzWdBw027yl6fG37c1mtGZDLSdXHBh1EaWmIFD3EgFpfioSfThTjPgwMBcgPG9QWO6e4uroreYJyXC_EdQQs11OaV05n0LJ7d5IzUWO5phvFPkumOFmfP1UpwZeDgca6JyaDYhT8clHpAKpQ6r9H5exHLMdWjKGHMXO65Q7M97hzSQhAYtb9pyf9PeRYIxp1HSREI1UI_98wA");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">David Parker</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Mobile Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcE3CgJilVkDUHhELq--fUI_wuqxlCqWI92uSYIZ31hs_u02DELJ7Z1tqK5aZ-cM4r_Sglv_FBqkXE88i1iZJ-_ArlLxlt-RhrdbLKB5XhKAy4jZqibr_7U4o4s-yyMsgJGlgpNPzKhzq_uIn-_UYROHHd68ML45K0jic60xVjU920V_2CMxpRetGc5rJhBZTk6l2vMI0H2QMWxr-NtCaEVho2n2F1uPC6PnwvBOpEOgi-cjqR-i2cqfkKNKA_nW5akYuqqvCqzMag");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Penelope Bennett</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: IoT</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQ4kshYXZoYtfY32OfhhS0B6GmZQr4_eB51D45QSczSerjmN2wNNO9XQs5Z4VTyx9tn2OSROFrjma489KAR0_xt7iaX8je0JHVRBNGU5ut-18m8ckYfWYwqAIU8tyor2wPuvnJX4ZuYPj_myRAXnXL4JrWktXS_kBt2AxgbTjUdRlU7J0spT__o0kz3p8WYeCboVIAJ-Rhp6NruUzcnesTQDVVqAm3_C5hD67_0PCxeWyKeHjGhVzLjgRe9DwYIMpuVAq_BKGPOhbI");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Grayson Carter</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cybersecurity</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRXyK8uaZfGQAKSGVxd6ER3GfAnscyNzEEq1j3vO2AKZneUhtumBI6Sm2l8nDXYE86fgchM6NmjrG-qkLa2dEP80xT7mC2f4TVTgVF27wOR4qutLziNOzU8Qoss1DSqx6_8bAP54xpfD0medbFo7zY5O5ErgS9ND6TqxZ8tJ9TwO-kw3h5HKCR58S3uDe_ghUygnWYf9sHrTvjFBsHBDZ9jy2-x0oui7mM5AUMvMzA5R2rE41o1dkNslO_oikVnXAObBievbbpR0h8");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Hazel Foster</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Software Engineering</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrhsNCNTnRT7yxfpIO_-n-avBooXpJ3Mt_vKPjWsl9REGXJ0YYSuIqrMBft89KhiT8CRq6EH3gWviCYtvXP44eOc0UkWZ1ofnqeEB8rfbddWSKBih7WvlmKkn18CaGQ9KLd8bA1_AaY2NeItV6TqTpv4-VivVjUd5r8cgIEVL2il3my2t52WI77zLFD2aOk6uEpRWGuknNMqqvneUKlEs_D5H1MwWgnacLHrApPY2gPm6fx82gQKNk12KlEnvaPaltTUcR0LUhE5dX");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Asher Harper</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Distributed Systems</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAfn3nhV0B0l6JQNR_6pn3qk0wXCQ45Pxt0j7WK1LK1bTpUVhICfWgdLp2cQAaJDN4IzBH0j3BCS93ZR5IIH91VW3Ri0aiKJikhKtPRrkeZ-ymCZP7sv-irVH_dLVb4UxIHeSXDxtQ9Tv1QxKkIMzGu7nzuljlZtQP619er2cddEU2JQQkpNJlXubtPV0rnIX-YRu4KgBA_mP7vLnfZrqNsq_hll2CwnhsWUAh5H1f81FFTmQD7m7d5EBmqxzj8u9Kv1Kd8PP-lGrd");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Lucy Hughes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Quantum Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAw0dfykKmI6E9C8Ug2RAW6x_6_WB9AKVy0KSsdxPvDvXq34uz8Th1urYKetZR-NmCT05T2p74vzC-FxczmxigN-5nmzcFvEZda6V5rGb3F9U9fkSyjW3Hi7IpoizFsQ85xi3NZB5k4Xpd2N_tS2zaIEBdMunTLvtmaR4eWKmAZQLPdd-BypR1i_6teM1UHx4UjsopI2OBcisOQsNawFkPmJlYLYRTKiGpY9dR65VtoraG0g6Mzj7yz1jyCMCSNIb4S6shwxoL9K8-u");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Christopher Cole</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cloud Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBynAsS8Xg8G0Dvcbj4PM5emRC8cTV1y_PwyhnbfxAde5EzwqpawKH4sT5pQJJgK3ar-fzWSikUJCVPO1VHZtyhsRRiDfsmbzueVnkIUhc-SEbOoduRZQXw-WpRaeq9ZZJNGBBLJ62eJk806px1vFanHM6yrRrcxzAnhptUlbekXncFXf5BvM8HXMfKNZV_ItCePm3d-pDgP0mboFPOlqivM6sds-W30TtAMwTIOAVgHrq0DolDxNoYOFjZCDWisLEEbtadxEgRefIN");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Audrey Hayes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Network Security</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdiHVN0bAwhDYJxJxTMrBgkb_qZHhoxLC3sYkxXoRYp1dA2EcxJc2g5Ovqntgm2KNTbYPzu2XqtOG6OQV8GNspiwkjVbF_orxJJSBPLMMXp_rlipJEcTR0BMv_tVHpfDVHAxQf2eeSQ24rxIs2uNQPxhLvlMwDz92w4zt4jYcbdrZXp-WFceFpbtiXLayHUrKusJs1dg7l1ep5oQ3SZ6oduIsEM8v88RNrUBnAtWu39AyTdGYx93-mAtzE9olAa8NO7eqY2-n1ESDY");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Joseph Parker</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: AI and Machine Learning</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAO_SWGCcaWMIFvtQTgx82XCbxGpMiunjK0EkY7i3nFzUjPO3JqjboRiF6-ybxSNr8kuLKuUF2hwkR9XHBKK8TRnbGQ6AWi5GLdm9ePAO4DvXvUd1KA5JGbPYi-JAFEob-ION_-63ZdcF3X0T8I_YtWQc6VipcrjTGO1pNiefT6BeLMEnC8AcYiPvdrZXbLmmkjwahOGh8geUpcDyZw1bwr1z84gdQXWHs5KgJaXv7oMswMNt6Qcg_U0vu2x4TJ1wdfcbgZzOVf_5BP");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Savannah Bennett</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Data Science</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBelVRvW43PX9_2P9UiPPNf-u3uL7rDIvxCRl91Hleykaq1Ek_rZ1PWqx8rkXI09WQEetR9UB_-xX7qNI1B9FaCn9v7hXDs6WykOhfGgTE_l-n1japEgBRZv_xbruBc-PhhgBpSoOl2xKipWZNL3GsfuEs_OaoSVaGSIKVf1PRyeSUTnRtq8RC2u3jf_XkNpWWiPWuo7gQx-GgXqi8RidIUT3GHNHP33zc9BxwCXUZD8wlbN2VS5yTE-DRCCQ2cChV9oJ8SkzvChLby");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Anthony Carter</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Mobile Computing</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8CF1itl1SKk21H8a-GqiKTgaSpmKUJjyrUFcYZU9aT0SAYYpaxubUs4pqrRSh3D5XsO8BsTrXBhFzxF5r6LDvnFzlGhCuWCYzR9AQKEDet9gUOD51Jp9T884y2qU9bJ-EOx1L5YLTb5vOP_SQYrZVKbVOXPxKWOxUH-Unm4WfKDTCVHXQGtyuBtoIznW1ROwi6ydO9gGHCML23gRuoj_7Tm2E-hfQJHjXHSpB0lbfY48OZoLH0NUZDlWD_pGYGDSnNKeQgRkDvl68");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Maya Foster</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: IoT</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUbWGQ4UymU2nU46a7AeEUmpnAEXud8HEQAWcaLrKMXmOCY09koJ6kPL0GcZymXN2YDX0JX5w-tpQCBI9zm08x2an0ks9MhQRAAdYC5rfjfUW434kELEuH1wtHydQvhUbX42p6rcvIORZO523LzCr_TvylFBlfZhjbTaTnilsiX7ymoN6geW1UxJUyWY-EcnLLbA6bhd3vtL3LEjIKUzhlsax9xWCJNwQfDS9e3zNHyGIWJ9B6jhMGuXWqojq3j4Caqlpkb3zy8MgX");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Leo Harper</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Cybersecurity</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmAPjms-Hmt1jNUKF8SjiZeU0KozgzfgB8m4meSIwuG5plUaf5kjqLUzK0x75q05XHUm51LizgD8r9lEWQx6KaWWE5-V30mlbr-wlnpNLfFHrWwG2phsZmbESGnbIQ_xQJMn_5zqQ5GNVRnKE1VdRWC-TFkmLrEoOCEDeVNRNDSRnOfWmEWaF7HHoaMg6m7IZgWyne6w8p_6nDlnnoR9fF6J3YLRxNsgAjHzGV2lgxbnDOXcMbgHayHGWLOtx9rMcTj_VmkLyDznZZ");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Anna Hughes</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Software Engineering</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOGLkG_Y9VOk-g9TJ00uMR1iPtJZOxW2Xllv7EIQYuLzJVzrf84nwi_c58Ccq_v1BHpsom9bgUe7pYeLyKaJETn7zfQwxWOU8ww44khQmDam7JG97efs9Lwh1gfmCXml5lR2L2AJM3moBRIT8gT67ycbZcE341r5xoIZWJRL8nyfYDEDn_wAHEzJf8nqMEMoY7GAbtwYQiJsvpfXYiZ_GN2d8QDwkMiu7zC9vNSRIoL1O_kzQc-HOCRcRfx--xCcWeoO9frEKA2EJD");'
+                  ></div>
+                </div>
+                <div>
+                  <p class="text-[#101518] text-base font-medium leading-normal">Isaiah Cole</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Distributed Systems</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center pb-3">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYx079R1FJa5xylqF6v-VcYEBc_cI0pwWgij6nnfu3HIhNFRhTmZ12QW8jeN5jWzofnvl0kNLUCmjirx6K4jtVf1La4lEjS2OkLeREuhqf_ioV7oJ8_ndOiZJX8-_8jd12lD8YQiSGg7HHhypIIIJruhLm-ga4KG0ozqOMRZ2h6okO3Zpl55EkZNu5zuqNDxFvDgZOCNDhTUI9mej2V43hjz2f4FypBRB7-HYiToZkN-voISjDWghsUmUlPu5xF2DG33hgXQhLIiVh");'
+                  ></div>
+                </div>
+                <p class="text-[#5c748a] text-sm font-normal leading-normal">Expertise: Distributed Systems</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center p-4">
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-[#111418]" data-icon="CaretLeft" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+                  </svg>
+                </div>
+              </a>
+              <a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-[#111418] rounded-full bg-[#f0f2f5]" href="#">1</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">2</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">3</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">4</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">5</a>
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-[#111418]" data-icon="CaretRight" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Home</a>
+                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Research</a>
+                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">People</a>
+                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Publications</a>
+                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">News</a>
+                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#5c748a]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#5c748a]" data-icon="LinkedinLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#5c748a] text-base font-normal leading-normal">@2024 NGCN. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
