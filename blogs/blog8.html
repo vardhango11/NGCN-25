@@ -6,7 +6,7 @@
     href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
 
   <title>NGCN</title>
-  <link rel="icon" type="image/x-icon" href="../Images/NGCNLogo_.png"/>
+  <link rel="icon" type="image/x-icon" href="../Images/NGCNLogo_.png" />
 
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -18,14 +18,11 @@
     <div class="layout-container flex h-full grow flex-col">
       <header
         class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
-        <div class="flex items-center gap-4 text-[#111418]">
-          <div class="size-4">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
-                fill="currentColor"></path>
-            </svg>
+        <div class="flex items-center gap-4 text-[#101518]">
+          <div class="flex items-center gap-1 text-[#101518] shrink-0">
+            <img src="../Images/NGCNLogo_.png" alt="NGCN Logo" class="h-10 w-auto" />
           </div>
-          <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">NGCN</h2>
+          <h2 class="text-[#101518] text-lg font-bold leading-tight tracking-[-0.015em]">NGCN</h2>
         </div>
         <div class="flex flex-1 justify-end gap-8">
           <div class="flex items-center gap-9">
@@ -49,16 +46,17 @@
           </div>
           <div class="flex px-4 py-3 justify-start">
             <a href="../blogs.html">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#dce8f3] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]">
-              <span class="truncate">Back to Blogs</span>
-            </button>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#dce8f3] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">Back to Blogs</span>
+              </button>
             </a>
           </div>
           <h2 class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">
-          SYNCAD: Cross Modal Diffusion Synchronized Yields from Narrative Cross Modal Audio and Data
-</h2>
-          <p class="text-[#60748a] text-sm font-normal leading-normal pb-3 pt-1 px-4">By Aditya Vardhan  & Madhav Kartheek | Published on
+            SYNCAD: Cross Modal Diffusion Synchronized Yields from Narrative Cross Modal Audio and Data
+          </h2>
+          <p class="text-[#60748a] text-sm font-normal leading-normal pb-3 pt-1 px-4">By Aditya Vardhan & Madhav
+            Kartheek | Published on
             January 15, 2024</p>
           <div class="flex w-full grow bg-white @container py-3">
             <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] flex">
@@ -68,10 +66,20 @@
             </div>
           </div>
           <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-           Diffusion models designed to generate videos from text or audio inputs face significant challenges. The primary issue arises from the difficulty in accurately mapping descriptive information (e.g., text descriptions, audio cues) into video content that is both temporally coherent and semantically aligned. Current audio-video generation models, like MM-Diffusions, struggle with integrating diverse input modalities, limiting their interactivity and context-awareness.
+            Diffusion models designed to generate videos from text or audio inputs face significant challenges. The
+            primary issue arises from the difficulty in accurately mapping descriptive information (e.g., text
+            descriptions, audio cues) into video content that is both temporally coherent and semantically aligned.
+            Current audio-video generation models, like MM-Diffusions, struggle with integrating diverse input
+            modalities, limiting their interactivity and context-awareness.
           </p>
           <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-            To address these challenges, we introduce SYNCAD, a novel framework that leverages synchronized audio and data inputs to enhance video generation. SYNCAD employs a cross-modal diffusion model that integrates audio cues with structured data, enabling the generation of videos that are not only visually coherent but also contextually rich. This approach allows for more interactive and responsive video content creation, overcoming the limitations of existing models.The challenge lies in creating cross-modal diffusion models that not only map the input description (text/audio) to a temporally consistent video but also ensure that the generated video is semantically faithful to the input prompt (audio/text).
+            To address these challenges, we introduce SYNCAD, a novel framework that leverages synchronized audio and
+            data inputs to enhance video generation. SYNCAD employs a cross-modal diffusion model that integrates audio
+            cues with structured data, enabling the generation of videos that are not only visually coherent but also
+            contextually rich. This approach allows for more interactive and responsive video content creation,
+            overcoming the limitations of existing models.The challenge lies in creating cross-modal diffusion models
+            that not only map the input description (text/audio) to a temporally consistent video but also ensure that
+            the generated video is semantically faithful to the input prompt (audio/text).
           <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
             <div class="flex items-center justify-center gap-2 px-3 py-2">
               <div class="text-[#60748a]" data-icon="Heart" data-size="24px" data-weight="regular">

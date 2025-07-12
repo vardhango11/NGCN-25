@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+
+    <title>NGCN</title>
+    <link rel="icon" type="image/x-icon" href="../Images/NGCNLogo_.png" />
+
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+        style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
+                <div class="flex items-center gap-4 text-[#101518]">
+                    <div class="flex items-center gap-1 text-[#101518] shrink-0">
+                        <img src="../Images/NGCNLogo_.png" alt="NGCN Logo" class="h-10 w-auto" />
+                    </div>
+                    <h2 class="text-[#101518] text-lg font-bold leading-tight tracking-[-0.015em]">NGCN</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a class="text-[#101518] text-base font-medium leading-normal" href="../index.html">Home</a>
+                        <a class="text-[#101518] text-base font-medium leading-normal"
+                            href="../research.html">Research</a>
+                        <a class="text-[#101518] text-base font-medium leading-normal"
+                            href="../publications.html">Publications</a>
+                        <a class="text-[#101518] text-base font-medium leading-normal" href="../people.html">People</a>
+                        <a class="text-[#101518] text-base font-medium leading-normal"
+                            href="../gallery.html">Gallery</a>
+                        <a class="text-[#101518] text-base font-medium leading-normal" href="../blogs.html">Blogs</a>
+                        <a class="text-[#101518] text-base font-medium leading-normal" href="../contact.html">Contact
+                            Us</a>
+                    </div>
+                    <div class="h-10 max-w-[480px]"></div>
+                </div>
+            </header>
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="flex flex-wrap gap-2 p-4">
+                        <a class="text-[#60748a] text-base font-medium leading-normal" href="../blogs.html">Blogs</a>
+                        <span class="text-[#60748a] text-base font-medium leading-normal">/</span>
+                        <span class="text-[#111418] text-base font-medium leading-normal">AI for Financial Fraud
+                            Detection</span>
+                    </div>
+                    <div class="flex px-4 py-3 justify-start">
+                        <a href="../blogs.html">
+                            <button
+                                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#dce8f3] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]">
+                                <span class="truncate">Back to Blogs</span>
+                            </button>
+                        </a>
+                    </div>
+                    <h2
+                        class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">
+                        Advances in Fraud Detection: Machine Learning
+                        and Deep Learning Emerging Technologies in
+                        Financial and Online Payment Systems</h2>
+                    <p class="text-[#60748a] text-sm font-normal leading-normal pb-3 pt-1 px-4">By Akhila Jyothi
+                        | CSE Dept., Ravindra College Of Engineering for Women, Kurnool.</p>
+                    <div class="flex w-full grow bg-white @container py-3">
+                        <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] flex">
+                            <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                                style='background-image: url("https://miro.medium.com/v2/resize:fit:2000/1*M2dT90tDTwIYTQcNPkcmvg.jpeg");'>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                    <p class="mb-4">
+                        Fraud in online banking and financial transactions has become increasingly complex, posing
+                        significant threats to individuals, businesses, and the economy, necessitating the development
+                        of intelligent and dynamic detection systems. This review highlights the transformative impact
+                        of Machine Learning (ML) and Deep Learning (DL) technologies in combating these evolving
+                        threats, particularly focusing on credit card and e-commerce fraud.
+                    </p>
+                    <p class="mb-4">
+                        ML and DL models offer data-driven solutions capable of learning from transaction patterns,
+                        identifying anomalies, and adapting to new forms of fraudulent activity in real time. Key
+                        methodologies include supervised learning models like Logistic Regression, Support Vector
+                        Machines (SVMs), and Random Forests, which learn from labeled data to identify known fraud
+                        patterns.
+                    </p>
+                    <p class="mb-4">
+                        For detecting emerging fraud patterns from unlabeled data, unsupervised methods such as
+                        clustering (e.g., K-Means, DBSCAN) and dimensionality reduction techniques (e.g., PCA,
+                        Autoencoders) are employed to find outliers or underlying structures. Furthermore, Deep Learning
+                        architectures like Convolutional Neural Networks (CNNs) are used to extract spatial features,
+                        while Long Short-Term Memory (LSTM) networks are powerful for analyzing temporal dynamics in
+                        sequential transaction data.
+                    </p>
+                    <p class="mb-4">
+                        Hybrid models combining CNNs and LSTMs enhance fraud prediction by integrating both spatial and
+                        temporal information. Central to the success of these models is feature engineering—transforming
+                        raw data into useful attributes—and data preprocessing, which includes normalization,
+                        dimensionality reduction, and synthetic sample generation (like SMOTE) to specifically address
+                        class imbalance, a common issue where fraud cases are rare.
+                    </p>
+                    <p class="mb-4">
+                        Despite these advancements, the field of fraud detection faces several significant challenges. A
+                        major hurdle is class imbalance, where fraudulent transactions constitute a very small fraction
+                        (often less than 1%) of the total dataset, which can bias models towards the non-fraudulent
+                        majority unless specifically addressed with techniques like SMOTE or cost-sensitive learning.
+                    </p>
+                    <p class="mb-4">
+                        Another critical challenge is concept drift, as fraudsters continuously adapt their methods,
+                        rendering existing detection models obsolete over time; this necessitates adaptive retraining
+                        and real-time monitoring systems. Data privacy and regulatory compliance, particularly with laws
+                        like GDPR and PCI DSS, also impose strict limitations on how sensitive financial information can
+                        be processed, driving the adoption of privacy-enhancing methods like federated learning and data
+                        anonymization.
+                    </p>
+                    <p class="mb-4">
+                        Furthermore, the complexity of advanced DL models often leads to a lack of model
+                        interpretability, making it difficult to understand the rationale behind a fraud prediction,
+                        which is a significant concern in regulated financial sectors. To address these issues, emerging
+                        trends include the use of blockchain for transparent and secure transaction records, real-time
+                        detection systems for immediate threat response, and the development of explainable AI (XAI) to
+                        enhance transparency and trust.
+                    </p>
+                    <p>
+                        The creation of synthetic datasets is also gaining traction to improve model training and
+                        support more robust evaluation, especially when real data is scarce or sensitive.
+                    </p>
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+                        <div class="flex items-center justify-center gap-2 px-3 py-2">
+                            <div class="text-[#60748a]" data-icon="Heart" data-size="24px" data-weight="regular">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">12</p>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 px-3 py-2">
+                            <div class="text-[#60748a]" data-icon="ChatCircleDots" data-size="24px"
+                                data-weight="regular">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
