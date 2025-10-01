@@ -1,0 +1,190 @@
+.heading{
+    width: 100%;
+    background-image: linear-gradient(to right, var(--primary), var(--accent));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.heading h1{
+    font-size: 2.2rem;
+    color: var(--background);
+    margin: 2rem 0 0 0 ;
+}
+
+.heading p{
+    font-size: 1.1rem;
+    color: var(--background);
+    text-align: center;
+}
+
+.peopleCards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- New Styles for Search and Filter --- */
+
+.controls {
+    width: 80%;
+    /* max-width: 900px; */
+    margin: 0rem auto 2rem auto; /* Pulls the controls up into the header space */
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+}
+
+.searchBar {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    opacity: 0.5;
+}
+
+.searchBar input {
+    width: 100%;
+    padding: 12px 20px 12px 50px; /* Left padding for the icon */
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    outline: none;
+  font-family: 'Lora', serif;
+}
+
+.filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;;
+}
+
+.filterBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background-color: #fafafa;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Lora', serif;
+}
+
+.filterBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.activeBtn {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.paginationButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    transition: all 0.2s ease;
+    color: #333;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background-color: #f5f5f5;
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageNumbers {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 1rem;
+}
+
+.pageNumber {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    transition: all 0.2s ease;
+    color: #333;
+}
+
+.pageNumber:hover:not(.ellipsis) {
+    background-color: #f5f5f5;
+}
+
+.activePage {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.ellipsis {
+    cursor: default;
+    background: transparent;
+    border: none;
+    width: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 0.5rem;
+    }
+    
+    .pageNumbers {
+        margin: 0 0.5rem;
+    }
+    
+    .pageNumber, .paginationButton {
+        min-width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
+
+.activeBtn:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}

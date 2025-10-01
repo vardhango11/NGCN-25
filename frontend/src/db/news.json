@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "date": "October 2025",
+    "title": "D2BFT: A Dual Byzantine Fault Tolerance Approach for Multi-Agent Drone Surveillance with Deep Reinforcement Learning",
+    "description": "Accepted for publication in Computer Networks (ComNet) Journal",
+    "tag": "Journal Publication"
+  },
+  {
+    "id": 2,
+    "date": "August 2025",
+    "title": "Hydro-Net: Integrating AI and Satellite Imagery for Precision Canal Building",
+    "description": "Accepted at 2025 IEEE International Conference in Complex, Intelligent and Software Intensive Systems (CISIS)",
+    "tag": "Publication"
+  },
+  {
+    "id": 3,
+    "date": "July 2025",
+    "title": "Explainable AI in E-Commerce Research Presented at AIE 2025",
+    "description": "Exploring how Explainable AI can build trust in e-commerce recommendations at AIE 2025.",
+    "tag": "Publication"
+  }
+]

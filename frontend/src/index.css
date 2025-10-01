@@ -1,0 +1,36 @@
+/* --- 1. Import Lora from Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+/* --- 2. Define Global Color Variables --- */
+:root {
+  --primary: #D5451B;
+  --secondary: #521C0D;
+  --accent: #FF9B45;
+  --emphasis: #FFC796;
+  --background: #F4E7E1;
+  --text: #000000;
+  --surface: #FFFFFF;
+}
+
+/* --- 3. Global Typography and Base Styles --- */
+body {
+  margin: 0;
+  /* UPDATED: Set Lora as the default font for the entire site */
+  font-family: 'Lora', serif;
+  /* FIXED: Used active color variables */
+  background-color: var(--background);
+  color: var(--secondary);
+}
+
+p {
+  /* UPDATED: Ensure paragraphs also use Lora for a consistent feel */
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* UPDATED: Use Lora for all headings */
+  font-family: 'Lora', serif;
+  /* FIXED: Used active color variables */
+  color: var(--secondary);
+}
