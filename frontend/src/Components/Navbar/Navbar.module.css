@@ -23,6 +23,7 @@
     padding: 0px;
     border: 0px transparent;
     background-color: var(--background);
+    cursor: pointer;
 }
 .logo button:focus{
     outline: none;

@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
-// Assuming you have similar Button and Input components
-// import Button1 from "../button1/button1";
-// import InputBox from "../input-box/input-box";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaHome, FaBook, FaFileAlt, FaUsers, FaImages, FaBlog, FaPhone, FaInfoCircle } from "react-icons/fa";
 
 const Footer = () => {
   // const [email, setEmail] = useState("");
@@ -26,56 +26,64 @@ const Footer = () => {
         <ul>
           <li>
             <Link to="/">
-              <p>Home</p>
+              <FaHome style={{ marginRight: "6px" }} />
+              <span>Home</span>
             </Link>
           </li>
           <li>
             <Link to="/research">
-              <p>Research</p>
+              <FaBook style={{ marginRight: "6px" }} />
+              <span>Research</span>
             </Link>
           </li>
           <li>
             <Link to="/publications">
-              <p>Publications</p>
+              <FaFileAlt style={{ marginRight: "6px" }} />
+              <span>Publications</span>
             </Link>
           </li>
           <li>
             <Link to="/people">
-              <p>People</p>
+              <FaUsers style={{ marginRight: "6px" }} />
+              <span>People</span>
             </Link>
           </li>
           <li>
             <Link to="/gallery">
-              <p>Gallery</p>
+              <FaImages style={{ marginRight: "6px" }} />
+              <span>Gallery</span>
             </Link>
           </li>
           <li>
             <Link to="/blogs">
-              <p>Blog</p>
+              <FaBlog style={{ marginRight: "6px" }} />
+              <span>Blog</span>
             </Link>
           </li>
           <li>
             <Link to="/contact">
-              <p>Contact</p>
+              <FaPhone style={{ marginRight: "6px" }} />
+              <span>Contact</span>
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <p>About Us</p>
+              <FaInfoCircle style={{ marginRight: "6px" }} />
+              <span>About Us</span>
             </Link>
           </li>
         </ul>
       </nav>
-
       <div className={styles.contactInfo}>
         <h4>Contact Us</h4>
         <ul>
-          {/* // Updated contact details */}
           <li>
-            <p>📍 IIITDM Kurnool, Andhra Pradesh</p>
+            <FaMapMarkerAlt style={{ marginRight: "8px" }} />
+            <span>IIITDM Kurnool, Andhra Pradesh</span>
           </li>
           <li>
-            <p>📧 ngcngroup@gmail.com</p>
+            <FaEnvelope style={{ marginRight: "8px" }} />
+            <span>ngcngroup@gmail.com</span>
           </li>
         </ul>
       </div>
@@ -84,29 +92,20 @@ const Footer = () => {
         <h4>Follow Us</h4>
         <ul>
           <li>
-            <a
-              href="https://www.linkedin.com/company/next-gen-computing-and-networking-ngcn/posts/?feedView=all"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <FaLinkedin style={{ marginRight: "6px" }} />
+            <a href="https://www.linkedin.com/company/next-gen-computing-and-networking-ngcn/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
           </li>
           <li>
-            <a
-              href="https://x.com/NGCN_Group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <FaTwitter style={{ marginRight: "6px" }} />
+            <a href="https://x.com/NGCN_Group" target="_blank" rel="noopener noreferrer">
               Twitter
             </a>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/ngcngroup"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <FaInstagram style={{ marginRight: "6px" }} />
+            <a href="https://www.instagram.com/ngcngroup" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
           </li>

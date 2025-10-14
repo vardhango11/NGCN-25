@@ -1,12 +1,11 @@
 import './Research.css'
-import { LuBrain } from "react-icons/lu";
+import { LuBrain, LuBook } from "react-icons/lu";
 import { FiCpu } from "react-icons/fi";
 import { LuNetwork } from "react-icons/lu";
 import { TbAtom } from "react-icons/tb";
 import { CiCloud } from "react-icons/ci";
 import { CiWifiOn } from "react-icons/ci";
 import { GoBold } from "react-icons/go";
-
 
 
 
@@ -101,7 +100,7 @@ const researchData = [
     {
         title: "Networking",
         desc: "Protecting data, networks, and systems through cutting-edge security techniques and frameworks.",
-        tags: ["Network Security", "Cryptography", "Threat Intelligence", "Zero Trust"],
+        tags: ["Network Security", "5G/4G", "Network Artitecture"],
         icon:
             <div className='icon-box'
                 style={{
@@ -126,7 +125,7 @@ const researchData = [
     {
         title: "Cloud Computing (CC)",
         desc: "Optimizing cloud infrastructure for scalable and efficient computing.",
-        tags: ["CC", "Cryptography", "Threat Intelligence", "Zero Trust"],
+        tags: ["IaaS", "PaaS", "SaaS", "Cloud Networking"],
         icon:
             <div className='icon-box'
                 style={{
@@ -149,9 +148,35 @@ const researchData = [
             </div>,
     },
     {
+    title: "Indian Knowledge Systems",
+    desc: "Study and integration of traditional Indian knowledge, including philosophy, mathematics, linguistics, medicine, and astronomy, into modern research and technology.",
+    tags: ["ASR for Regional Languages", "Advanced Music Systems", "Ancient Mathematics"],
+    iconType: "reactIcon",
+    icon:
+        <div className='icon-box'
+            style={{
+                backgroundColor: "#f3662eff",
+                height: "60px",
+                width: "60px",
+                borderRadius: "10px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}
+        >
+            <LuBook
+                className='card-icon'
+                style={{
+                    fontSize: "35px",
+                    color: "white"
+                }}
+            />
+        </div>,
+    },
+    {
         title: "Quantum Computing",
         desc: "Leveraging supercomputing and parallel architectures for data-intensive scientific applications.",
-        tags: ["MPI", "OpenMP", "GPU Acceleration", "Cluster Computing"],
+        tags: ["MPI", "OpenMP", "GPU Acceleration"],
         icon:
             <div className='icon-box'
                 style={{
@@ -176,7 +201,7 @@ const researchData = [
     {
         title: "Natural Language Processing (NLP)",
         desc: "Advancing techniques for understanding and generating human language.",
-        tags: ["NLP", "DL", "GPU Acceleration", "Cluster Computing"],
+        tags: ["Named Entity Recognition (NER)", "Sentiment Analysis", "Language Modeling"],
         icon:
             <div className='icon-box'
                 style={{
