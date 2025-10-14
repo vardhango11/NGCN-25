@@ -99,9 +99,34 @@ const researchData = [
             </div>,
     },
     {
+        title: "Indian Knowledge Systems",
+        desc: "The Indian Knowledge System (IKS) is a comprehensive framework encompassing India's ancient and traditional knowledge in fields like philosophy, mathematics, astronomy, medicine, arts, engineering, and governance",
+        tags: ["Artificial Intelligence (AI)", "Algorithms and data structures", "Cryptography", "Ethical frameworks"],
+        icon:
+            <div className='icon-box'
+                style={{
+                    backgroundColor: "#f3662eff",
+                    height: "60px",
+                    width: "60px",
+                    borderRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}
+            >
+                <LuNetwork
+                    className='card-icon'
+                    style={{
+                        fontSize: "35px",
+                        color: "white"
+                    }}
+                />
+            </div>,
+    },
+    {
         title: "Networking",
         desc: "Protecting data, networks, and systems through cutting-edge security techniques and frameworks.",
-        tags: ["Network Security", "Cryptography", "Threat Intelligence", "Zero Trust"],
+        tags: ["Network Security", "Cryptography", "Threat Intelligence", "Zero Trust","5G/6G"],
         icon:
             <div className='icon-box'
                 style={{

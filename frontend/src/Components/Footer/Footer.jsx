@@ -88,7 +88,8 @@ const Footer = () => {
               href="https://www.linkedin.com/company/next-gen-computing-and-networking-ngcn/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
-            >
+            ><img src="/linkedin.png" alt="LinkedIn logo"
+       style="width:20px;height:20px;vertical-align:middle;margin-right:8px;"></img>
               LinkedIn
             </a>
           </li>
@@ -97,7 +98,8 @@ const Footer = () => {
               href="https://x.com/NGCN_Group"
               target="_blank"
               rel="noopener noreferrer"
-            >
+            ><img src="/x.png" alt="x logo"
+       style="width:20px;height:20px;vertical-align:middle;margin-right:8px;"></img>
               Twitter
             </a>
           </li>
@@ -106,7 +108,8 @@ const Footer = () => {
               href="https://www.instagram.com/ngcngroup"
               target="_blank"
               rel="noopener noreferrer"
-            >
+            ><img src="/insta.png" alt="Insta logo"
+       style="width:20px;height:20px;vertical-align:middle;margin-right:8px;"></img>
               Instagram
             </a>
           </li>
