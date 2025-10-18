@@ -29,6 +29,34 @@ function Home() {
                     <Link to='/about'><button><p>Learn more</p></button></Link>
                 </div>
             </div>
+            <div className={styles.internshipSection}>
+                <div className={styles.internshipHeader}>
+                    <h2>Internship Opportunities</h2>
+                    <p>Join our research team and contribute to cutting-edge projects</p>
+                </div>
+                <div className={styles.internshipCards}>
+                    <div className={styles.internshipCard}>
+                        <div className={styles.cardContent}>
+                            <h3>Year-Long Open Internship</h3>
+                            <p>Open for interns all year round! Interested candidates can send their resumes to <strong>ngcngroup@gmail.com</strong>. Internship opportunities are available in our research areas including AI, networking, and computing.</p>
+                            <p>Gain valuable research experience, work with cutting-edge technologies, and collaborate with our expert team on innovative projects.</p> Looking Forward!
+                        </div>
+                        <div className={styles.cardButton}>
+                            <a href="../../public/openinterns.png" target="_blank" rel="noopener noreferrer"><button><p>View Details</p></button></a>
+                        </div>
+                    </div>
+                    <div className={styles.internshipCard}>
+                        <div className={styles.cardContent}>
+                            <h3>Paid Internship Programs</h3>
+                            <p>We offer <strong>paid internships</strong> on selected projects. These roles allow students and professionals to contribute directly to our ongoing initiatives while gaining hands-on research and development experience.</p>
+                            <p>Work on real-world problems, receive mentorship from industry experts, and build your professional portfolio.</p> Please contact for more details.
+                        </div>
+                        <div className={styles.cardButton}>
+                            <Link to='/contact'><button><p>Coming Soon</p></button></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className={styles.block2}>
                 <div>
                     <h2>Top Blogs</h2>
