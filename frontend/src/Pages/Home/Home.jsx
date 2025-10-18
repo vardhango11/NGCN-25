@@ -42,7 +42,7 @@ function Home() {
                             <p>Gain valuable research experience, work with cutting-edge technologies, and collaborate with our expert team on innovative projects.</p> Looking Forward!
                         </div>
                         <div className={styles.cardButton}>
-                            <a href="/openinterns.png" target="_blank" rel="noopener noreferrer"><button><p>View Details</p></button></a>
+                            <a href="/Images/openinterns.png" target="_blank" rel="noopener noreferrer"><button><p>View Details</p></button></a>
                         </div>
                     </div>
                     <div className={styles.internshipCard}>
