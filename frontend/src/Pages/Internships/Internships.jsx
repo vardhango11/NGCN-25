@@ -35,7 +35,7 @@ function Internships() {
                         </p>
                         <div className={styles.cardButton}>
                             <a href="./Images/internship_1.png" target="_blank" rel="noopener noreferrer">
-                                <button><p>View Details</p></button>
+                                <button><p>View Internship Details</p></button>
                             </a>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ function Internships() {
                         </p>
                         <div className={styles.cardButton}>
                             <a href="./Images/internship_3.png" target="_blank" rel="noopener noreferrer">
-                                <button><p>View Fake News Detection Internship</p></button>
+                                <button><p>View Fake News Internship</p></button>
                             </a>
                             <a href="./Images/internship_2.png" target="_blank" rel="noopener noreferrer">
                                 <button><p>View Nyāya-Śāstra Internship</p></button>
