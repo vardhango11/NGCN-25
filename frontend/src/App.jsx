@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Footer from './Components/Footer/Footer.jsx';
 
@@ -12,12 +14,22 @@ import People from './Pages/People/People.jsx';
 import Publications from './Pages/Publications/Publications.jsx';
 import Research from './Pages/Research/Research.jsx';
 import Founder from './Pages/Founder/Founder.jsx';
+import Internships from './Pages/Internships/Internships.jsx';
 
 import './App.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,6 +41,7 @@ function App() {
         <Route path="/people" element={<People />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="/research" element={<Research />} />
+        <Route path="/internships" element={<Internships />} />
         <Route path="/kesdesikan" element={<Founder />} />   
         <Route path="*" element={<Navigate to="/" replace />} /> 
       </Routes>
