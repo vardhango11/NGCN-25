@@ -53,9 +53,9 @@ function Home() {
 
                     <div className={styles.internshipCard}>
                         <div className={styles.cardContent}>
-                            <h3>Paid Internship Programs</h3>
+                            <h3>Funded Internship Programs</h3>
                             <p>
-                                We offer <strong>paid internships</strong> on selected projects, allowing students and
+                                We offer <strong>funded internships</strong> on selected projects, allowing students and
                                 professionals to contribute directly to our initiatives while gaining hands-on
                                 experience.
                             </p>

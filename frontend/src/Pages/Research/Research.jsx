@@ -148,30 +148,30 @@ const researchData = [
             </div>,
     },
     {
-    title: "Indian Knowledge Systems",
-    desc: "Study and integration of traditional Indian knowledge, including philosophy, mathematics, linguistics, medicine, and astronomy, into modern research and technology.",
-    tags: ["ASR for Regional Languages", "Advanced Music Systems", "Ancient Mathematics"],
-    iconType: "reactIcon",
-    icon:
-        <div className='icon-box'
-            style={{
-                backgroundColor: "#f3662eff",
-                height: "60px",
-                width: "60px",
-                borderRadius: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-            }}
-        >
-            <LuBook
-                className='card-icon'
+        title: "Indian Knowledge Systems",
+        desc: "Study and integration of traditional Indian knowledge, including philosophy, mathematics, linguistics, medicine, and astronomy, into modern research and technology.",
+        tags: ["ASR for Regional Languages", "Advanced Music Systems", "Ancient Mathematics"],
+        iconType: "reactIcon",
+        icon:
+            <div className='icon-box'
                 style={{
-                    fontSize: "35px",
-                    color: "white"
+                    backgroundColor: "#f3662eff",
+                    height: "60px",
+                    width: "60px",
+                    borderRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
                 }}
-            />
-        </div>,
+            >
+                <LuBook
+                    className='card-icon'
+                    style={{
+                        fontSize: "35px",
+                        color: "white"
+                    }}
+                />
+            </div>,
     },
     {
         title: "Quantum Computing",
@@ -198,6 +198,58 @@ const researchData = [
                 />
             </div>,
     },
+    {
+        title: "Game Theory & Matching Theory",
+        desc: "Analyzing strategic decision-making and designing stable, optimal matching systems using mathematical and algorithmic techniques.",
+        tags: ["Game Theory", "Matching Theory", "Optimization"],
+        icon:
+            <div className='icon-box'
+                style={{
+                    backgroundColor: "#f3662eff",
+                    height: "60px",
+                    width: "60px",
+                    borderRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}
+            >
+                <LuNetwork
+                    className='card-icon'
+                    style={{
+                        fontSize: "35px",
+                        color: "white"
+                    }}
+                />
+            </div>,
+    },
+    {
+        title: "Cellular Networks",
+        desc: "Researching next-generation cellular technologies to improve speed, latency, and large-scale connectivity.",
+        tags: ["4G", "5G", "6G", "Wireless Systems"],
+        icon:
+            <div className='icon-box'
+                style={{
+                    backgroundColor: "#f3662eff",
+                    height: "60px",
+                    width: "60px",
+                    borderRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}
+            >
+                <CiWifiOn
+                    className='card-icon'
+                    style={{
+                        fontSize: "35px",
+                        color: "white"
+                    }}
+                />
+            </div>,
+    },
+
+
     {
         title: "Natural Language Processing (NLP)",
         desc: "Advancing techniques for understanding and generating human language.",

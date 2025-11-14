@@ -21,21 +21,24 @@ function Internships() {
                     <div className={styles.content}>
                         <h2>Self-Funded Internships</h2>
                         <p>
-                            The <strong>Next Gen Computing and Networking (NGCN)</strong> research group at IIITDM Kurnool
+                            The <strong>Next Gen Computing and Networking (NGCN)</strong> research group currently at IIITDM Kurnool
                             invites applications for a <strong>Research Internship</strong> open throughout the year.
-                            Interns can work in AI, Networking, and Computing under the guidance of
-                            <strong> Dr. K. E. Srinivasa Desikan</strong>.
+                            Interns can work in AI, ML, Indian Knowledge Systems, Networking, and Computing for more reseach domains exotic list can be found in reseach page link <a href="./Research">here</a>under the guidance of
+                            <strong> Dr. K. E. Srinivasa Desikan</strong>. 
                         </p>
                         <p>
                             Duration options: <strong>1 / 3 / 6 / 12 months</strong>. Limited seats available.
                             Internship certificates will be awarded upon completion.
                         </p>
                         <p>
-                            Eligibility: 3rd & 4th year B.Tech students with CGPA ≥ 8.5 (relaxed for exceptional candidates).
+                            Eligibility: 2nd, 3rd & 4th year B.Tech students with CGPA ≥ 8.5 (relaxed for CFTI students and exceptional candidates).
                         </p>
                         <div className={styles.cardButton}>
                             <a href="./Images/internship_1.png" target="_blank" rel="noopener noreferrer">
                                 <button><p>View Internship Details</p></button>
+                            </a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" target="_blank" rel="noopener noreferrer">
+                                <button><p>Interested Students: Fill this Form</p></button>
                             </a>
                         </div>
                     </div>
@@ -44,9 +47,9 @@ function Internships() {
                 {/* --- Paid Internship Section --- */}
                 <section className={styles.sectionAlt}>
                     <div className={styles.content}>
-                        <h2>Paid Internship Programs</h2>
+                        <h2>Funded Internship Programs</h2>
                         <p>
-                            These paid research internships offer stipends up to <strong>₹10,000 per month</strong> and
+                            These funded research internships offer stipends up to <strong>₹10,000 per month</strong> and
                             provide opportunities to contribute to advanced interdisciplinary projects.
                         </p>
                         <p>
@@ -57,10 +60,10 @@ function Internships() {
                         <p>
                             <strong>2. Nyāya-Śāstra Internship:</strong> Designed for Computer Science Engineers to apply
                             Nyāya principles to computing logic. Duration – 3 months (Nov 2025 – Feb 2026).
-                        </p>
+                        </p>    
                         <p>
                             Both programs are guided by <strong>Dr. K. E. Srinivasa Desikan</strong> and open to scholars
-                            and engineers with CGPA ≥ 8.5.
+                            and engineers with CGPA ≥ 8.5 (relaxed for CFTI students and exceptional candidates and Sanskrit scholars).
                         </p>
                         <div className={styles.cardButton}>
                             <a href="./Images/internship_3.png" target="_blank" rel="noopener noreferrer">
@@ -68,6 +71,9 @@ function Internships() {
                             </a>
                             <a href="./Images/internship_2.png" target="_blank" rel="noopener noreferrer">
                                 <button><p>View Nyāya-Śāstra Internship</p></button>
+                            </a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" target="_blank" rel="noopener noreferrer">
+                                <button><p>Interested Students: Fill this Form</p></button>
                             </a>
                         </div>
                     </div>
