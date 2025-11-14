@@ -1,6 +1,14 @@
- [
+[
   {
     "id": 1,
+    "title": "D2BFT: A Dual Byzantine Fault Tolerance Approach for Multi-Agent Drone Surveillance with Deep Reinforcement Learning",
+    "authors": "Nanapu Viswesh & Banavathu Gopi, K. E. Srinivasa Desikan",
+    "conference": "Computer Networks (ComNet) Q1 Journal",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.comnet.2025.111750"
+  },
+  {
+    "id": 2,
     "title": "Hydro-Net: Integrating AI and Satellite Imagery for Precision Canal Building",
     "authors": "Shivamani Gangarapu & Gollangi Sai Surya Teja, K. E. Srinivasa Desikan",
     "conference": "CISIS 2025",
@@ -8,7 +16,7 @@
     "doi": "https://link.springer.com/chapter/10.1007/978-3-031-96099-4_7"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "PLAN SMART: A Tourism Plan with Efficient Minimal Cost",
     "authors": "Sravan Kumar Jalapati & Yasasvi Jayavanth Kandula, K. E. Srinivasa Desikan",
     "conference": "CISIS 2025",
@@ -16,7 +24,7 @@
     "doi": "https://link.springer.com/chapter/10.1007/978-3-031-96096-3_8"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Mini Q-Learning for Sparsely Connected Fog Nodes",
     "authors": "Sravan Kumar Jalapati, K. E. Srinivasa Desikan",
     "conference": "CISIS 2025",

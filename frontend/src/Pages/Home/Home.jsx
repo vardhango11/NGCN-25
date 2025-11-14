@@ -40,8 +40,7 @@ function Home() {
                         <div className={styles.cardContent}>
                             <h3>Self-Funded Internships</h3>
                             <p>
-                                Open throughout the year! Interested candidates can send their resumes to
-                                <strong> ngcngroup@gmail.com</strong>. Internship opportunities are available in AI,
+                                Open throughout the year! Interested candidates can fill out the forms present in Internships page. Internship opportunities are available in AI,
                                 networking, and computing.
                             </p>
                             <p>
