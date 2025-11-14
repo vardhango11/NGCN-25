@@ -1,4 +1,5 @@
 import styles from "./Internships.module.css";
+import { FiExternalLink } from "react-icons/fi";
 import "../About/About.css";
 
 function Internships() {
@@ -15,7 +16,7 @@ function Internships() {
                 </div>
             </div>
 
-<div className={styles.container}>
+            <div className={styles.container}>
                 {/* --- Unpaid Internship Section --- */}
                 <section className={styles.section}>
                     <div className={styles.content}>
@@ -23,8 +24,11 @@ function Internships() {
                         <p>
                             The <strong>Next Gen Computing and Networking (NGCN)</strong> research group currently at IIITDM Kurnool
                             invites applications for a <strong>Research Internship</strong> open throughout the year.
-                            Interns can work in AI, ML, Indian Knowledge Systems, Networking, and Computing for more reseach domains exotic list can be found in reseach page link <a href="./Research">here</a>under the guidance of
-                            <strong> Dr. K. E. Srinivasa Desikan</strong>. 
+                            Interns can work in AI, ML, Indian Knowledge Systems, Networking, and Computing for more reseach domains exotic list can be found in  <a href="./Research" className="research-page-link">
+                                <strong>Research Page </strong>
+                                <FiExternalLink className="research-page-icon" />
+                            </a> and students will be working on any of the research domain under the guidance of
+                            <strong> Dr. K. E. Srinivasa Desikan</strong>.
                         </p>
                         <p>
                             Duration options: <strong>1 / 3 / 6 / 12 months</strong>. Limited seats available.
@@ -60,7 +64,7 @@ function Internships() {
                         <p>
                             <strong>2. Nyāya-Śāstra Internship:</strong> Designed for Computer Science Engineers to apply
                             Nyāya principles to computing logic. Duration – 3 months (Nov 2025 – Feb 2026).
-                        </p>    
+                        </p>
                         <p>
                             Both programs are guided by <strong>Dr. K. E. Srinivasa Desikan</strong> and open to scholars
                             and engineers with CGPA ≥ 8.5 (relaxed for CFTI students and exceptional candidates and Sanskrit scholars).
