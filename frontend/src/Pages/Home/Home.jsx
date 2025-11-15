@@ -6,13 +6,32 @@ import domain from "../../db/domain.json";
 import homeBlogs from "../../db/homeBlogs.json";
 import HomeImpactCard from "../../Components/HomeImpactCard/HomeImpactCard";
 import HomeBlogCard from "../../Components/HomeBlogCard/HomeBlogCard";
+
 import HomeNewsCard from "../../Components/HomeNewsCard/HomeNewsCard";
 import useRssFeed from "../../hooks/useRssFeed";
+import useMediumFeed from "../../hooks/useMediumFeed";
+import ArticleCard from "../../Components/ArticleCard/ArticleCard";
+import ArticleModal from "../../Components/ArticleModal/ArticleModal";
+
 
 const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
+const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
 
 function Home() {
     const { feeds: news, loading: newsLoading, error: newsError } = useRssFeed(RSS_FEED_URL);
+    const { feeds: articles, loading: articlesLoading, error: articlesError } = useMediumFeed(MEDIUM_FEED_URL);
+    const [modalOpen, setModalOpen] = React.useState(false);
+    const [selectedArticle, setSelectedArticle] = React.useState(null);
+
+    const openModal = (article) => {
+        setSelectedArticle(article);
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
+        setSelectedArticle(null);
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.block1}>
@@ -142,8 +161,39 @@ function Home() {
                                 <p>No news available</p>
                             </div>
                         )}
+
                     </div>
                 </div>
+            </div>
+
+            {/* Latest Articles Section */}
+            <div className={styles.blockArticles}>
+                <div className={styles.articlesContainer}>
+                    <div className={styles.articlesHeader}>
+                        <h2>Latest Articles</h2>
+                    </div>
+                    <div className={styles.articlesCards}>
+                        {articlesLoading ? (
+                            <div className={styles.loadingMessage}><p>Loading articles...</p></div>
+                        ) : articlesError ? (
+                            <div className={styles.errorMessage}><p>Unable to load articles at the moment. Please try again later.</p></div>
+                        ) : articles && articles.length > 0 ? (
+                            articles.map(article => (
+                                <ArticleCard
+                                    key={article.id}
+                                    date={article.date}
+                                    title={article.title}
+                                    description={article.description}
+                                    image={article.image}
+                                    onClick={() => openModal(article)}
+                                />
+                            ))
+                        ) : (
+                            <div className={styles.loadingMessage}><p>No articles available</p></div>
+                        )}
+                    </div>
+                </div>
+                <ArticleModal open={modalOpen} onClose={closeModal} article={selectedArticle} />
             </div>
 
             <div className={styles.block5}>

@@ -1,9 +1,8 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: var(--secondary); */
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -11,15 +10,15 @@
     position: relative;
 }
 
-.container h2{
+.container h2 {
     font-size: 2rem;
     color: var(--primary);
     text-align: center;
 }
 
-.logo{
-    position: relative; /* Ensure it respects the flexbox centering */
-    z-index: 0; /* Place it on top of the overlay */
+.logo {
+    position: relative;
+    z-index: 0;
     max-width: 500px;
     padding: 0px;
     display: flex;
@@ -28,59 +27,57 @@
     margin-top: 4rem;
     margin-bottom: 0.5rem;
 }
-.logo img{
+
+.logo img {
     width: 20rem;
 }
 
-.title h2{
+.title h2 {
     font-size: 2rem;
     color: white;
 }
 
-.titleButton{
+.titleButton {
     margin-bottom: 1rem;
     padding-bottom: 2rem;
 }
 
-.titleButton button{
+.titleButton button {
     background-color: var(--background);
     margin: 0rem;
     border-radius: 5rem;
     border: 0px solid;
-    /* border-color: var(--primary); */
     padding: 0rem;
-
 }
-.titleButton button p{
+
+.titleButton button p {
     color: var(--primary);
     font-size: 0.9rem;
     font-weight: bold;
     padding: 0.75rem;
     margin: 0.25rem 0.75rem;
-
 }
 
-.titleButton button:hover{
+.titleButton button:hover {
     background-color: var(--primary);
     cursor: pointer;
 }
 
-.titleButton button p:hover{
+.titleButton button p:hover {
     color: var(--background);
 }
 
-.block1{
+.block1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centered content vertically */
-    /* background-color: var(--background); */
+    justify-content: center;
     width: 100%;
     height: 100vh;
     padding-top: 0rem;
 }
 
-.block1 h1{
+.block1 h1 {
     margin: 4rem 0rem 1rem 0rem;
     font-size: 3rem;
     color: white;
@@ -453,12 +450,81 @@
     width: 100%;
     height: 100%;
     background-color: #0000004f; 
-    /* background-color: #ffffff26;  */
     z-index: 0; /* Sits on top of the video, but below the content */
     margin: 0px;
     padding: 0px;
 }
 
+/* Latest Articles Section */
+.blockArticles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 3rem 2rem 2rem 2rem;
+    background: linear-gradient(to right, var(--background), #fff 60%);
+}
+
+.articlesContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articlesHeader {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.articlesHeader h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.articlesCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 750px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.articlesCards::-webkit-scrollbar {
+    width: 12px;
+}
+
+.articlesCards::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.articlesCards::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.articlesCards::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+.articlesCards {
+    scrollbar-color: var(--primary) rgba(0, 0, 0, 0.05);
+    scrollbar-width: thin;
+}
 
 @media screen and (max-width: 1100px) {
     .block1{
