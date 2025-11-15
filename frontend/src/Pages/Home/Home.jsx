@@ -1,18 +1,18 @@
 import styles from "./Home.module.css";
 import { Link } from 'react-router-dom';
-import { Tweet } from 'react-tweet';
 import React, { useState, useEffect } from 'react';
 import impact from "../../db/impact.json";
 import domain from "../../db/domain.json";
 import homeBlogs from "../../db/homeBlogs.json";
-import news from "../../db/news.json";
-import tweets from "../../db/tweets.json";
 import HomeImpactCard from "../../Components/HomeImpactCard/HomeImpactCard";
 import HomeBlogCard from "../../Components/HomeBlogCard/HomeBlogCard";
 import HomeNewsCard from "../../Components/HomeNewsCard/HomeNewsCard";
+import useRssFeed from "../../hooks/useRssFeed";
 
+const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
 
 function Home() {
+    const { feeds: news, loading: newsLoading, error: newsError } = useRssFeed(RSS_FEED_URL);
     return (
         <div className={styles.container}>
             <div className={styles.block1}>
@@ -117,26 +117,31 @@ function Home() {
                         <h2>Latest News</h2>
                     </div>
                     <div className={styles.newsCards}>
-                        {news.map(card => (
-                            <HomeNewsCard
-                                key={card.id}
-                                date={card.date}
-                                title={card.title}
-                                description={card.description}
-                                tag={card.tag}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <div className={styles.tweets}>
-
-                    <h2>Latest Updates</h2>
-                    <div className={styles.tweetsContainer}>
-                        {tweets.map(card => (
-                            <div key={card.id} className={styles.tweetCard} data-theme="light">
-                                <Tweet id={card.tweetId} />
+                        {newsLoading ? (
+                            <div className={styles.loadingMessage}>
+                                <p>Loading latest news...</p>
                             </div>
-                        ))}
+                        ) : newsError ? (
+                            <div className={styles.errorMessage}>
+                                <p>Unable to load news at the moment. Please try again later.</p>
+                            </div>
+                        ) : news && news.length > 0 ? (
+                            news.map(card => (
+                                <HomeNewsCard
+                                    key={card.id}
+                                    date={card.date}
+                                    title={card.title}
+                                    description={card.description}
+                                    tag={card.tag}
+                                    image={card.image}
+                                    link={card.link}
+                                />
+                            ))
+                        ) : (
+                            <div className={styles.loadingMessage}>
+                                <p>No news available</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -136,35 +136,79 @@
 
 .block4 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0px;
-    padding: 0rem;
+    padding: 3rem 2rem;
     width: 100%;
-    /* background-color: var(--secondary); */
     background-image: linear-gradient(to left, var(--accent), var(--primary));
+    min-height: auto;
 }
 
-.block4 h2{
-    margin: 2rem 0rem 0rem 0rem;
-    padding-left: 0px;
-    text-align: left;
+.block4 h2 {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    text-align: center;
     color: var(--background);
+    font-size: 2rem;
+    width: 100%;
 }
 
-
-.block4 .news{
-    width: 80%;
-    margin: 2rem;
+.block4 .news {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    text-align: center;
 }
 
-
-.block4 .newsCards{
-    margin-left: 4rem;
+.block4 .news h2 {
+    margin: 0;
+    text-align: center;
 }
 
-.newsContainer{
-    width: 50%;
+.block4 .newsCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1600px;
+    max-height: 750px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom scrollbar styling */
+.block4 .newsCards::-webkit-scrollbar {
+    width: 12px;
+}
+
+.block4 .newsCards::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.block4 .newsCards::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.block4 .newsCards::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Firefox scrollbar */
+.block4 .newsCards {
+    scrollbar-color: var(--primary) rgba(0, 0, 0, 0.05);
+    scrollbar-width: thin;
+}
+
+.newsContainer {
+    width: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -487,4 +531,24 @@
     .internshipHeader p {
         font-size: 1rem;
     }
+}
+
+/* Loading and Error Messages */
+.loadingMessage,
+.errorMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    color: var(--background);
+    font-size: 1rem;
+}
+
+.loadingMessage p,
+.errorMessage p {
+    margin: 0;
+    color: var(--background);
+    font-style: italic;
 }
