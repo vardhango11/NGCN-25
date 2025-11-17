@@ -38,7 +38,7 @@ function Internships() {
                             Eligibility: 2nd, 3rd & 4th year B.Tech students with CGPA ≥ 8.5 (relaxed for CFTI students and exceptional candidates).
                         </p>
                         <div className={styles.cardButton}>
-                            <a href="./Images/internship_1.png" target="_blank" rel="noopener noreferrer">
+                            <a href="./Images/open_internship.png" target="_blank" rel="noopener noreferrer">
                                 <button><p>View Internship Details</p></button>
                             </a>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" target="_blank" rel="noopener noreferrer">
@@ -70,10 +70,10 @@ function Internships() {
                             and engineers with CGPA ≥ 8.5 (relaxed for CFTI students and exceptional candidates and Sanskrit scholars).
                         </p>
                         <div className={styles.cardButton}>
-                            <a href="./Images/internship_3.png" target="_blank" rel="noopener noreferrer">
+                            <a href="./Images/fake_news_internship.png" target="_blank" rel="noopener noreferrer">
                                 <button><p>View Fake News Internship</p></button>
                             </a>
-                            <a href="./Images/internship_2.png" target="_blank" rel="noopener noreferrer">
+                            <a href="./Images/iks_internship.png" target="_blank" rel="noopener noreferrer">
                                 <button><p>View Nyāya-Śāstra Internship</p></button>
                             </a>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" target="_blank" rel="noopener noreferrer">
