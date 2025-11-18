@@ -1,18 +1,14 @@
 import styles from "./Home.module.css";
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import impact from "../../db/impact.json";
 import domain from "../../db/domain.json";
 import homeBlogs from "../../db/homeBlogs.json";
 import HomeImpactCard from "../../Components/HomeImpactCard/HomeImpactCard";
 import HomeBlogCard from "../../Components/HomeBlogCard/HomeBlogCard";
-
 import HomeNewsCard from "../../Components/HomeNewsCard/HomeNewsCard";
 import useRssFeed from "../../hooks/useRssFeed";
 import useMediumFeed from "../../hooks/useMediumFeed";
-import ArticleCard from "../../Components/ArticleCard/ArticleCard";
-import ArticleModal from "../../Components/ArticleModal/ArticleModal";
-
 
 const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
@@ -20,17 +16,42 @@ const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
 function Home() {
     const { feeds: news, loading: newsLoading, error: newsError } = useRssFeed(RSS_FEED_URL);
     const { feeds: articles, loading: articlesLoading, error: articlesError } = useMediumFeed(MEDIUM_FEED_URL);
-    const [modalOpen, setModalOpen] = React.useState(false);
-    const [selectedArticle, setSelectedArticle] = React.useState(null);
+    const newsContainerRef = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
 
-    const openModal = (article) => {
-        setSelectedArticle(article);
-        setModalOpen(true);
-    };
-    const closeModal = () => {
-        setModalOpen(false);
-        setSelectedArticle(null);
-    };
+    // Auto-scroll effect for news
+    useEffect(() => {
+        const container = newsContainerRef.current;
+        if (!container || newsLoading || newsError || !news || news.length === 0) return;
+
+        let animationFrameId;
+        let scrollPosition = 0;
+        const scrollSpeed = 0.5; // Adjust speed as needed
+
+        const autoScroll = () => {
+            if (!isPaused && container) {
+                scrollPosition += scrollSpeed;
+                
+                // Reset scroll position when reaching the end
+                if (scrollPosition >= container.scrollHeight - container.clientHeight) {
+                    scrollPosition = 0;
+                }
+                
+                container.scrollTop = scrollPosition;
+                animationFrameId = requestAnimationFrame(autoScroll);
+            }
+        };
+
+        if (!isPaused) {
+            animationFrameId = requestAnimationFrame(autoScroll);
+        }
+
+        return () => {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
+    }, [news, newsLoading, newsError, isPaused]);
 
     return (
         <div className={styles.container}>
@@ -48,6 +69,7 @@ function Home() {
                     <Link to='/about'><button><p>Learn more</p></button></Link>
                 </div>
             </div>
+            
             <div className={styles.internshipSection}>
                 <div className={styles.internshipHeader}>
                     <h2>Internship Opportunities</h2>
@@ -92,9 +114,10 @@ function Home() {
                 </div>
             </div>
 
+            {/* Merged Blogs & Articles Section */}
             <div className={styles.block2}>
                 <div>
-                    <h2>Top Blogs</h2>
+                    <h2>Top Blogs & Articles</h2>
                 </div>
                 <div className={styles.blogCards}>
                     {homeBlogs.map(card => (
@@ -106,6 +129,21 @@ function Home() {
                             link={card.link}
                         />
                     ))}
+                    {articlesLoading ? (
+                        <div className={styles.loadingCard}>
+                            <p>Loading articles...</p>
+                        </div>
+                    ) : articlesError ? null : articles && articles.length > 0 ? (
+                        articles.slice(0, 3).map(article => (
+                            <HomeBlogCard
+                                key={`article-${article.id}`}
+                                image={article.image || "default-article.jpg"}
+                                title={article.title}
+                                description={article.description}
+                                link={article.link}
+                            />
+                        ))
+                    ) : null}
                 </div>
             </div>
 
@@ -114,28 +152,31 @@ function Home() {
                 <div>
                     <div className={styles.impactCards}>
                         {impact.map(card => (
-                            <Link to={card.link} style={{ textDecoration: 'none' }}>
+                            <Link to={card.link} style={{ textDecoration: 'none' }} key={card.id}>
                                 <HomeImpactCard
-                                    key={card.id}
                                     image={card.image}
                                     title={card.title}
                                     description={card.description}
                                     tag={card.tag}
                                 />
                             </Link>
-
-
                         ))}
                     </div>
                 </div>
             </div>
 
+            {/* Auto-scrolling News Section */}
             <div className={styles.block4}>
                 <div className={styles.newsContainer}>
                     <div className={styles.news}>
                         <h2>Latest News</h2>
                     </div>
-                    <div className={styles.newsCards}>
+                    <div 
+                        className={styles.newsCards}
+                        ref={newsContainerRef}
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                    >
                         {newsLoading ? (
                             <div className={styles.loadingMessage}>
                                 <p>Loading latest news...</p>
@@ -161,39 +202,8 @@ function Home() {
                                 <p>No news available</p>
                             </div>
                         )}
-
                     </div>
                 </div>
-            </div>
-
-            {/* Latest Articles Section */}
-            <div className={styles.blockArticles}>
-                <div className={styles.articlesContainer}>
-                    <div className={styles.articlesHeader}>
-                        <h2>Latest Articles</h2>
-                    </div>
-                    <div className={styles.articlesCards}>
-                        {articlesLoading ? (
-                            <div className={styles.loadingMessage}><p>Loading articles...</p></div>
-                        ) : articlesError ? (
-                            <div className={styles.errorMessage}><p>Unable to load articles at the moment. Please try again later.</p></div>
-                        ) : articles && articles.length > 0 ? (
-                            articles.map(article => (
-                                <ArticleCard
-                                    key={article.id}
-                                    date={article.date}
-                                    title={article.title}
-                                    description={article.description}
-                                    image={article.image}
-                                    onClick={() => openModal(article)}
-                                />
-                            ))
-                        ) : (
-                            <div className={styles.loadingMessage}><p>No articles available</p></div>
-                        )}
-                    </div>
-                </div>
-                <ArticleModal open={modalOpen} onClose={closeModal} article={selectedArticle} />
             </div>
 
             <div className={styles.block5}>
@@ -210,7 +220,6 @@ function Home() {
                             image={card.image}
                             title={card.title}
                             description={card.description}
-
                         />
                     ))}
                 </div>
