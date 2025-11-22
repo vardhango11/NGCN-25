@@ -20,8 +20,13 @@ function Internships() {
                         <h2>Self-Funded Research Internships</h2>
                         <p>
                             The Next Gen Computing and Networking (NGCN) Research Group at IIITDM Kurnool invites applications
-                            for year-long rolling research internships in domains including AI, ML, Networking, IKS, and Next-Gen Computing.
+                            for year-round research internships in domains such as AI, Machine Learning, Indian Knowledge Systems,
+                            Networking, and Advanced Computing. The complete list of research focus areas can be found on the
+                            <a href="./Research" className="research-page-link">
+                                {" "}Research Page{" "}<FiExternalLink className="research-page-icon" />
+                            </a>.
                         </p>
+
                         <p>
                             Duration options include 1, 3, 6 and 12 months. Internships are guided by
                             Dr. K. E. Srinivasa Desikan, Assistant Professor, IIITDM Kurnool.
@@ -51,7 +56,11 @@ function Internships() {
                         <p>
                             Fully funded research internships offering stipends up to ₹10,000/month in collaboration with
                             national funding bodies. Interdisciplinary work opportunities under the guidance of faculty at IIITDM Kurnool.
+                            <a href="https://iiitk.ac.in/Project-Recruitments/page" target="_blank" rel="noopener noreferrer" className="research-page-link">
+                                {" "}Official Advertisement{" "}<FiExternalLink className="research-page-icon" />
+                            </a>.
                         </p>
+
                         <p>
                             Applicants must download the official advertisement PDF, fill the required application form,
                             and upload the completed form along with their latest CV merge it as a PDF and upload it in the
