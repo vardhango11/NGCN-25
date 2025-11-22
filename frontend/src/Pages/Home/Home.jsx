@@ -9,6 +9,8 @@ import HomeBlogCard from "../../Components/HomeBlogCard/HomeBlogCard";
 import HomeNewsCard from "../../Components/HomeNewsCard/HomeNewsCard";
 import useRssFeed from "../../hooks/useRssFeed";
 import useMediumFeed from "../../hooks/useMediumFeed";
+import twitterFeed from "../../hooks/twitterFeed.json";
+import mediumFeed from "../../hooks/mediumFeed.json";
 
 const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
@@ -31,12 +33,12 @@ function Home() {
         const autoScroll = () => {
             if (!isPaused && container) {
                 scrollPosition += scrollSpeed;
-                
+
                 // Reset scroll position when reaching the end
                 if (scrollPosition >= container.scrollHeight - container.clientHeight) {
                     scrollPosition = 0;
                 }
-                
+
                 container.scrollTop = scrollPosition;
                 animationFrameId = requestAnimationFrame(autoScroll);
             }
@@ -69,7 +71,7 @@ function Home() {
                     <Link to='/about'><button><p>Learn more</p></button></Link>
                 </div>
             </div>
-            
+
             <div className={styles.internshipSection}>
                 <div className={styles.internshipHeader}>
                     <h2>Internship Opportunities</h2>
@@ -133,7 +135,17 @@ function Home() {
                         <div className={styles.loadingCard}>
                             <p>Loading articles...</p>
                         </div>
-                    ) : articlesError ? null : articles && articles.length > 0 ? (
+                    ) : (articlesError || !articles || articles.length === 0) ? (
+                        mediumFeed.slice(0, 3).map(article => (
+                            <HomeBlogCard
+                                key={`local-article-${article.id}`}
+                                image={article.image || "default-article.jpg"}
+                                title={article.title}
+                                description={article.description}
+                                link={article.link}
+                            />
+                        ))
+                    ) : (
                         articles.slice(0, 3).map(article => (
                             <HomeBlogCard
                                 key={`article-${article.id}`}
@@ -143,7 +155,8 @@ function Home() {
                                 link={article.link}
                             />
                         ))
-                    ) : null}
+                    )}
+
                 </div>
             </div>
 
@@ -171,7 +184,7 @@ function Home() {
                     <div className={styles.news}>
                         <h2>Latest News</h2>
                     </div>
-                    <div 
+                    <div
                         className={styles.newsCards}
                         ref={newsContainerRef}
                         onMouseEnter={() => setIsPaused(true)}
@@ -181,11 +194,19 @@ function Home() {
                             <div className={styles.loadingMessage}>
                                 <p>Loading latest news...</p>
                             </div>
-                        ) : newsError ? (
-                            <div className={styles.errorMessage}>
-                                <p>Unable to load news at the moment. Please try again later.</p>
-                            </div>
-                        ) : news && news.length > 0 ? (
+                        ) : (newsError || !news || news.length === 0) ? (
+                            twitterFeed.map(card => (
+                                <HomeNewsCard
+                                    key={`local-${card.id}`}
+                                    date={card.date}
+                                    title={card.title}
+                                    description={card.description}
+                                    tag={card.tag}
+                                    image={card.image}
+                                    link={card.link}
+                                />
+                            ))
+                        ) : (
                             news.map(card => (
                                 <HomeNewsCard
                                     key={card.id}
@@ -197,11 +218,8 @@ function Home() {
                                     link={card.link}
                                 />
                             ))
-                        ) : (
-                            <div className={styles.loadingMessage}>
-                                <p>No news available</p>
-                            </div>
                         )}
+
                     </div>
                 </div>
             </div>
