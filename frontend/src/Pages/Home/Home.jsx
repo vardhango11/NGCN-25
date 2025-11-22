@@ -151,7 +151,7 @@ function Home() {
                                 key={`article-${article.id}`}
                                 image={article.image || "default-article.jpg"}
                                 title={article.title}
-                                description={article.description}
+                                description=""
                                 link={article.link}
                             />
                         ))
