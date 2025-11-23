@@ -121,6 +121,7 @@ function Home() {
                 <div>
                     <h2>Top Blogs & Articles</h2>
                 </div>
+
                 <div className={styles.blogCards}>
                     {homeBlogs.map(card => (
                         <HomeBlogCard
@@ -131,34 +132,19 @@ function Home() {
                             link={card.link}
                         />
                     ))}
-                    {articlesLoading ? (
-                        <div className={styles.loadingCard}>
-                            <p>Loading articles...</p>
-                        </div>
-                    ) : (articlesError || !articles || articles.length === 0) ? (
-                        mediumFeed.slice(0, 3).map(article => (
-                            <HomeBlogCard
-                                key={`local-article-${article.id}`}
-                                image={article.image || "default-article.jpg"}
-                                title={article.title}
-                                description={article.description}
-                                link={article.link}
-                            />
-                        ))
-                    ) : (
-                        articles.slice(0, 3).map(article => (
-                            <HomeBlogCard
-                                key={`article-${article.id}`}
-                                image={article.image || "default-article.jpg"}
-                                title={article.title}
-                                description=""
-                                link={article.link}
-                            />
-                        ))
-                    )}
 
+                    {mediumFeed.slice(0, 3).map(article => (
+                        <HomeBlogCard
+                            key={`medium-${article.id}`}
+                            image={article.image || "default-article.jpg"}
+                            title={article.title}
+                            description={article.description}
+                            link={article.link}
+                        />
+                    ))}
                 </div>
             </div>
+
 
             <div className={styles.block3}>
                 <div><h2>Our Impact</h2></div>
@@ -179,50 +165,34 @@ function Home() {
             </div>
 
             {/* Auto-scrolling News Section */}
+            {/* Latest News (Using Only Local JSON) */}
             <div className={styles.block4}>
                 <div className={styles.newsContainer}>
                     <div className={styles.news}>
                         <h2>Latest News</h2>
                     </div>
+
                     <div
                         className={styles.newsCards}
                         ref={newsContainerRef}
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                     >
-                        {newsLoading ? (
-                            <div className={styles.loadingMessage}>
-                                <p>Loading latest news...</p>
-                            </div>
-                        ) : (newsError || !news || news.length === 0) ? (
-                            twitterFeed.map(card => (
-                                <HomeNewsCard
-                                    key={`local-${card.id}`}
-                                    date={card.date}
-                                    title={card.title}
-                                    description={card.description}
-                                    tag={card.tag}
-                                    image={card.image}
-                                    link={card.link}
-                                />
-                            ))
-                        ) : (
-                            news.map(card => (
-                                <HomeNewsCard
-                                    key={card.id}
-                                    date={card.date}
-                                    title={card.title}
-                                    description={card.description}
-                                    tag={card.tag}
-                                    image={card.image}
-                                    link={card.link}
-                                />
-                            ))
-                        )}
-
+                        {twitterFeed.map(card => (
+                            <HomeNewsCard
+                                key={card.id}
+                                date={card.date}
+                                title={card.title}
+                                description={card.description}
+                                tag={card.tag}
+                                image={card.image}
+                                link={card.link}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
+
 
             <div className={styles.block5}>
                 <div className={styles.head2}>
