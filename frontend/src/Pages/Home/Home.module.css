@@ -198,6 +198,15 @@
     background: var(--accent);
 }
 
+.newsCards a,
+.newsCards a * {
+    text-decoration: none !important;
+}
+
+.newsCards a:hover,
+.newsCards a:hover * {
+    text-decoration: none !important;
+}
 /* Firefox scrollbar */
 .block4 .newsCards {
     scrollbar-color: var(--primary) rgba(0, 0, 0, 0.05);

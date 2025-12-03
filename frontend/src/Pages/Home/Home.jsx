@@ -9,8 +9,9 @@ import HomeBlogCard from "../../Components/HomeBlogCard/HomeBlogCard";
 import HomeNewsCard from "../../Components/HomeNewsCard/HomeNewsCard";
 import useRssFeed from "../../hooks/useRssFeed";
 import useMediumFeed from "../../hooks/useMediumFeed";
-import twitterFeed from "../../hooks/twitterFeed.json";
+// import twitterFeed from "../../hooks/twitterFeed.json";
 import mediumFeed from "../../hooks/mediumFeed.json";
+import ngcnNewsFeed from "../../hooks/ngcnNewsFeed.json";
 
 const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
@@ -178,15 +179,15 @@ function Home() {
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                     >
-                        {twitterFeed.map(card => (
+                        {ngcnNewsFeed.map((card, index) => (
                             <HomeNewsCard
-                                key={card.id}
-                                date={card.date}
+                                key={index}
+                                date={card.pubDate}
                                 title={card.title}
                                 description={card.description}
-                                tag={card.tag}
                                 image={card.image}
                                 link={card.link}
+                                tag="Medium"
                             />
                         ))}
                     </div>
