@@ -1,0 +1,22 @@
+.medium-blog-list-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .medium-blog-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .medium-blog-list-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.medium-blog-list-item:hover,
+.medium-blog-list-item:focus-within {
+  transform: translateY(-4px);
+  transition: transform .3s ease;
+}

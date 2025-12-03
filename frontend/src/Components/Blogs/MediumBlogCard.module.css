@@ -1,0 +1,95 @@
+:root {
+  --primary: #D5451B;
+  --secondary: #521C0D;
+  --secondarylight:#e76a47;
+  --accent: #FF9B45;
+  --emphasis: #FFC796;
+  --background: #F4E7E1;
+  --text: #000000;
+  --surface: #FFFFFF;
+}
+
+.mediumCardLink {
+  text-decoration: none;
+}
+
+.mediumCard {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: var(--surface);
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.mediumCardLink:hover .mediumCard,
+.mediumCardLink:focus-visible .mediumCard {
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+}
+
+.mediumBadge {
+  background-color: var(--secondarylight);
+  color: var(--surface);
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: .75rem;
+  font-weight: 700;
+  width: max-content;
+  margin-bottom: .5rem;
+}
+
+.mediumCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.mediumCardTitle {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  margin: 0;
+}
+
+.mediumCardExcerpt {
+  color: #4b5563;
+  font-size: 1rem;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMoreBtn {
+  margin-top: .75rem;
+  padding: .5rem 0;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--surface);
+  border-radius: .75rem;
+  font-weight: 700;
+  transition: background-color .3s ease;
+}
+
+.mediumCardLink:hover .readMoreBtn {
+  background-color: var(--secondarylight);
+}
+
+.mediumCardLink,
+.mediumCardLink * {
+  text-decoration: none !important;
+}
+
+.mediumCardTitle {
+  text-decoration: none !important;
+}
+
+.mediumCardLink:hover .mediumCardTitle {
+  text-decoration: none !important;
+}

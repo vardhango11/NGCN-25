@@ -7,6 +7,8 @@ import BlogCard1 from '../../Components/Blogs/BlogCard1.jsx'; // For Featured Ar
 import BlogCard2 from '../../Components/Blogs/BlogCard2.jsx'; // For Latest Articles
 import blogsData from '../../db/blogs.json';
 import featuredBlogsData from '../../db/featured.json';
+import mediumFeed from "../../hooks/mediumFeed.json";
+import MediumBlogList from "../../Components/Blogs/MediumBlogList.jsx";
 
 const Blogs = () => {
   const [search, setSearch] = useState('');
@@ -20,6 +22,11 @@ const Blogs = () => {
     blog.title.toLowerCase().includes(search.toLowerCase()) ||
     blog.description?.toLowerCase().includes(search.toLowerCase()) ||
     blog.category.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const filteredMediumBlogs = mediumFeed.filter((blog) =>
+    blog.title.toLowerCase().includes(search.toLowerCase()) ||
+    blog.description?.toLowerCase().includes(search.toLowerCase())
   );
 
   // Filter latest blogs by search
@@ -42,69 +49,75 @@ const Blogs = () => {
       <div className="header-banner">
         <h1 className="banner-title">Research Blogs</h1>
         <p className="banner-description">
-          Insights, discoveries, and thoughts from our research team on cutting-edge technologies
+          Insights, discoveries, and perspectives from our research team featuring blogs and Medium publications on cutting-edge technologies.
         </p>
 
-        
+
       </div>
-{/* Search Bar */}
-<div className="filters-wrapper">
-<div className="search-bar-wrapper">
-  <div className="search-input-wrapper">
-    <FaSearch className="search-icon" />
-    <input
-      type="text"
-      placeholder="Search blogs..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      className="search-input"
-    />
-  </div>
-</div>
+      {/* Search Bar */}
+      <div className="filters-wrapper">
+        <div className="search-bar-wrapper">
+          <div className="search-input-wrapper">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search blogs..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="search-input"
+            />
+          </div>
+        </div>
 
         {/* Category Filters */}
-<div className="category-filters">
-  <button
-    key="all-topics"
-    onClick={handleClearSearch}
-    className={`category-button ${search === '' ? 'active' : ''}`}
-    type="button"
-  >
-    All Topics
-  </button>
+        <div className="category-filters">
+          <button
+            key="all-topics"
+            onClick={handleClearSearch}
+            className={`category-button ${search === '' ? 'active' : ''}`}
+            type="button"
+          >
+            All Topics
+          </button>
 
-  {uniqueCategories.map((category) => (
-    <button
-      key={category}
-      onClick={() => setSearch(category)}
-      className={`category-button ${search === category ? 'active' : ''}`}
-      type="button"
-    >
-      {category}
-    </button>
-  ))}
+          {uniqueCategories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSearch(category)}
+              className={`category-button ${search === category ? 'active' : ''}`}
+              type="button"
+            >
+              {category}
+            </button>
+          ))}
 
-</div>
-</div>
+        </div>
+      </div>
       {/* Blog List */}
       <div className="blog-list-wrapper">
+        {filteredMediumBlogs.length > 0 && (
+          <section className="featured-articles">
+            <h1>Latest Thinking on Medium</h1>
+            <MediumBlogList blogs={filteredMediumBlogs} />
+          </section>
+        )}
         {(filteredFeaturedBlogs.length + filteredLatestBlogs.length) > 0 ? (
           <>
             {/* Featured Articles Section */}
-{filteredFeaturedBlogs.length > 0 && (
-  <section className="featured-articles">
-    <h1>Featured Articles</h1>
-    <BlogList1 blogs={filteredFeaturedBlogs} />
-  </section>
-)}
+            {/* {filteredFeaturedBlogs.length > 0 && (
+              <section className="featured-articles">
+                <h1>Featured Articles</h1>
+                <BlogList1 blogs={filteredFeaturedBlogs} />
+              </section>
+            )} */}
 
-{/* Latest Articles Section */}
-{filteredLatestBlogs.length > 0 && (
-  <section className="latest-articles">
-    <h1>Latest Articles</h1>
-    <BlogList2 blogs={filteredLatestBlogs} />
-  </section>
-)}
+            {/* Latest Articles Section */}
+            {filteredLatestBlogs.length > 0 && (
+              <section className="latest-articles">
+                <h1>Research Articles</h1>
+                <BlogList2 blogs={filteredLatestBlogs} />
+              </section>
+            )}
 
           </>
         ) : (
