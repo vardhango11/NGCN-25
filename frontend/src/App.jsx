@@ -11,10 +11,12 @@ import About from './Pages/About/About.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import Gallery from './Pages/Gallery/Gallery.jsx';
 import People from './Pages/People/People.jsx';
+import Resources from './Pages/Socials/Resources.jsx';
 import Publications from './Pages/Publications/Publications.jsx';
 import Research from './Pages/Research/Research.jsx';
 import Founder from './Pages/Founder/Founder.jsx';
 import Internships from './Pages/Internships/Internships.jsx';
+import News from './Pages/News/News.jsx';
 
 import './App.css';
 
@@ -39,10 +41,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/people" element={<People />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="/research" element={<Research />} />
         <Route path="/internships" element={<Internships />} />
-        <Route path="/kesdesikan" element={<Founder />} />   
+        <Route path="/kesdesikan" element={<Founder />} />
+        <Route path="/news" element={<News />} />   
         <Route path="*" element={<Navigate to="/" replace />} /> 
       </Routes>
       <Footer />
