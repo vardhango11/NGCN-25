@@ -7,6 +7,8 @@ import BlogCard1 from '../../Components/Blogs/BlogCard1.jsx'; // For Featured Ar
 import BlogCard2 from '../../Components/Blogs/BlogCard2.jsx'; // For Latest Articles
 import blogsData from '../../db/blogs.json';
 import featuredBlogsData from '../../db/featured.json';
+import mediumFeed from "../../hooks/mediumFeed.json";
+import MediumBlogList from "../../Components/Blogs/MediumBlogList.jsx";
 
 const Blogs = () => {
   const [search, setSearch] = useState('');
@@ -20,6 +22,11 @@ const Blogs = () => {
     blog.title.toLowerCase().includes(search.toLowerCase()) ||
     blog.description?.toLowerCase().includes(search.toLowerCase()) ||
     blog.category.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const filteredMediumBlogs = mediumFeed.filter((blog) =>
+    blog.title.toLowerCase().includes(search.toLowerCase()) ||
+    blog.description?.toLowerCase().includes(search.toLowerCase())
   );
 
   // Filter latest blogs by search
@@ -88,9 +95,12 @@ const Blogs = () => {
       </div>
       {/* Blog List */}
       <div className="blog-list-wrapper">
-        <section className="notion-embed-section">
-          <iframe src="https://wide-mochi-c5e.notion.site/ebd//2d442403455080329e1eeca49d341eee" width="100%" height="400" frameborder="0" allowfullscreen style={{ border: 'none', borderRadius: '8px' }}></iframe>
-        </section>
+        {filteredMediumBlogs.length > 0 && (
+          <section className="featured-articles">
+            <h1>Latest Thinking on Medium</h1>
+            <MediumBlogList blogs={filteredMediumBlogs} />
+          </section>
+        )}
         {(filteredFeaturedBlogs.length + filteredLatestBlogs.length) > 0 ? (
           <>
             {/* Featured Articles Section */}

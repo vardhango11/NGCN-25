@@ -11,12 +11,50 @@ import useRssFeed from "../../hooks/useRssFeed";
 import useMediumFeed from "../../hooks/useMediumFeed";
 // import twitterFeed from "../../hooks/twitterFeed.json";
 import mediumFeed from "../../hooks/mediumFeed.json";
+import ngcnNewsFeed from "../../hooks/ngcnNewsFeed.json";
 
 const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
 
 function Home() {
+    const { feeds: news, loading: newsLoading, error: newsError } = useRssFeed(RSS_FEED_URL);
     const { feeds: articles, loading: articlesLoading, error: articlesError } = useMediumFeed(MEDIUM_FEED_URL);
+    const newsContainerRef = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    // Auto-scroll effect for news
+    useEffect(() => {
+        const container = newsContainerRef.current;
+        if (!container || newsLoading || newsError || !news || news.length === 0) return;
+
+        let animationFrameId;
+        let scrollPosition = 0;
+        const scrollSpeed = 0.5; // Adjust speed as needed
+
+        const autoScroll = () => {
+            if (!isPaused && container) {
+                scrollPosition += scrollSpeed;
+
+                // Reset scroll position when reaching the end
+                if (scrollPosition >= container.scrollHeight - container.clientHeight) {
+                    scrollPosition = 0;
+                }
+
+                container.scrollTop = scrollPosition;
+                animationFrameId = requestAnimationFrame(autoScroll);
+            }
+        };
+
+        if (!isPaused) {
+            animationFrameId = requestAnimationFrame(autoScroll);
+        }
+
+        return () => {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
+    }, [news, newsLoading, newsError, isPaused]);
 
     return (
         <div className={styles.container}>
@@ -127,20 +165,33 @@ function Home() {
                 </div>
             </div>
 
-            {/* Latest News - Notion Embed */}
+            {/* Auto-scrolling News Section */}
+            {/* Latest News (Using Only Local JSON) */}
             <div className={styles.block4}>
-                <iframe src="https://wide-mochi-c5e.notion.site/ebd//2d442403455080cbbb30d78b18a7d2d3" width="100%" height="400" frameborder="0" allowfullscreen 
-                style={{ border: 'none', borderRadius: '8px' }}></iframe>
-            </div>
+                <div className={styles.newsContainer}>
+                    <div className={styles.news}>
+                        <h2>Latest News</h2>
+                    </div>
 
-            <div className={styles.block4}>
-                <iframe src="https://wide-mochi-c5e.notion.site/ebd//2d442403455080b1a230ec9c0d2271bb" width="100%" height="400" frameborder="0" allowfullscreen 
-                style={{ border: 'none', borderRadius: '8px' }}></iframe>
-            </div>
-
-            <div className={styles.block4}>
-                <iframe src="https://wide-mochi-c5e.notion.site/ebd//2d442403455080329e1eeca49d341eee" width="100%" height="400" frameborder="0" allowfullscreen 
-                style={{ border: 'none', borderRadius: '8px' }}></iframe>
+                    <div
+                        className={styles.newsCards}
+                        ref={newsContainerRef}
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                    >
+                        {ngcnNewsFeed.slice(0, 4).map((card, index) => (
+                            <HomeNewsCard
+                                key={index}
+                                date={card.pubDate}
+                                title={card.title}
+                                description={card.description}
+                                image={card.image}
+                                link={card.link}
+                                tag="Medium"
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
 
 

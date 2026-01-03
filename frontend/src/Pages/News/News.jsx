@@ -1,20 +1,46 @@
-import styles from './News.module.css';
+import styles from "./News.module.css";
+import ngcnNewsFeed from "../../hooks/ngcnNewsFeed.json";
 
 function News() {
-    return (
-        <div className={styles['news-container']}>
-            <div className={styles['iframe-wrapper']}>
-                <iframe
-                    src="https://wide-mochi-c5e.notion.site/ebd//2d442403455080cbbb30d78b18a7d2d3"
-                    width="100%"
-                    height="600"
-                    frameBorder="0"
-                    allowFullScreen
-                    style={{ border: 'none', borderRadius: '8px' }}
-                />
+  return (
+    <div className={styles.container}>
+      <div className={styles.block1}>
+        <h1>News & Updates</h1>
+        <p>Latest announcements, events, and research updates</p>
+      </div>
+
+      <div className={styles.newsGrid}>
+        {ngcnNewsFeed.map((item, index) => (
+          <div className={styles.card} key={index}>
+            
+            {/* Image */}
+            {item.image && (
+              <img
+                src={item.image}
+                alt={item.title}
+                className={styles.cardImage}
+              />
+            )}
+
+            {/* Tag */}
+            <span className={styles.tag}>
+              {item.tag || "NEWS"}
+            </span>
+
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+
+            <div className={styles.meta}>
+              <span>{item.pubDate}</span>
+              <a href={item.link} target="_blank" rel="noreferrer">
+                Read →
+              </a>
             </div>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default News;

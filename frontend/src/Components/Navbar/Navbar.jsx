@@ -22,18 +22,17 @@ function Navbar() {
             <div className={styles.logo}>
                 <Link to="/"><button><img src="/NGCNLogo.png" alt="Logo" /></button></Link>
             </div>
-            
+
             <div className={navLinksClasses}>
                 <Link to="/"><button><p>Home</p></button></Link>
-                {/* <Link to="/about"><button><p>About Us</p></button></Link> */}
                 <Link to="/kesdesikan"><button><p>Founder</p></button></Link>
                 <Link to="/people"><button><p>People</p></button></Link>
-                <Link to="/resources"><button><p>Our Videos</p></button></Link>
-                <Link to="/blogs"><button><p>Blogs</p></button></Link>
-                <Link to="/news"><button><p>News</p></button></Link>
                 <Link to="/research"><button><p>Research</p></button></Link>
-                <Link to="/internships"><button><p>Internships</p></button></Link>
                 <Link to="/publications"><button><p>Publications</p></button></Link>
+                <Link to="/blogs"><button><p>Blogs</p></button></Link>
+                <Link to="/resources"><button><p>Videos</p></button></Link>
+                <Link to="/news"><button><p>News</p></button></Link>
+                <Link to="/internships"><button><p>Internships</p></button></Link>
                 <Link to="/gallery"><button><p>Gallery</p></button></Link>
                 <Link to="/contact"><button><p>Contact</p></button></Link>
             </div>

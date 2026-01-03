@@ -143,7 +143,6 @@
     min-height: auto;
 }
 
-
 .block4 h2 {
     margin: 0 0 2rem 0;
     padding: 0;
@@ -170,33 +169,17 @@
     gap: 1.5rem;
     width: 100%;
     max-width: 1600px;
-    max-height: 750px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 
-/* Custom scrollbar styling */
-.block4 .newsCards::-webkit-scrollbar {
-    width: 12px;
-}
+    /* FIX white border / line */
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none;
 
-.block4 .newsCards::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-.block4 .newsCards::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
-    transition: background 0.3s ease;
-}
-
-.block4 .newsCards::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+    overflow: hidden;
 }
 
 .newsCards a,

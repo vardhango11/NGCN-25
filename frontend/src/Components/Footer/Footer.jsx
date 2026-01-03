@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaHome, FaBook, FaFileAlt, FaUsers, FaImages, FaBlog, FaPhone, FaInfoCircle } from "react-icons/fa";
 
 const Footer = () => {
@@ -109,6 +109,12 @@ const Footer = () => {
               Instagram
             </a>
           </li>
+          <li>
+            <FaYoutube style={{ marginRight: "6px" }} />
+            <a href="https://www.youtube.com/@NGCNGroup" target="_blank" rel="noopener noreferrer">
+              YouTube
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -129,7 +135,7 @@ const Footer = () => {
       <div className={styles.copyright}>
         <p>Copyright © 2024 NGCN. All Rights Reserved.</p>
         {/* <div className={styles.legalLinks}> */}
-          {/* <a href="/terms">Terms & Conditions</a>
+        {/* <a href="/terms">Terms & Conditions</a>
           <span>|</span>
           <a href="/privacy">Privacy Policy</a> */}
         {/* </div> */}

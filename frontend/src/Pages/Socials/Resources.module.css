@@ -1,0 +1,200 @@
+.container {
+  width: 100%;
+  background-color: var(--background);
+}
+
+/* Header */
+.header {
+  background-image: linear-gradient(to left, var(--accent), var(--primary));
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  color: var(--background);
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.headerSub {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Coming Soon Card */
+.comingSoon {
+  max-width: 700px;
+  margin: 4rem auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.iconCircle {
+  width: 90px;
+  height: 90px;
+  background: #fee2e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.iconCircle span {
+  font-size: 3rem;
+  color: #dc2626;
+}
+
+.comingSoon h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.comingSoon p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Subscribe Button */
+.subscribeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Video Grid */
+.videoGrid {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.videoCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+.videoCard:hover { text-decoration: none; }
+
+.thumbWrapper {
+  position: relative;
+}
+
+.videoThumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Play Button */
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Duration */
+.duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* Content */
+.cardContent {
+  padding: 1rem;
+}
+
+.newsTag {
+  background: var(--primary);
+  color: var(--background);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.cardContent h3 {
+  font-size: 1.05rem;
+  margin: 0.4rem 0;
+}
+
+.author {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.watchRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.watch {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+}
