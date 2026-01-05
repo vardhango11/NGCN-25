@@ -150,7 +150,7 @@ function Home() {
             {/* NGCN on Medium Section */}
             <div className={styles.block2}>
                 <div>
-                    <h2>NGCN on Medium</h2>
+                    <h2>Top Blogs and Articles</h2>
                 </div>
 
                 <div className={styles.blogCards}>
@@ -173,6 +173,12 @@ function Home() {
                             link={article.link}
                         />
                     ))}
+                </div>
+
+                <div className={styles.readMoreContainer}>
+                    <Link to="/blogs">
+                        <button><p>Read More</p></button>
+                    </Link>
                 </div>
             </div>
 

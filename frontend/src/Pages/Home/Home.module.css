@@ -109,6 +109,35 @@
     flex-wrap: wrap;
 }
 
+.readMoreContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.readMoreContainer button {
+    background-color: var(--primary);
+    border-radius: 5rem;
+    border: none;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.readMoreContainer button:hover {
+    background-color: var(--accent);
+    cursor: pointer;
+}
+
+.readMoreContainer button p {
+    color: var(--background);
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+}
+
 .youtubeSection {
     display: flex;
     flex-direction: column;
@@ -636,6 +665,11 @@
 
     .internshipHeader p {
         font-size: 1rem;
+    }
+
+    .readMoreContainer {
+        justify-content: center;
+        margin-top: 1.5rem;
     }
 }
 
