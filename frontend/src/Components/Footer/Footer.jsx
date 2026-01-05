@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaHome, FaBook, FaFileAlt, FaUsers, FaImages, FaBlog, FaPhone, FaInfoCircle } from "react-icons/fa";
+import { FaHome, FaBook, FaFileAlt, FaUsers, FaImages, FaBlog, FaPhone, FaInfoCircle, FaVideo } from "react-icons/fa";
 
 const Footer = () => {
   // const [email, setEmail] = useState("");
@@ -46,6 +46,12 @@ const Footer = () => {
             <Link to="/people">
               <FaUsers style={{ marginRight: "6px" }} />
               <span>People</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/videos">
+              <FaVideo style={{ marginRight: "6px" }} />
+              <span>Videos</span>
             </Link>
           </li>
           <li>
@@ -120,16 +126,16 @@ const Footer = () => {
 
       <div className={styles.newsletter}>
         <h4>Join Our Newsletter</h4>
-        <p>Get updates on new products and special offers!</p>
-        <div className={styles.newsletterForm}>
-          {/* You can reuse your InputBox and Button components here */}
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className={styles.newsletterInput}
-          />
-          <button className={styles.newsletterButton}>Subscribe</button>
-        </div>
+        <iframe
+          src="https://ngcngroup.substack.com/embed"
+          width="50%"
+          height="320"
+          style={{ 
+            border: "1px solid #EEE", 
+            borderRadius: "8px" 
+          }}
+          title="NGCN Substack Newsletter"
+        ></iframe>
       </div>
 
       <div className={styles.copyright}>
@@ -140,7 +146,7 @@ const Footer = () => {
           <a href="/privacy">Privacy Policy</a> */}
         {/* </div> */}
         <div>
-          <p class="footer-credits">
+          <p className={styles["footer-credits"]}>
             Made with ❤️ by
             <a href="mailto:vishwajeetsingh1567@gmail.com"> Vishwajeet, </a>
             <a href="mailto:shashwatp108@gmail.com">Shashwat, </a>

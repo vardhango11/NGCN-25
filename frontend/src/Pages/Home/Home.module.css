@@ -85,19 +85,20 @@
     margin-top: 1rem;
     padding: 0px;
 }
-.block2{
+.block2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--background);
     width: 100%;
-    padding-bottom: 0rem;
-    margin: 0px;
+    padding: 3rem 2rem;
+    margin: 0;
+    background-image: linear-gradient(to left, var(--accent), var(--primary));
 }
 
-.block2 h2{
-    margin: 2rem 0rem 1rem 0rem; /* Reduced top margin */
+.block2 h2 {
+    margin: 0 0 2rem 0;
+    color: var(--background);
 }
 
 .block2 .blogCards{
@@ -107,6 +108,52 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.youtubeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem 2rem;
+    margin: 0;
+    background-image: linear-gradient(to left, var(--accent), var(--primary));
+}
+
+.youtubeSection h2 {
+    margin: 0 0 2rem 0;
+    color: var(--background);
+    font-size: 2rem;
+}
+
+.youtubeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.youtubeEmbed {
+    position: relative;
+    width: 100%;
+    max-width: 560px; /* Max width of a standard video embed */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.youtubeEmbed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
 
 .block3{
     display: flex;

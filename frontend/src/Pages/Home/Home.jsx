@@ -13,6 +13,7 @@ import useMediumFeed from "../../hooks/useMediumFeed";
 import mediumFeed from "../../hooks/mediumFeed.json";
 import ngcnNewsFeed from "../../hooks/ngcnNewsFeed.json";
 
+
 const RSS_FEED_URL = "https://rss.app/feeds/9tosQeY2S4RLKWcj.xml";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@ngcngroup";
 
@@ -117,54 +118,6 @@ function Home() {
                 </div>
             </div>
 
-            {/* Merged Blogs & Articles Section */}
-            <div className={styles.block2}>
-                <div>
-                    <h2>Top Blogs & Articles</h2>
-                </div>
-
-                <div className={styles.blogCards}>
-                    {homeBlogs.map(card => (
-                        <HomeBlogCard
-                            key={card.id}
-                            image={card.image}
-                            title={card.title}
-                            description={card.description}
-                            link={card.link}
-                        />
-                    ))}
-
-                    {mediumFeed.slice(0, 3).map(article => (
-                        <HomeBlogCard
-                            key={`medium-${article.id}`}
-                            image={article.image || "default-article.jpg"}
-                            title={article.title}
-                            description={article.description}
-                            link={article.link}
-                        />
-                    ))}
-                </div>
-            </div>
-
-
-            <div className={styles.block3}>
-                <div><h2>Our Impact</h2></div>
-                <div>
-                    <div className={styles.impactCards}>
-                        {impact.map(card => (
-                            <Link to={card.link} style={{ textDecoration: 'none' }} key={card.id}>
-                                <HomeImpactCard
-                                    image={card.image}
-                                    title={card.title}
-                                    description={card.description}
-                                    tag={card.tag}
-                                />
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
             {/* Auto-scrolling News Section */}
             {/* Latest News (Using Only Local JSON) */}
             <div className={styles.block4}>
@@ -194,6 +147,55 @@ function Home() {
                 </div>
             </div>
 
+            {/* NGCN on Medium Section */}
+            <div className={styles.block2}>
+                <div>
+                    <h2>NGCN on Medium</h2>
+                </div>
+
+                <div className={styles.blogCards}>
+                    {homeBlogs.map(card => (
+                        <HomeBlogCard
+                            key={card.id}
+                            image={card.image}
+                            title={card.title}
+                            description={card.description}
+                            link={card.link}
+                        />
+                    ))}
+
+                    {mediumFeed.slice(0, 3).map(article => (
+                        <HomeBlogCard
+                            key={`medium-${article.id}`}
+                            image={article.image || "default-article.jpg"}
+                            title={article.title}
+                            description={article.description}
+                            link={article.link}
+                        />
+                    ))}
+                </div>
+            </div>
+
+
+
+            <div className={styles.block3}>
+                <div><h2>Our Impact</h2></div>
+                <div>
+                    <div className={styles.impactCards}>
+                        {impact.map(card => (
+                            <Link to={card.link} style={{ textDecoration: 'none' }} key={card.id}>
+                                <HomeImpactCard
+                                    image={card.image}
+                                    title={card.title}
+                                    description={card.description}
+                                    tag={card.tag}
+                                />
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
 
             <div className={styles.block5}>
                 <div className={styles.head2}>
@@ -213,20 +215,9 @@ function Home() {
                     ))}
                 </div>
             </div>
-
-            <div className={styles.block6}>
-                <div>
-                    <h2>Join Our Research Community</h2>
-                </div>
-                <div>
-                    <p>Collaborate with us on cutting-edge research in computing and networking. Together, we can shape the future of technology.</p>
-                </div>
-                <div className={styles.titleButton}>
-                    <Link to='/contact'><button><p>Get in touch</p></button></Link>
-                </div>
-            </div>
         </div>
     )
 }
+
 
 export default Home;
