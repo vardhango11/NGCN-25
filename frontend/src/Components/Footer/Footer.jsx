@@ -128,7 +128,7 @@ const Footer = () => {
         <h4>Join Our Newsletter</h4>
         <iframe
           src="https://ngcngroup.substack.com/embed"
-          width="50%"
+          width="60%"
           height="320"
           style={{ 
             border: "1px solid #EEE", 

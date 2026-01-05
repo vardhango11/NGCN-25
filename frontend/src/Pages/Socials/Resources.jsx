@@ -1,10 +1,14 @@
 import styles from "./Resources.module.css";
 import youtubeVideos from "../../hooks/youtubeVideos.json";
 import { MdSmartDisplay, MdSubscriptions } from "react-icons/md";
+import useRssFeed from "../../hooks/useRssFeed";
 
+const YOUTUBE_FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA";
 
 function YouTube() {
-  const hasVideos = youtubeVideos.length > 0;
+  const { feeds, loading, error } = useRssFeed(YOUTUBE_FEED_URL);
+  const displayVideos = feeds && feeds.length > 0 ? feeds : youtubeVideos;
+  const hasVideos = displayVideos.length > 0;
 
   return (
     <div className={styles.container}>
@@ -19,7 +23,7 @@ function YouTube() {
 
 
       {/* Content */}
-      {!hasVideos ? (
+      {loading ? ( <div className={styles.loading}>Loading videos...</div> ) : !hasVideos ? (
         <div className={styles.comingSoon}>
           <div className={styles.iconCircle}>
             <MdSmartDisplay size={48} color="#dc2626" />
@@ -43,17 +47,17 @@ function YouTube() {
         </div>
       ) : (
         <div className={styles.videoGrid}>
-          {youtubeVideos.map(video => (
+          {displayVideos.map((video, index) => (
             <a
-              key={video.id}
-              href={video.url}
+              key={video.id || index}
+              href={video.url || video.link}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.videoCard}
             >
               <div className={styles.thumbWrapper}>
                 <img
-                  src={video.thumbnail}
+                  src={video.thumbnail || video.image}
                   alt={video.title}
                   className={styles.videoThumb}
                 />
@@ -62,24 +66,23 @@ function YouTube() {
 
               <div className={styles.cardContent}>
                 <span className={`${styles.tag} ${styles.newsTag}`}>
-                  {video.tag}
+                  {video.tag || "YouTube"}
                 </span>
 
                 <h3>{video.title}</h3>
 
                 <p className={styles.description}>
-                  {video.description}
+                  {video.description || video.contentSnippet}
                 </p>
 
                 <div className={styles.watchRow}>
                   <span className={styles.time}>
-                    {new Date(video.published).toLocaleDateString()}
+                    {new Date(video.published || video.pubDate).toLocaleDateString()}
                   </span>
                   <span className={styles.watch}>Watch</span>
                 </div>
               </div>
             </a>
-
           ))}
         </div>
       )}

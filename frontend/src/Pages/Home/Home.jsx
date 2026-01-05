@@ -176,8 +176,6 @@ function Home() {
                 </div>
             </div>
 
-
-
             <div className={styles.block3}>
                 <div><h2>Our Impact</h2></div>
                 <div>
