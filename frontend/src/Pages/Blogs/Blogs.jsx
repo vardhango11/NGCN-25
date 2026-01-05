@@ -54,50 +54,12 @@ const Blogs = () => {
 
 
       </div>
-      {/* Search Bar */}
-      <div className="filters-wrapper">
-        <div className="search-bar-wrapper">
-          <div className="search-input-wrapper">
-            <FaSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search blogs..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="search-input"
-            />
-          </div>
-        </div>
 
-        {/* Category Filters */}
-        <div className="category-filters">
-          <button
-            key="all-topics"
-            onClick={handleClearSearch}
-            className={`category-button ${search === '' ? 'active' : ''}`}
-            type="button"
-          >
-            All Topics
-          </button>
-
-          {uniqueCategories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSearch(category)}
-              className={`category-button ${search === category ? 'active' : ''}`}
-              type="button"
-            >
-              {category}
-            </button>
-          ))}
-
-        </div>
-      </div>
       {/* Blog List */}
       <div className="blog-list-wrapper">
         {filteredMediumBlogs.length > 0 && (
           <section className="featured-articles">
-            <h1>Latest Thinking on Medium</h1>
+            {/* <h1>Latest Thinking on Medium</h1> */}
             <MediumBlogList blogs={filteredMediumBlogs} />
           </section>
         )}
@@ -111,13 +73,16 @@ const Blogs = () => {
               </section>
             )} */}
 
+
             {/* Latest Articles Section */}
+            {/*
             {filteredLatestBlogs.length > 0 && (
               <section className="latest-articles">
                 <h1>Research Articles</h1>
                 <BlogList2 blogs={filteredLatestBlogs} />
               </section>
             )}
+          */}
 
           </>
         ) : (
