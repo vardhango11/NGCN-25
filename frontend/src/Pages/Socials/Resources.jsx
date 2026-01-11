@@ -68,7 +68,9 @@ function YouTube() {
                 <h3>{video.title}</h3>
 
                 <p className={styles.description}>
-                  {video.description}
+                  {video.description.length > 80
+                    ? video.description.slice(0, 80) + "..."
+                    : video.description}
                 </p>
 
                 <div className={styles.watchRow}>
