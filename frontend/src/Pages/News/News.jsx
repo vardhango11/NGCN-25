@@ -5,8 +5,8 @@ function News() {
   return (
     <div className={styles.container}>
       <div className={styles.block1}>
-        <h1>News & Updates</h1>
-        <p>Latest announcements, events, and research updates</p>
+        <h1>Stay tuned for latest News & Updates</h1>
+        <p>Announcements, events, and research updates</p>
       </div>
 
       <div className={styles.newsGrid}>

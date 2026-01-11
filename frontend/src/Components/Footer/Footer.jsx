@@ -117,7 +117,7 @@ const Footer = () => {
           </li>
           <li>
             <FaYoutube style={{ marginRight: "6px" }} />
-            <a href="https://www.youtube.com/@NGCNGroup" target="_blank" rel="noopener noreferrer">
+            <a href="https://youtube.com/@ngcnresearch" target="_blank" rel="noopener noreferrer">
               YouTube
             </a>
           </li>

@@ -85,104 +85,121 @@
     margin-top: 1rem;
     padding: 0px;
 }
-.block2 {
+
+.block2{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--background);
     width: 100%;
-    padding: 3rem 2rem;
-    margin: 0;
-    background-image: linear-gradient(to left, var(--accent), var(--primary));
+    padding-bottom: 2rem;
+    margin: 0px;
 }
 
-.block2 h2 {
-    margin: 0 0 2rem 0;
-    color: var(--background);
+.block2 h2{
+    margin: 2rem 0rem 1rem 0rem;
 }
 
 .block2 .blogCards{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1600px;
+    padding: 0 2rem;
 }
 
-.readMoreContainer {
-    display: flex;
-    justify-content: flex-end;
+/* Medium Card Styles */
+.mediumCardLink {
+    text-decoration: none;
+    flex: 1 1 calc(33.333% - 1.5rem);
+    min-width: 300px;
+    max-width: 450px;
+}
+
+.mediumCard {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin-top: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--surface);
+    padding: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.readMoreContainer button {
+.mediumCardLink:hover .mediumCard,
+.mediumCardLink:focus-visible .mediumCard {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.mediumBadge {
+    background-color: var(--secondarylight);
+    color: var(--surface);
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: max-content;
+    margin-bottom: 0.5rem;
+}
+
+.mediumCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.mediumCardTitle {
+    color: var(--secondary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    text-decoration: none !important;
+}
+
+.mediumCardExcerpt {
+    color: #4b5563;
+    font-size: 1rem;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.readMoreBtn {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0;
+    text-align: center;
     background-color: var(--primary);
-    border-radius: 5rem;
-    border: none;
-    padding: 0;
+    color: var(--surface);
+    border-radius: 0.75rem;
+    font-weight: 700;
     transition: background-color 0.3s ease;
 }
 
-.readMoreContainer button:hover {
-    background-color: var(--accent);
-    cursor: pointer;
+.mediumCardLink:hover .readMoreBtn {
+    background-color: var(--secondarylight);
 }
 
-.readMoreContainer button p {
-    color: var(--background);
-    font-size: 0.9rem;
-    font-weight: bold;
-    padding: 0.75rem 1.5rem;
-    margin: 0;
+.mediumCardLink,
+.mediumCardLink * {
+    text-decoration: none !important;
 }
 
-.youtubeSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 3rem 2rem;
-    margin: 0;
-    background-image: linear-gradient(to left, var(--accent), var(--primary));
+.mediumCardLink:hover .mediumCardTitle {
+    text-decoration: none !important;
 }
-
-.youtubeSection h2 {
-    margin: 0 0 2rem 0;
-    color: var(--background);
-    font-size: 2rem;
-}
-
-.youtubeContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1600px;
-}
-
-.youtubeEmbed {
-    position: relative;
-    width: 100%;
-    max-width: 560px; /* Max width of a standard video embed */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-.youtubeEmbed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-
 
 .block3{
     display: flex;
@@ -213,7 +230,7 @@
     align-items: center;
     justify-content: center;
     margin: 0px;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem 3rem 2rem;
     width: 100%;
     background-image: linear-gradient(to left, var(--accent), var(--primary));
     min-height: auto;
@@ -242,11 +259,9 @@
 .block4 .newsCards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
     width: 100%;
     max-width: 1600px;
-
-    /* FIX white border / line */
     background: transparent;
     padding: 0;
     margin: 0;
@@ -254,23 +269,127 @@
     outline: none;
     border-radius: 0;
     box-shadow: none;
-
     overflow: hidden;
 }
 
-.newsCards a,
-.newsCards a * {
+.newsCard {
+    background-color: var(--background);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     text-decoration: none !important;
 }
 
-.newsCards a:hover,
-.newsCards a:hover * {
+.newsCard * {
     text-decoration: none !important;
 }
-/* Firefox scrollbar */
-.block4 .newsCards {
-    scrollbar-color: var(--primary) rgba(0, 0, 0, 0.05);
-    scrollbar-width: thin;
+
+.newsCard:hover * {
+    text-decoration: none !important;
+}
+
+.newsThumbWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.newsThumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.newsCard:hover .newsThumb {
+    transform: scale(1.05);
+}
+
+.newsCardContent {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+}
+
+.newsTag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--background);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    align-self: flex-start;
+    border: 2px solid var(--primary);
+}
+
+.newsCardContent h3 {
+    color: var(--primary);
+    font-size: 1.125rem;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.newsDescription {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.newsWatchRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.newsTime {
+    font-size: 0.8rem;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+.newsWatch {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.newsCard:hover .newsWatch {
+    color: var(--accent);
 }
 
 .newsContainer {
@@ -279,44 +398,125 @@
     padding: 0px;
 }
 
-.tweets{
-    width: 45%;
-    margin: 0rem;
-    padding: 0px;
-
-    border-radius: 1rem;
+/* Section Buttons */
+.sectionButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
-.tweets h2{
-    margin-bottom: 1rem;
-    margin-left: 2rem;
-
+.sectionBtn {
+    background-color: var(--background);
+    border-radius: 5rem;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.tweetsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 590px;
-  overflow: auto;
-  border-radius: 0rem;
-  margin: 0px;
-  padding: 0px;
-
+.sectionBtn:hover {
+    background-color: rgba(244, 231, 225, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.tweetCard{
-    margin: -1rem;
-    padding: 0px;
+.sectionBtn p {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
 }
 
-/* Optional: Add a subtle hover effect */
-.tweetCard:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s ease-in-out;
+.sectionBtnSecondary {
+    background-color: transparent;
+    border-radius: 5rem;
+    border: 2px solid var(--background);
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
+.sectionBtnSecondary:hover {
+    background-color: var(--background);
+    transform: translateY(-2px);
+}
+
+.sectionBtnSecondary p {
+    color: var(--background);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 0.65rem 1.5rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.sectionBtnSecondary:hover p {
+    color: var(--primary);
+}
+
+/* Light Section Buttons (for light backgrounds) */
+.sectionButtonsLight {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.sectionBtnLight {
+    background-color: var(--primary);
+    border-radius: 5rem;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sectionBtnLight:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sectionBtnLight p {
+    color: var(--background);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+}
+
+.sectionBtnSecondaryLight {
+    background-color: transparent;
+    border-radius: 5rem;
+    border: 2px solid var(--primary);
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sectionBtnSecondaryLight:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.sectionBtnSecondaryLight p {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 0.65rem 1.5rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.sectionBtnSecondaryLight:hover p {
+    color: var(--background);
+}
 
 .block5 {
     display: flex;
@@ -328,7 +528,6 @@
     padding-bottom: 2rem;
     margin: 0px;
     background-color: var(--background);
-
 }
 
 .block5 .domainCards{
@@ -337,6 +536,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 .block5 h2{
@@ -350,7 +550,7 @@
     justify-content: center;
     background-image: linear-gradient(to left, var(--accent), var(--primary));
     width: 100%;
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     margin: 0;
 }
 
@@ -450,17 +650,195 @@
     margin: 0;
 }
 
+/* YouTube Section */
+.youtubeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, var(--primary), var(--accent));
+    width: 100%;
+    padding: 3rem 2rem;
+    margin: 0;
+}
+
+.youtubeHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.youtubeHeader h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--background);
+    font-size: 2.5rem;
+}
+
+.youtubeHeader p {
+    color: var(--background);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.videoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.videoCard {
+    background-color: var(--background);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-decoration: none !important;
+}
+
+.videoCard * {
+    text-decoration: none !important;
+}
+
+.videoCard:hover * {
+    text-decoration: none !important;
+}
+
+.thumbWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.videoThumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.videoCard:hover .videoThumb {
+    transform: scale(1.05);
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s ease;
+    padding-left: 4px;
+}
+
+.videoCard:hover .playButton {
+    background-color: rgb(255, 0, 0);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.cardContent {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary);
+    color: var(--background);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    align-self: flex-start;
+}
+
+.cardContent h3 {
+    color: var(--primary);
+    font-size: 1.125rem;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.description {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.watchRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.time {
+    font-size: 0.8rem;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+.watch {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.videoCard:hover .watch {
+    color: var(--accent);
+}
+
 .block6{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: var(--primary); */
     background-image: linear-gradient(to left, var(--accent), var(--primary));
     width: 100%;
     padding: 2rem;
     margin: 0;
-
 }
 
 .block6 h2{
@@ -473,7 +851,6 @@
     color: var(--background);
     font-size: 1.1rem;
     font-weight: 300;
-
 }
 
 .block6 button{
@@ -489,112 +866,42 @@
 .block6 button p{
     color: var(--background);
 }
+
 .block6 button p:hover{
     color: var(--primary);
 }
 
-/* MODIFY this rule */
 .videoContainer {
-  position: absolute;
+    position: absolute;
     width: 100%;
     height: 100vh;
-  z-index: -1; /* Place the video behind everything else */
-  margin: 0px;
-  padding: 0px;
+    z-index: -1;
+    margin: 0px;
+    padding: 0px;
 }
 
 .videoContainer video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the area without distortion */
-  margin: 0px;
-  padding: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
 }
 
 .videoContainer::before {
-    content: ''; /* Required to generate the pseudo-element */
-    position: absolute; /* Positioned relative to the .videoContainer */
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #0000004f; 
-    z-index: 0; /* Sits on top of the video, but below the content */
+    z-index: 0;
     margin: 0px;
     padding: 0px;
 }
 
-/* Latest Articles Section */
-.blockArticles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding: 3rem 2rem 2rem 2rem;
-    background: linear-gradient(to right, var(--background), #fff 60%);
-}
-
-.articlesContainer {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.articlesHeader {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.articlesHeader h2 {
-    color: var(--primary);
-    font-size: 2rem;
-    margin: 0;
-}
-
-.articlesCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1200px;
-    max-height: 750px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.articlesCards::-webkit-scrollbar {
-    width: 12px;
-}
-
-.articlesCards::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-.articlesCards::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
-}
-
-.articlesCards::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
-}
-
-.articlesCards {
-    scrollbar-color: var(--primary) rgba(0, 0, 0, 0.05);
-    scrollbar-width: thin;
-}
-
+/* Responsive Design */
 @media screen and (max-width: 1100px) {
     .block1{
         display: flex;
@@ -602,16 +909,29 @@
         align-items: center;
         justify-content: center;
     }
+    
     .block1 h1{
         font-size: 2rem;
         text-align: center;
     }
+    
     .block1 h2{
         font-size: 1.25rem;
         text-align: center;
     }
+    
     .logo img{
         width: 15rem;
+    }
+
+    .block2 .blogCards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mediumCardLink {
+        flex: 1 1 100%;
+        max-width: 500px;
     }
 
     .block4{
@@ -620,14 +940,7 @@
         justify-content: center;
         align-items: center;
     }
-    .block4 .tweets{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-    }
+    
     .newsContainer{
         margin: 0px;
         padding: 0px;
@@ -637,6 +950,7 @@
         align-items: center;
         width: 90%;
     }
+    
     .block4 .newsCards{
         width: 100%;
         margin: 0px;
@@ -645,11 +959,11 @@
     .block5 p{
         text-align: center;
     }
+    
     .block6 p{
         text-align: center;
     }
 
-    /* Internship Section Responsive */
     .internshipCards {
         flex-direction: column;
         gap: 1.5rem;
@@ -667,9 +981,41 @@
         font-size: 1rem;
     }
 
-    .readMoreContainer {
-        justify-content: center;
-        margin-top: 1.5rem;
+    /* YouTube responsive */
+    .videoGrid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .youtubeHeader h2 {
+        font-size: 2rem;
+    }
+
+    .youtubeHeader p {
+        font-size: 1rem;
+    }
+}
+
+/* Large screens optimization */
+@media screen and (min-width: 1600px) {
+    .container h2 {
+        font-size: 2.5rem;
+    }
+
+    .internshipCards,
+    .newsContainer,
+    .videoGrid {
+        max-width: 1800px;
+    }
+
+    .block2 .blogCards,
+    .block3 .impactCards,
+    .block5 .domainCards {
+        max-width: 1800px;
+    }
+
+    .videoGrid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
 }
 

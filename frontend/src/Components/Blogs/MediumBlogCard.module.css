@@ -14,6 +14,7 @@
 }
 
 .mediumCard {
+  height: 100%;
   position: relative;
   width: 100%;
   display: flex;
@@ -43,16 +44,32 @@
 }
 
 .mediumCardContent {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
+
 
 .mediumCardTitle {
   color: var(--secondary);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4rem;
+  margin: 0;
+}
+
+.mediumCardImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: .75rem;
+  margin-bottom: .5rem;
+}
+
+.mediumCardDate {
+  font-size: .85rem;
+  color: #6b7280; /* gray */
   margin: 0;
 }
 
@@ -67,7 +84,7 @@
 }
 
 .readMoreBtn {
-  margin-top: .75rem;
+  margin-top: auto; /* pushes to bottom */
   padding: .5rem 0;
   text-align: center;
   background-color: var(--primary);

@@ -1,1 +1,47 @@
-[]
+[
+{
+    "id": 1,
+    "title": "What is Research?",
+    "description": "A concise explainer on the meaning and importance of research in various fields of study.",
+    "published": "Jan 2022",
+    "thumbnail": "https://img.youtube.com/vi/mV0bUQpz468/maxresdefault.jpg",
+    "url": "https://youtu.be/mV0bUQpz468",
+    "tag": "Education"
+  },
+  {
+    "id": 2,
+    "title": "Beginners Guide to Writing a Research Paper",
+    "description": "An easy walkthrough explaining the parts of a research paper and how to approach writing one, ideal for students and beginners.",
+    "published": "March 2018",
+    "thumbnail": "https://img.youtube.com/vi/yRxFwMHS_A8/maxresdefault.jpg",
+    "url": "https://youtu.be/yRxFwMHS_A8",
+    "tag": "Education"
+  },
+  {
+    "id": 3,
+    "title": "How to Build AI Agents from Scratch | AI Agents for Beginners",
+    "description": "Beginner-friendly step-by-step walkthrough of building artificial intelligence agents from scratch, covering foundational concepts.",
+    "published": "Summer 2025",
+    "thumbnail": "https://img.youtube.com/vi/nLkBNnnA8Ac/maxresdefault.jpg",
+    "url": "https://youtu.be/nLkBNnnA8Ac",
+    "tag": "Technology"
+  },
+    {
+    "id": 4,
+    "title": "Cloud Computing in 6 Minutes | What Is Cloud Computing? | Cloud Computing Explained",
+    "description": "A concise 6-minute overview that explains what cloud computing is, why it matters, key benefits like scalability and cost-effectiveness, and contrasts cloud vs traditional computing. The video is delivered by Simplilearn with clear visuals and examples for beginners.",
+    "published": "July 28, 2020",
+    "thumbnail": "https://img.youtube.com/vi/M988_fsOSWo/maxresdefault.jpg",
+    "url": "https://youtu.be/M988_fsOSWo",
+    "tag": "Education"
+    },
+  {
+    "id": 5,
+    "title": "How Decision Making is Actually Science: Game Theory Explained",
+    "description": "A clear overview of how decision-making processes relate to game theory and scientific thinking.",
+    "published": "2021",
+    "thumbnail": "https://img.youtube.com/vi/MHS-htjGgSY/maxresdefault.jpg",
+    "url": "https://youtu.be/MHS-htjGgSY",
+    "tag": "Science"
+  }
+]

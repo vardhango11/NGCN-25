@@ -1,20 +1,16 @@
 import styles from "./Resources.module.css";
 import youtubeVideos from "../../hooks/youtubeVideos.json";
 import { MdSmartDisplay, MdSubscriptions } from "react-icons/md";
-import useRssFeed from "../../hooks/useRssFeed";
 
-const YOUTUBE_FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA";
 
 function YouTube() {
-  const { feeds, loading, error } = useRssFeed(YOUTUBE_FEED_URL);
-  const displayVideos = feeds && feeds.length > 0 ? feeds : youtubeVideos;
-  const hasVideos = displayVideos.length > 0;
+  const hasVideos = youtubeVideos.length > 0;
 
   return (
     <div className={styles.container}>
       {/* Header */}
       <header className={styles.header}>
-        <h1>Videos</h1>
+        <h1>Get along with us on YouTube</h1>
         <p className={styles.headerSub}>
           Moving forward, we are planning to upload YouTube Shorts,
           research highlights, and quick insights from our work.
@@ -23,7 +19,7 @@ function YouTube() {
 
 
       {/* Content */}
-      {loading ? ( <div className={styles.loading}>Loading videos...</div> ) : !hasVideos ? (
+      {!hasVideos ? (
         <div className={styles.comingSoon}>
           <div className={styles.iconCircle}>
             <MdSmartDisplay size={48} color="#dc2626" />
@@ -47,17 +43,17 @@ function YouTube() {
         </div>
       ) : (
         <div className={styles.videoGrid}>
-          {displayVideos.map((video, index) => (
+          {youtubeVideos.map(video => (
             <a
-              key={video.id || index}
-              href={video.url || video.link}
+              key={video.id}
+              href={video.url}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.videoCard}
             >
               <div className={styles.thumbWrapper}>
                 <img
-                  src={video.thumbnail || video.image}
+                  src={video.thumbnail}
                   alt={video.title}
                   className={styles.videoThumb}
                 />
@@ -66,23 +62,24 @@ function YouTube() {
 
               <div className={styles.cardContent}>
                 <span className={`${styles.tag} ${styles.newsTag}`}>
-                  {video.tag || "YouTube"}
+                  {video.tag}
                 </span>
 
                 <h3>{video.title}</h3>
 
                 <p className={styles.description}>
-                  {video.description || video.contentSnippet}
+                  {video.description}
                 </p>
 
                 <div className={styles.watchRow}>
                   <span className={styles.time}>
-                    {new Date(video.published || video.pubDate).toLocaleDateString()}
+                    {new Date(video.published).toLocaleDateString()}
                   </span>
                   <span className={styles.watch}>Watch</span>
                 </div>
               </div>
             </a>
+
           ))}
         </div>
       )}
