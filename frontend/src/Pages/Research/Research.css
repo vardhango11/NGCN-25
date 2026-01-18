@@ -1,189 +1,171 @@
+/* --- Variables (Ensuring consistency with your other pages) --- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-.title h1 {
-  font-size: 2.2rem;
-  /* Adjusted font size for mobile */
-  font-weight: bold;
-  color: var(--color-surface);
-  margin: 2rem 0 0 0;
-  
+:root {
+  --primary: #d5451b;
+  --secondary: #521c0d;
+  --accent: #ff9b45;
+  --emphasis: #ffc796;
+  --background: #f4e7e1;
+  --text: #000000;
+  --surface: #ffffff;
+  --card-border: #f0e6da;
+  --radius-lg: 1rem;
+  --radius-md: 0.5rem;
 }
 
-.title p {
-  font-size: 1.1rem;
-  /* Adjusted font size for mobile */
-  color: var(--color-surface);
-  max-width: 90%;
-  
+/* --- Page Layout --- */
+.research-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Lora', serif; 
 }
 
-/* Container */
-.research-container {
-  padding: 4rem 20px;
-  background: #F4E7E1;
-  /* same warm-beige as in screenshot */
-  min-height: 80vh;
-  /* background-color: red; */
-}
-
-
-/* Header */
-.research-header {
+/* --- Hero Section --- */
+.research-hero {
+  /* Using the orange gradient you liked */
+  background-image: linear-gradient(to left, var(--accent), var(--primary));
+  padding: 5rem 1.5rem 6rem 1.5rem;
   text-align: center;
-  margin-bottom: 1;
+  color: var(--surface);
+  margin-bottom: 2rem;
 }
 
-.research-header h1 {
-  font-size: 1.8rem;
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.research-hero h1 {
+  font-family: 'Lora', serif; /* Ensure Heading uses Lora */
+  font-size: 3rem;
+  color: var(--surface);
   font-weight: 700;
-  color: #5b2c1a;
-  /* deep brown heading */
-  margin-bottom: 0.5rem;
-  font-family: "noto sans";
+  margin-bottom: 1rem;
 }
 
-.research-header p {
-  color: #663c2d;
-  font-size: 1rem;
-  margin-bottom: 4rem;
-  
+.research-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Grid */
-/* .research-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-} */
+/* --- Container --- */
+.research-container {
+  padding: 0 1.5rem 5rem 1.5rem;
+  max-width: 1300px;
+  margin: -4rem auto 0 auto; /* Negative margin creates the overlap effect */
+}
 
+/* --- Grid Layout --- */
 .research-grid {
-  display: flex;
-  flex-wrap: wrap;           /* allow wrapping to multiple rows */
-  gap: 1.8rem;               /* space between cards */
-  justify-content: center;   /* center items in each row */
-  max-width: 1800px;
-  
-  margin: 0 auto;            /* center the container */
+  display: grid;
+  /* Auto-fit creates responsive columns without media queries */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
 }
 
-/* Card */
-/* .research-card {
-  
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 450px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  
-} */
-
+/* --- Card Components --- */
 .research-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  
-  flex: 1 1 350px;           /* flexible basis 350px, can grow/shrink */
-  max-width: 450px;          /* max width per card */
-  
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(82, 28, 13, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Makes all cards equal height in the row */
 }
-
-@media screen and (max-width:1145px) {
-  .research-card{
-    max-width: 520px;
-  }
-}
-
-@media screen and (max-width:752px) {
-  .research-card{
-    max-width: 600px;
-  }
-}
-
-
 
 .research-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(82, 28, 13, 0.12);
 }
 
-/* Icon */
+/* Card Header Area */
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Icon Styling */
 .icon-box {
-  background-color: "#f3662eff";
-  height: "60px";
-  width: "60px";
-  border-radius: "10px";
-  display: "flex";
-  justify-content: "center";
-  align-items: "center";
+  width: 50px;
+  height: 50px;
+  background-color: #fff0eb; /* Very light orange bg */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .card-icon {
-  font-size: "35px";
-  color: "white";
+  font-size: 26px;
+  color: var(--primary);
 }
 
-.icon-wrapper {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1rem;
-  width: 100%;
-}
-
-.icon-wrapper img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  /* background-color: #c96b4f; */
-  /* right: 2px; */
-}
-
-/* Title */
 .research-card h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #5b2c1a;
-  margin-bottom: 0.5rem;
-  
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* Description */
-.research-card p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
-  /* font-family: "noto sans"; */
+.card-desc {
+  font-size: 1rem;
+  color: #555; /* Slightly softer text for reading */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Pushes tags to the bottom */
 }
 
-/* Tags */
-.tags {
+/* Tags Area */
+.tags-container {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  gap: 0.5rem;
+  gap: 0.6rem;
+  margin-top: auto; /* Ensures tags stick to bottom */
 }
 
 .tag {
-  background: #e4dbd49f;
-  padding: 0.35rem 0.75rem;
+  background: #f8f1ec; /* Warm beige tag bg */
+  color: var(--secondary);
+  padding: 0.4rem 0.9rem;
   font-size: 0.8rem;
-  border-radius: 20px;
-  color: #5b2c1a;
+  border-radius: 50px;
   font-weight: 600;
-  /* font-family: "noto sans"; */
+  transition: background 0.2s;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .research-header h1 {
-    font-size: 2rem;
+.research-card:hover .tag {
+  background: var(--emphasis); /* Tag highlights on card hover */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .research-hero {
+    padding: 3rem 1.5rem 5rem 1.5rem;
+  }
+  
+  .research-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .research-container {
+    margin-top: -3rem;
   }
 
-  .research-card {
-    padding: 1.5rem;
+  .research-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
   }
 }

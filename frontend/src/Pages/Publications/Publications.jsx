@@ -31,22 +31,27 @@ function Publications() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.block1}>
-                <h1>Publications</h1>
-                <p>Peer-reviewed research papers and scholarly contributions to the scientific community</p>
-                </div>
+            {/* Hero Header */}
+            <div className={styles.heading}>
+                <h1>Publications & Impact</h1>
+                <p>A collection of peer-reviewed contributions to top-tier journals and conferences, documenting our journey in advancing the frontiers of computer science.</p>
+            </div>
+
+            {/* Overlapping Search Card */}
+            <div className={styles.controls}>
                 <div className={styles.search}>
                     <img src="search.svg" alt="Search Icon" className={styles.searchIcon} />
                     <input
                         type="text"
-                        placeholder="Search publications"
+                        placeholder="Search by title, author, or year..."
                         className={styles.searchInput}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
                 </div>
+            </div>
 
-
+            {/* Content List */}
             <div className={styles.pubContainer}>
                 {sortedYears.map(year => (
                     <Fragment key={year}>

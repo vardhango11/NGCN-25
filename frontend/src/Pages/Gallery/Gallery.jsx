@@ -3,20 +3,11 @@ import './Gallery.css'
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-
-// function Gallery(){
-//     return(
-//         <div>
-//             <h1>Gallery</h1>
-//             <p>All gallery-related content will go here.</p>
-//         </div>
-//     )
-// }
-
 const images = [
     {
         original: "/Images/IMG_1722.JPG",
         thumbnail: "/Images/IMG_1722.JPG",
+        description: "NGCN Team Gathering" // Optional: Added description field support
     },
     {
         original: "/Images/g2.jpg",
@@ -42,29 +33,31 @@ const images = [
 
 const Gallery = () => {
     return (
-        <div>
-            <div className="title">
-                <div>
+        <div className="gallery-page-wrapper">
+            {/* 1. Hero Header */}
+            <header className="gallery-hero">
+                <div className="hero-content">
                     <h1>Gallery</h1>
+                    <p>
+                        The first class that dared to dream. Photos documenting the beginnings of our Next-Gen Computing research journey.
+                    </p>
                 </div>
-                <div>
-                    <center>
-                        <p>
-                            The first class that dared to dream. Photos documenting the beginnings of our Next-Gen Computing research journey.
-                        </p>
-                    </center>
-                </div>
-            </div>
+            </header>
 
-            <div className="gallery-container">
-                <ImageGallery
-                    items={images}
-                    showPlayButton={false}
-                    showFullscreenButton={true}
-                    autoPlay={true}
-                    slideInterval={4000}
-                    thumbnailPosition="bottom"
-                />
+            {/* 2. Overlapping Gallery Card */}
+            <div className="gallery-content-card">
+                <div className="gallery-inner-wrapper">
+                    <ImageGallery
+                        items={images}
+                        showPlayButton={true}
+                        showFullscreenButton={true}
+                        autoPlay={true}
+                        slideInterval={4000}
+                        thumbnailPosition="bottom"
+                        showNav={true}
+                        showBullets={true}
+                    />
+                </div>
             </div>
         </div>
     );

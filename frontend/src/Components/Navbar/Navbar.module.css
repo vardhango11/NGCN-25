@@ -1,111 +1,176 @@
-/* Navbar.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-.nav-elements {
+/* --- 1. Main Navbar Container --- */
+.navbar {
+    width: 100%;
+    height: 70px;
+    
+    /* UPDATED: Lower opacity (0.75) allows content to be seen behind */
+    background-color: rgba(255, 255, 255, 0.75); 
+    
+    /* UPDATED: Stronger blur effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* Support for Safari */
+    
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Lora', serif;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.navContainer {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--background);
-    border: 0px transparent;
-    margin: 0 ;
-    padding: 0 1rem;
-    position: relative;
 }
 
+/* --- 2. Logo --- */
 .logo img {
-    height: 50px;
-    margin: 0px;
-    padding: 0px;
+    height: 45px;
+    width: auto;
+    display: block;
+    transition: transform 0.2s ease;
 }
 
-.logo button{
-    margin: 0px;
-    padding: 0px;
-    border: 0px transparent;
-    background-color: var(--background);
-    cursor: pointer;
-}
-.logo button:focus{
-    outline: none;
-}
-.nav-links button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+.logo img:hover {
+    transform: scale(1.05);
 }
 
-.nav-links {
+/* --- 3. Links (Desktop) --- */
+.navLinks {
     display: flex;
     gap: 1.5rem;
     align-items: center;
 }
 
-.nav-links button {
-    border: 0px solid black;
-    border-radius: 1.5rem;
-    margin: 0rem;
-    padding: 0.25rem;
-}
-
-.nav-links p {
-    margin: 0;
-    font-weight: 500;
+.link {
+    /* UPDATED: Remove Underline */
+    text-decoration: none;
     color: var(--secondary);
-    transition: color 0.2s;
-    padding: 0rem 0.1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
-.nav-links button:hover {
-    background-image: linear-gradient(to top, var(--accent), var(--emphasis));
+/* UPDATED: Ensure no underline on Hover, Focus, or Active */
+.link:hover, 
+.link:focus, 
+.link:active {
+    text-decoration: none; /* Double check removal */
+    background-color: rgba(213, 69, 27, 0.08); /* Light orange tint instead of full background */
+    color: var(--primary);
 }
 
-.nav-links button:active {
-    background-image: linear-gradient(to bottom, var(--accent), var(--emphasis));
+/* Special styling for Contact button */
+.contactBtn {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
 }
 
-.hamburger-menu {
-    display: none; /* Hidden on desktop */
-    font-size: 1.5rem;
+.contactBtn:hover {
+    text-decoration: none;
+    background-color: var(--secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --- 4. Mobile Hamburger --- */
+.hamburger {
+    display: none;
     background: none;
     border: none;
+    font-size: 1.8rem;
+    color: var(--secondary);
     cursor: pointer;
+    padding: 0;
 }
 
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-    .nav-elements {
-        position: relative;
-        justify-content: center;
+/* --- 5. Mobile Responsive Styles --- */
+@media (max-width: 1100px) {
+    .navLinks {
+        gap: 0.8rem;
+    }
+    .link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+        z-index: 1200;
     }
 
-.nav-links {
-    position: fixed;
-    top: 0px;
-    left: 0;
-    transform: translateX(-100%); /* Moves the element off-screen to the left */
-    height: 100%;
-    width: 200px;
-    background-color: var(--background);
-    padding-top: 3.5rem;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    transition: transform 0.5s ease-in-out;
-    overflow-x: hidden; 
-}
+    /* Mobile Sidebar */
+    .navLinks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 260px;
+        background-color: white; /* Solid white for readability on mobile menu */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5rem 1.5rem 2rem 1.5rem;
+        box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        gap: 1rem;
+        z-index: 1100;
+    }
 
-    .nav-links.active {
+    .navLinks.active {
         transform: translateX(0);
     }
 
-    .hamburger-menu {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1500;
+    /* Mobile Links */
+    .link {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 0;
+    }
+
+    .link:hover {
+        background: none;
+        color: var(--primary);
+        padding-left: 10px;
+        text-decoration: none;
+    }
+
+    .contactBtn {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 8px;
+    }
+
+    /* Dark overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 1000;
+        backdrop-filter: blur(2px);
     }
 }

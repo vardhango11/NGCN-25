@@ -4,11 +4,13 @@ import ngcnNewsFeed from "../../hooks/ngcnNewsFeed.json";
 function News() {
   return (
     <div className={styles.container}>
-      <div className={styles.block1}>
-        <h1>Stay tuned for latest News & Updates</h1>
-        <p>Announcements, events, and research updates</p>
+      {/* Hero Header */}
+      <div className={styles.hero}>
+        <h1>News & Updates</h1>
+        <p>Stay informed about our latest announcements, events, and research breakthroughs.</p>
       </div>
 
+      {/* Grid overlaps the header */}
       <div className={styles.newsGrid}>
         {ngcnNewsFeed.map((item, index) => (
           <div className={styles.card} key={index}>
@@ -22,19 +24,21 @@ function News() {
               />
             )}
 
-            {/* Tag */}
-            <span className={styles.tag}>
-              {item.tag || "NEWS"}
-            </span>
+            <div className={styles.cardBody}>
+              {/* Tag */}
+              <span className={styles.tag}>
+                {item.tag || "NEWS"}
+              </span>
 
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
 
-            <div className={styles.meta}>
-              <span>{item.pubDate}</span>
-              <a href={item.link} target="_blank" rel="noreferrer">
-                Read →
-              </a>
+              <div className={styles.meta}>
+                <span>{item.pubDate}</span>
+                <a href={item.link} target="_blank" rel="noreferrer">
+                  Read →
+                </a>
+              </div>
             </div>
           </div>
         ))}

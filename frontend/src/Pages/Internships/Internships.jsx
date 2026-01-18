@@ -1,158 +1,158 @@
 import styles from "./Internships.module.css";
-import { FiExternalLink } from "react-icons/fi";
-import "../About/About.css";
+import { FiExternalLink, FiDownload, FiFileText } from "react-icons/fi";
+import { HiOutlineLightBulb, HiOutlineBriefcase } from "react-icons/hi";
 
 function Internships() {
     return (
-        <div>
-            <div className="title">
-                <h1>Internship Opportunities</h1>
-                <center>
+        <div className={styles.pageWrapper}>
+            {/* 1. Hero Header */}
+            <header className={styles.hero}>
+                <div className={styles.heroContent}>
+                    <h1>Internship Opportunities</h1>
                     <p>Join our research team and contribute to impactful and interdisciplinary projects.</p>
-                </center>
-            </div>
+                </div>
+            </header>
 
-            <div className={styles.container}>
+            {/* 2. Main Content Area */}
+            <div className={styles.mainContent}>
 
-                {/* --- Self-Funded Internship Section --- */}
-                <section className={styles.section}>
-                    <div className={styles.content}>
-                        <h2>Self-Funded Research Internships</h2>
-                        <p>
-                            The Next Gen Computing and Networking (NGCN) Research Group at IIITDM Kurnool invites applications
-                            for year-round research internships in domains such as AI, Machine Learning, Indian Knowledge Systems,
-                            Networking, and Advanced Computing. The complete list of research focus areas can be found on the
-                            <a href="./Research" className="research-page-link">
-                                {" "}Research Page{" "}<FiExternalLink className="research-page-icon" />
-                            </a>.
-                        </p>
+                {/* Overlapping Intro Card */}
+                <div className={styles.introCard}>
+                    <h2>Why Intern with NGCN?</h2>
+                    <p>
+                        We offer a dynamic research environment where theoretical knowledge meets practical application.
+                        Whether you are looking for funded projects or self-driven research experience, NGCN provides
+                        the mentorship and resources to help you excel.
+                    </p>
+                </div>
 
-                        <p>
-                            Duration options include 1, 3, 6 and 12 months. Internships are guided by
-                            Dr. K. E. Srinivasa Desikan, Assistant Professor, IIITDM Kurnool.
-                        </p>
-                        <p>
-                            <strong>Eligibility:</strong> B.Tech 2nd–4th year students with CGPA ≥ 8.5 (relaxations for CFTI and exceptional candidates).
-                            Limited seats only. No stipend provided; internship certificate awarded on successful completion.
-                        </p>
+                {/* Grid Layout for Internship Types */}
+                <div className={styles.gridContainer}>
 
-                        <div className={styles.cardButton}>
-                            <a href="./Images/open_internship.png" target="_blank" rel="noopener noreferrer">
-                                <button><p>View Internship Details</p></button>
-                            </a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
-                                target="_blank" rel="noopener noreferrer">
-                                <button><p>Submit Application Form</p></button>
-                            </a>
+                    {/* --- Card 1: Self-Funded --- */}
+                    <div className={styles.internshipCard}>
+                        <div className={styles.cardHeader}>
+                            <div className={styles.iconBox}>
+                                <HiOutlineLightBulb className={styles.cardIcon} />
+                            </div>
+                            <h3>Self-Funded Research</h3>
                         </div>
-                    </div>
-                </section>
-
-
-                {/* --- Funded Internship Section --- */}
-                <section className={styles.sectionAlt}>
-                    <div className={styles.content}>
-                        <h2>Funded Internship Programs</h2>
-                        <p>
-                            Fully funded research internships offering stipends up to ₹10,000/month in collaboration with
-                            national funding bodies. Interdisciplinary work opportunities under the guidance of faculty at IIITDM Kurnool.
-                            <a href="https://iiitk.ac.in/Project-Recruitments/page" target="_blank" rel="noopener noreferrer" className="research-page-link">
-                                {" "}Official Advertisement{" "}<FiExternalLink className="research-page-icon" />
-                            </a>.
-                        </p>
-
-                        <p>
-                            Applicants must download the official advertisement PDF, fill the required application form,
-                            and upload the completed form along with their latest CV merge it as a PDF and upload it in the
-                            Google application form.
-                        </p>
-
-                        {/* Fake News Internship */}
-                        <h3>1. Fake News Detection Internship</h3>
-                        <p>
-                            A CSU-funded project under the Ashtadashi Scheme–2025 focusing on identifying and preventing
-                            misinformation related to Indian scriptures using AI, NLP, and Machine Learning technologies.
-                            The research aims to protect the authenticity of culturally significant texts such as the Ramayana
-                            and Mahabharata by developing computational models for fact validation and content analysis.
-                            <p>
-                                Interns will contribute to dataset creation, model development, and evaluation of misinformation
-                                patterns within digital media environments.
+                        
+                        <div className={styles.cardBody}>
+                            <p className={styles.desc}>
+                                Year-round internships in AI, Machine Learning, Indian Knowledge Systems, 
+                                and Advanced Computing. Guided by Dr. K. E. Srinivasa Desikan.
                             </p>
-                        </p>
-                        <p>
-                            <strong>Eligibility:</strong> B.Tech 2nd year and above with knowledge in ML & Discrete Mathematics, or
-                            traditional scholars with Sanskrit literacy and cultural knowledge. Mode: On-campus preferred. Tenure up to Dec 2026.
-                        </p>
+                            
+                            <ul className={styles.detailsList}>
+                                <li><strong>Duration:</strong> 1, 3, 6, or 12 months</li>
+                                <li><strong>Eligibility:</strong> B.Tech 2nd–4th year (CGPA ≥ 8.5)</li>
+                                <li><strong>Stipend:</strong> None (Certificate provided)</li>
+                            </ul>
 
-                        <div className={styles.cardButton}>
-                            <a href="./Images/fake_news_internship.png" target="_blank" rel="noopener noreferrer">
-                                <button><p>View Project Details</p></button>
-                            </a>
-                            <a href="./data/csu_astadashi.pdf" target="_blank" rel="noopener noreferrer">
-                                <button><p>Official Advertisement (PDF)</p></button>
-                            </a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
-                                target="_blank" rel="noopener noreferrer">
-                                <button><p>Submit Application Form</p></button>
-                            </a>
+                            <div className={styles.buttonGroup}>
+                                <a href="./Images/open_internship.png" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                    <FiFileText /> View Details
+                                </a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" 
+                                   target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- Card 2: Fake News Detection (Funded) --- */}
+                    <div className={styles.internshipCard}>
+                        <div className={styles.cardHeader}>
+                            <div className={styles.iconBox}>
+                                <HiOutlineBriefcase className={styles.cardIcon} />
+                            </div>
+                            <h3>Fake News Detection</h3>
+                            <span className={styles.badge}>Funded</span>
                         </div>
 
-
-                        {/* Nyaya Shastra Internship */}
-                        <h3>2. Nyāya-Śāstra Internship</h3>
-                        <p>
-                            An IKS–MoE funded internship focused on studying classical Indian logical frameworks such as
-                            Tarka and Nyāya, and examining their relevance to computation, inference mechanisms, and
-                            modern AI-based reasoning systems.
-                            The project aims to explore how traditional knowledge systems can contribute to more robust,
-                            explainable, and culturally-aware logic models in computer science.
-                            <p>
-                                Interns will engage in
-                                conceptual analysis, mapping of logic principles, and foundational research in computational
-                                reasoning inspired by ancient texts.
+                        <div className={styles.cardBody}>
+                            <p className={styles.desc}>
+                                CSU-funded project (Ashtadashi Scheme–2025) on identifying misinformation 
+                                in Indian scriptures using AI, NLP, and ML technologies.
                             </p>
-                        </p>
-                        <p>
-                            <strong>Eligibility:</strong> B.Tech (2nd year & above) with strong logic background and Sanskrit reading skills,
-                            or scholars with training in Tarka-Śāstra. Tenure up to Feb 2026. Mostly on-campus research.
-                        </p>
 
-                        <div className={styles.cardButton}>
-                            <a href="./Images/iks_internship.png" target="_blank" rel="noopener noreferrer">
-                                <button><p>View Project Details</p></button>
-                            </a>
-                            <a href="./data/IKS_ADVERTISEMENT_13_11_2025.pdf" target="_blank" rel="noopener noreferrer">
-                                <button><p>Official Advertisement (PDF)</p></button>
-                            </a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
-                                target="_blank" rel="noopener noreferrer">
-                                <button><p>Submit Application Form</p></button>
-                            </a>
+                            <ul className={styles.detailsList}>
+                                <li><strong>Stipend:</strong> Up to ₹10,000/month</li>
+                                <li><strong>Focus:</strong> Fact validation models for Ramayana/Mahabharata</li>
+                                <li><strong>Eligibility:</strong> B.Tech 2nd year+ (ML knowledge) or Sanskrit Scholars</li>
+                            </ul>
+
+                            <div className={styles.buttonGroup}>
+                                <a href="./data/csu_astadashi.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                    <FiDownload /> Advertisement
+                                </a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" 
+                                   target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- Card 3: Nyāya-Śāstra (Funded) --- */}
+                    <div className={styles.internshipCard}>
+                        <div className={styles.cardHeader}>
+                            <div className={styles.iconBox}>
+                                <HiOutlineBriefcase className={styles.cardIcon} />
+                            </div>
+                            <h3>Nyāya-Śāstra Research</h3>
+                            <span className={styles.badge}>Funded</span>
                         </div>
 
-                        <p style={{ marginTop: "25px", fontSize: "14px" }}>
-                            Note: Do not send emails separately. Applications submitted through the form alone will be considered.
-                        </p>
+                        <div className={styles.cardBody}>
+                            <p className={styles.desc}>
+                                IKS–MoE funded internship studying classical Indian logical frameworks (Tarka/Nyāya) 
+                                and their relevance to modern AI reasoning systems.
+                            </p>
+
+                            <ul className={styles.detailsList}>
+                                <li><strong>Stipend:</strong> Up to ₹10,000/month</li>
+                                <li><strong>Focus:</strong> Mapping ancient logic to computational models</li>
+                                <li><strong>Eligibility:</strong> Strong logic background & Sanskrit skills</li>
+                            </ul>
+
+                            <div className={styles.buttonGroup}>
+                                <a href="./data/IKS_ADVERTISEMENT_13_11_2025.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                    <FiDownload /> Advertisement
+                                </a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" 
+                                   target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* Selection Process Section */}
+                <section className={styles.processSection}>
+                    <h2>Selection Process</h2>
+                    <div className={styles.stepsContainer}>
+                        <div className={styles.step}>
+                            <div className={styles.stepNumber}>1</div>
+                            <p>Profile Shortlisting</p>
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.step}>
+                            <div className={styles.stepNumber}>2</div>
+                            <p>Technical Interview</p>
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.step}>
+                            <div className={styles.stepNumber}>3</div>
+                            <p>Final Verification</p>
+                        </div>
                     </div>
                 </section>
-
-
-                {/* Interview Process */}
-                <section className={styles.section}>
-                    <div className={styles.content}>
-                        <h2>Internship Selection Process</h2>
-                        <p>
-                            Candidates will undergo a structured evaluation process to ensure suitability for the research roles:
-                        </p>
-                        <ul>
-                            <li><strong>Stage 1:</strong> Profile and Resume Shortlisting</li>
-                            <li><strong>Stage 2:</strong> One or Two Interviews (based on technical and research performance)</li>
-                            <li><strong>Stage 3:</strong> Background and Academic Verification</li>
-                        </ul>
-                    </div>
-                </section>
-
-
+                
             </div>
         </div>
     );

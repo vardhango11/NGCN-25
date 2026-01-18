@@ -1,58 +1,68 @@
-.heading{
+.container {
     width: 100%;
+    min-height: 100vh;
+    background-color: var(--background); /* Ensure bg color matches */
+}
+
+/* --- Hero Section --- */
+.heading {
+    width: 100%;
+    /* Keep your original gradient */
     background-image: linear-gradient(to right, var(--primary), var(--accent));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 2rem;
+    
+    /* UPDATED: Increase padding to allow overlap space */
+    padding: 5rem 1.5rem 7rem 1.5rem; 
+    margin-bottom: 0; /* Remove bottom margin so controls can overlap */
+    color: var(--surface); /* Assuming white */
 }
 
-.heading h1{
-    font-size: 2.2rem;
-    color: var(--background);
-    margin: 2rem 0 0 0 ;
+.heading h1 {
+    font-size: 2.5rem;
+    color: white; /* Explicitly white for contrast on orange */
+    margin: 0 0 1rem 0;
+    font-weight: 700;
 }
 
-.heading p{
+.heading p {
     font-size: 1.1rem;
-    color: var(--background);
-    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    line-height: 1.6;
 }
 
-.peopleCards{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* --- New Styles for Search and Filter --- */
-
+/* --- Controls (Overlapping Card) --- */
 .controls {
-    width: 80%;
-    /* max-width: 900px; */
-    margin: 0rem auto 2rem auto; /* Pulls the controls up into the header space */
-    padding: 1.5rem;
+    width: 90%;
+    max-width: 1000px;
+    
+    /* UPDATED: Negative top margin to pull it up into the header */
+    margin: -4rem auto 3rem auto; 
+    
+    padding: 2rem;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Stronger shadow for lift effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    
     z-index: 10;
     position: relative;
 }
 
 .searchBar {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     width: 100%;
 }
 
 .searchIcon {
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
@@ -61,97 +71,131 @@
 
 .searchBar input {
     width: 100%;
-    padding: 12px 20px 12px 50px; /* Left padding for the icon */
+    padding: 14px 20px 14px 55px;
     font-size: 1rem;
     border: 1px solid #e0e0e0;
-    border-radius: 25px;
+    border-radius: 50px; /* More rounded like research page pills */
     outline: none;
-  font-family: 'Lora', serif;
+    font-family: 'Lora', serif; /* Keeping your font */
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.searchBar input:focus {
+    background-color: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(213, 69, 27, 0.1);
 }
 
 .filterButtons {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
 }
 
 .filterBtn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    padding: 8px 20px;
+    font-size: 0.95rem;
     border: 1px solid #e0e0e0;
-    border-radius: 20px;
-    background-color: #fafafa;
+    border-radius: 50px; /* Pill shape */
+    background-color: white;
     color: #555;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    font-family: 'Lora', serif;
+    font-family: 'Lora', serif; /* Keeping your font */
+    font-weight: 500;
 }
 
 .filterBtn:hover {
-    background-color: #e0e0e0;
+    background-color: #f0f0f0;
+    border-color: #ccc;
 }
 
 .activeBtn {
     background-color: var(--primary);
     color: white;
     border-color: var(--primary);
+    box-shadow: 0 4px 10px rgba(213, 69, 27, 0.2);
 }
 
-/* Pagination Styles */
+.activeBtn:hover {
+    background-color: var(--secondary); /* Darker shade on hover */
+    border-color: var(--secondary);
+}
+
+/* --- People Grid --- */
+.peopleCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- Pagination --- */
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
-    gap: 1rem;
+    margin: 4rem 0 5rem 0;
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
 .paginationButton {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border: 1px solid #e0e0e0;
     background-color: white;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Lora', serif;
     transition: all 0.2s ease;
     color: #333;
+    font-weight: 500;
 }
 
 .paginationButton:hover:not(:disabled) {
-    background-color: #f5f5f5;
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
 }
 
 .paginationButton:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    background-color: #f5f5f5;
 }
 
 .pageNumbers {
     display: flex;
     gap: 0.5rem;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .pageNumber {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #e0e0e0;
     background-color: white;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Lora', serif;
     transition: all 0.2s ease;
     color: #333;
+    font-weight: 500;
 }
 
 .pageNumber:hover:not(.ellipsis) {
-    background-color: #f5f5f5;
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .activePage {
@@ -160,31 +204,44 @@
     border-color: var(--primary);
 }
 
+.activePage:hover:not(.ellipsis) {
+    background-color: var(--secondary);
+    color: white;
+}
+
 .ellipsis {
     cursor: default;
     background: transparent;
     border: none;
     width: auto;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .pagination {
-        gap: 0.5rem;
+    .heading {
+        padding: 4rem 1.5rem 5rem 1.5rem;
     }
     
-    .pageNumbers {
-        margin: 0 0.5rem;
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .controls {
+        width: 92%;
+        margin-top: -3rem;
+        padding: 1.5rem;
+    }
+
+    .pagination {
+        gap: 0.3rem;
     }
     
     .pageNumber, .paginationButton {
         min-width: 32px;
         height: 32px;
         font-size: 0.9rem;
+        padding: 0 0.8rem;
     }
-}
-
-.activeBtn:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
 }

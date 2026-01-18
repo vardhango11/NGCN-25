@@ -1,42 +1,58 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import styles from './Navbar.module.css'; // Import the CSS module
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import styles from './Navbar.module.css';
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // Dynamically apply classes using the 'styles' object
-    // This combines the base 'nav-links' class with the 'active' class when the menu is open
-    const navLinksClasses = `${styles['nav-links']} ${isMenuOpen ? styles.active : ''}`;
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    // Close menu when route changes
+    useEffect(() => {
+        closeMenu();
+    }, [location]);
 
     return (
-        <div className={styles['nav-elements']}>
-            <button className={styles['hamburger-menu']} onClick={toggleMenu}>
-                &#9776; {/* Hamburger Icon */}
-            </button>
+        <nav className={styles.navbar}>
+            <div className={styles.navContainer}>
+                {/* 1. Mobile Hamburger */}
+                <button className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">
+                    {isMenuOpen ? "✕" : "☰"}
+                </button>
 
-            <div className={styles.logo}>
-                <Link to="/"><button><img src="/NGCNLogo.png" alt="Logo" /></button></Link>
-            </div>
+                {/* 2. Logo */}
+                <div className={styles.logo}>
+                    <Link to="/" onClick={closeMenu}>
+                        <img src="/NGCNLogo.png" alt="NGCN Logo" />
+                    </Link>
+                </div>
 
-            <div className={navLinksClasses}>
-                <Link to="/"><button><p>Home</p></button></Link>
-                <Link to="/kesdesikan"><button><p>Founder</p></button></Link>
-                <Link to="/people"><button><p>People</p></button></Link>
-                <Link to="/research"><button><p>Research</p></button></Link>
-                <Link to="/publications"><button><p>Publications</p></button></Link>
-                <Link to="/blogs"><button><p>Blogs</p></button></Link>
-                <Link to="/resources"><button><p>Videos</p></button></Link>
-                <Link to="/news"><button><p>News</p></button></Link>
-                <Link to="/internships"><button><p>Internships</p></button></Link>
-                <Link to="/gallery"><button><p>Gallery</p></button></Link>
-                <Link to="/contact"><button><p>Contact</p></button></Link>
+                {/* 3. Navigation Links */}
+                <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
+                    <Link to="/" className={styles.link} onClick={closeMenu}>Home</Link>
+                    <Link to="/kesdesikan" className={styles.link} onClick={closeMenu}>Founder</Link>
+                    <Link to="/people" className={styles.link} onClick={closeMenu}>People</Link>
+                    <Link to="/research" className={styles.link} onClick={closeMenu}>Research</Link>
+                    <Link to="/publications" className={styles.link} onClick={closeMenu}>Publications</Link>
+                    <Link to="/blogs" className={styles.link} onClick={closeMenu}>Blogs</Link>
+                    <Link to="/resources" className={styles.link} onClick={closeMenu}>Videos</Link>
+                    <Link to="/news" className={styles.link} onClick={closeMenu}>News</Link>
+                    <Link to="/internships" className={styles.link} onClick={closeMenu}>Internships</Link>
+                    <Link to="/gallery" className={styles.link} onClick={closeMenu}>Gallery</Link>
+                    <Link to="/contact" className={styles.contactBtn} onClick={closeMenu}>Contact</Link>
+                </div>
+                
+                {/* Overlay for mobile when menu is open */}
+                {isMenuOpen && <div className={styles.overlay} onClick={closeMenu}></div>}
             </div>
-        </div>
+        </nav>
     );
 }
 
