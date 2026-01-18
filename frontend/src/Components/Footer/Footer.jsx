@@ -130,9 +130,9 @@ const Footer = () => {
           src="https://ngcngroup.substack.com/embed"
           width="60%"
           height="320"
-          style={{ 
-            border: "1px solid #EEE", 
-            borderRadius: "8px" 
+          style={{
+            border: "1px solid #EEE",
+            borderRadius: "8px"
           }}
           title="NGCN Substack Newsletter"
         ></iframe>
@@ -146,12 +146,11 @@ const Footer = () => {
           <a href="/privacy">Privacy Policy</a> */}
         {/* </div> */}
         <div>
-          <p className={styles["footer-credits"]}>
-            Made with ❤️ by
-            <a href="mailto:vishwajeetsingh1567@gmail.com"> Vishwajeet, </a>
-            <a href="mailto:shashwatp108@gmail.com">Shashwat, </a>
-            <a href="mailto:purvi41493842@gmail.com">Jyoti </a>&
-            <a href="mailto:aadityagautam010@gmail.com"> Aaditya </a>
+          <p className={styles["footer-credits"]} style={{ textDecoration: "none" }}>
+            Made with ❤️ by Vishwajeet, Shashwat, Jyoti & Aaditya
+          </p>
+          <p className={styles["footer-credits"]} style={{ textDecoration: "none" }}>
+            Website maintenance by Shivamani G & Aditya
           </p>
         </div>
       </div>
