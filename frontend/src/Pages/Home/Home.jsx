@@ -180,7 +180,6 @@ function Home() {
                 <div>
                     <h2>NGCN on Medium</h2>
                 </div>
-
                 <div className={styles.blogCards}>
                     {mediumFeed.slice(0, 6).map(article => (
                         <a
@@ -194,10 +193,20 @@ function Home() {
                             <div className={styles.mediumCard}>
                                 <div className={styles.mediumBadge}>Medium</div>
 
+                                {/* NEW IMAGE */}
+                                {article.image && (
+                                    <div className={styles.mediumThumbWrapper}>
+                                        <img
+                                            src={article.image}
+                                            alt={article.title}
+                                            className={styles.mediumThumbnail}
+                                        />
+                                    </div>
+                                )}
+
                                 <div className={styles.mediumCardContent}>
                                     <h3 className={styles.mediumCardTitle}>{article.title}</h3>
                                     <p className={styles.mediumCardExcerpt}>{article.description}</p>
-
                                     <div className={styles.readMoreBtn}>Read on Medium →</div>
                                 </div>
                             </div>
@@ -310,7 +319,7 @@ function Home() {
                         />
                     ))}
                 </div>
-                
+
                 <div className={styles.sectionButtonsLight}>
                     <Link to="/research">
                         <button className={styles.sectionBtnLight}><p>Explore Research Domains</p></button>
