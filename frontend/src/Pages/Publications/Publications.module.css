@@ -43,7 +43,7 @@
 /* --- Overlapping Controls Card --- */
 .controls {
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
 
     /* Negative margin pulls it up over the header */
     margin: -3.5rem auto 3rem auto;
@@ -99,7 +99,7 @@
     flex-direction: column;
     align-items: center; /* Centers the cards */
     width: 90%;
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 0 5rem 0; 
     box-sizing: border-box;
@@ -145,7 +145,7 @@
 
     .controls {
         width: 90%;
-        max-width: 900px;
+        max-width: 1300px;
         margin: -3.5rem auto 3rem auto;
         padding: 2rem;
         background-color: white;
