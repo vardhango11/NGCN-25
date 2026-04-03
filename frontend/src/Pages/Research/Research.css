@@ -64,8 +64,7 @@
 /* --- Grid Layout --- */
 .research-grid {
   display: grid;
-  /* Auto-fit creates responsive columns without media queries */
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -79,7 +78,7 @@
   border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
-  height: 100%; /* Makes all cards equal height in the row */
+  height: auto;
 }
 
 .research-card:hover {
@@ -126,7 +125,7 @@
   color: #555; /* Slightly softer text for reading */
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex-grow: 1; /* Pushes tags to the bottom */
+  flex-grow: 0;
 }
 
 /* Tags Area */
@@ -149,6 +148,47 @@
 
 .research-card:hover .tag {
   background: var(--emphasis); /* Tag highlights on card hover */
+}
+
+/* --- Related Blogs --- */
+.related-blogs {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.related-blogs-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.related-blogs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.related-blogs-list li {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  line-height: 1.4;
+  padding-left: 0.8rem;
+  position: relative;
+}
+
+.related-blogs-list li::before {
+  content: "\2022";
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
 /* --- Responsive --- */

@@ -96,14 +96,6 @@
         "photo": "./Images/p12.jpg"
     },
     {
-        "name": "Addanki Tirumala Vishnu Vardhan",
-        "batch": "2025 Pilot Batch",
-        "expertise": "ML, NLP, LLMs, IoTs, GenAI, SLMs",
-        "description": "Working on transformer-based generative models with a focus on multimodal extensions for real-world applications. My current work involves creating a solution for visually impaired individuals that provides spatial awareness and navigation cues through haptic and audio feedback. My research interests also include optimizing on-device models and exploring methods to distill Large Multimodal Language Models (LMMs) into Small Multimodal Language Models (SMLMs) for resource-constrained environments.",
-        "email": "vishnuvardhanaddanki22@gmail.com",
-        "photo": "./Images/vishnuvardhan_2025.jpg"
-    },
-    {
         "name": "Dr. Konduri Ramesh",
         "batch": "QIP Alumni",
         "expertise": "Networking",
@@ -432,14 +424,6 @@
         "photo": "./Images/p24.png"
     },
     {
-        "name": "Madhumitha Itikala",
-        "batch": "2027 B.Tech",
-        "expertise": "AI,ML,DL",
-        "description": "My work focuses on Artificial Intelligence, with a strong emphasis on Machine Learning and Deep Learning. I explore the design of intelligent, data-driven systems that learn from patterns and make human-like decisions. Using deep neural networks, I aim to develop inclusive, real-time solutions for tasks like speech synthesis and language understanding, with attention to scalability, emotion, and multilingual support.",
-        "email": "itikalamadhumitha@gmail.com",
-        "photo": "./Images/p25.png"
-    },
-    {
         "name": "Sriman Srinivasan",
         "batch": "2027 B.Tech",
         "expertise": "LLMs , Gen AI , Machine Learning ",
@@ -472,19 +456,83 @@
         "photo": "./Images/p37.png"
     },
     {
-        "name": "Prateek Raushan",
-        "batch": "2028 B.Tech",
-        "expertise": "Networks and Machine learning",
-        "description": "Passionate about machine learning, exploring algorithms, data science, and AI-driven projects to build practical skills and strengthen expertise for future innovations.",
-        "email": "124cs0082@iiitk.ac.in",
-        "photo": "./Images/p38.jpg"
+        "name": "Kousthub J V",
+        "batch": "2027 B.Tech",
+        "expertise": "ML, DL, Computer Vision, Backend Systems",
+        "description": "My research interests lie broadly in applying machine learning and deep learning techniques to solve real-world problems in data analysis and computer vision. I am particularly interested in working on domains like hyperspectral imagery classification.",
+        "email": "jvkousthub@gmail.com",
+        "photo": "./Images/p58.png"
     },
     {
-        "name": "Addanki Tirumala Vishnu Vardhan",
-        "batch": "M.Tech",
-        "expertise": "ML, NLP, LLMs, GenAI.",
-        "description": "Working on transformer-based generative models with a focus on multimodal extensions for real-world applications. My current work involves creating a solution for visually impaired individuals that provides spatial awareness and navigation cues through haptic and audio feedback. My research interests also include optimizing on-device models and exploring methods to distill Large Multimodal Language Models (LMMs) into Small Multimodal Language Models (SMLMs) for resource-constrained environments.",
-        "email": "vishnuvardhanaddanki22@gmail.com",
-        "photo": "./Images/p57.jpg"
+        "name": "Keshav Sharma",
+        "batch": "2027 B.Tech",
+        "expertise": "ML, RL, Data Science",
+        "description": "My research focuses on applying Machine Learning and Reinforcement Learning techniques, particularly for data-driven decision making. I am interested in data science, predictive modeling, and portfolio optimization, with an emphasis on building efficient models for forecasting and strategy optimization in dynamic financial environments.",
+        "email": "keshavpradeepsharma@gmail.com",
+        "photo": "./Images/p59.jpg"
+    },
+    {
+        "name": "Saathvik Kalepu",
+        "batch": "2027 B.Tech",
+        "expertise": "XAI",
+        "description": "My research focuses on designing a user-centric Explainable Artificial Intelligence (XAI) framework for decision support systems, with a specific application in the financial domain. The primary objective of my work is to enhance transparency, trust, and usability of AI-driven financial decisions by integrating hybrid interpretability techniques and counterfactual reasoning.",
+        "email": "saathvikk202@gmail.com",
+        "photo": "./Images/p60.png"
+    },
+    {
+        "name": "Sanjay Davis",
+        "batch": "2027 B.Tech",
+        "expertise": "Low Level Programming, Systems Programming, Operating Systems",
+        "description": "My research focuses on systems programming, operating systems, and low-level programming. I am working on building system components from scratch and understanding how software interacts with hardware. I have worked on projects like emulators to explore system-level concepts. I am always willing to learn new concepts and improve my skills.",
+        "email": "123cs0031@iiitk.ac.in",
+        "photo": "./Images/p61.jpg"
+    },
+    {
+        "name": "G V Sai Srivardhan",
+        "batch": "2027 B.Tech",
+        "expertise": "Explainable Edge AI",
+        "description": "My research focuses on facilitate real-time explainable AI deployment on edge devices with limited resources. I want to develop a variant of Grad-CAM, which reduces latency using approximated gradients and feature maps, making it more suitable for deployment.",
+        "email": "gvssvardhan115@gmail.com",
+        "photo": "./Images/p62.jpg"
+    },
+    {
+        "name": "Yadavalli Sri Rama Bharadwaj",
+        "batch": "2027 B.Tech",
+        "expertise": "AI, Machine Learning, Data Science, Generative AI",
+        "description": "My work focuses on machine learning and data science, with a specific interest in generative AI–related topics. I have experience in feature engineering and building data-driven models, with a focus on generative AI concepts such as language models, prompt-based systems, and extracting meaningful insights to develop scalable solutions.",
+        "email": "123cs0030@iiitk.ac.in",
+        "photo": "./Images/p63.jpg"
+    },
+    {
+        "name": "Pranav Undrikalle",
+        "batch": "2027 B.Tech",
+        "expertise": "ML",
+        "description": "",
+        "email": "pranavuk000@gmail.com",
+        "photo": "./Images/p64.jpg"
+    },
+    {
+        "name": "Nallari HarshaVardhan Raj",
+        "batch": "2027 B.Tech",
+        "expertise": "XAI, Machine Learning and AI",
+        "description": "Currently working on a novel Explainable AI (XAI) framework combining hybrid interpretability and counterfactual explanations to enhance transparency, fairness, and trust in AI-driven financial decision-making.",
+        "email": "harshanallary@gmail.com",
+        "photo": "./Images/p65.jpeg"
+    },
+    {
+        "name": "Shivam Singh",
+        "batch": "2027 B.Tech",
+        "expertise": "Reinforcement Learning",
+        "description": "I am actively researching portfolio optimization using reinforcement learning with hypergraphs, attention mechanisms, and intrinsic mode functions, along with change point detection to model regime shifts—aiming to apply these techniques in real-world banking and financial risk management.",
+        "email": "shivamsinghsn95@gmail.com",
+        "photo": "./Images/p66.JPG"
+    },
+    {
+        "name": "Varunkumar R",
+        "batch": "2027 B.Tech",
+        "expertise": "RL, Fog Computing",
+        "description": "My research focuses on applying reinforcement learning techniques to fog computing. I explore the design of decentralized fog computing systems by integrating principles from both game theory and reinforcement learning.",
+        "email": "kumarvarun.official@gmail.com",
+        "photo": "./Images/p67.jpg"
     }
 ]
