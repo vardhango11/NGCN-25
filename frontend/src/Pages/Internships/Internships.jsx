@@ -37,16 +37,17 @@ function Internships() {
                             </div>
                             <h3>Self-Funded Research</h3>
                         </div>
-                        
+
                         <div className={styles.cardBody}>
                             <p className={styles.desc}>
-                                Year-round internships in AI, Machine Learning, Indian Knowledge Systems, 
+                                Internships in AI, Machine Learning, Indian Knowledge Systems,
                                 and Advanced Computing. Guided by Dr. K. E. Srinivasa Desikan.
+                                In addition to core CSE domains, focused emphasis will be placed on emerging areas such as IKS and IoT/6G.
                             </p>
-                            
+
                             <ul className={styles.detailsList}>
-                                <li><strong>Duration:</strong> 1, 3, 6, or 12 months</li>
-                                <li><strong>Eligibility:</strong> B.Tech 2nd–4th year (CGPA ≥ 8.5)</li>
+                                <li><strong>Duration:</strong> 3 months (extendable up to 6 months based on performance)</li>
+                                <li><strong>Eligibility:</strong> B.Tech 3rd year or Dual Degree B.Tech 4th year (Academic year 2025–2026). Age ≤ 23 years</li>
                                 <li><strong>Stipend:</strong> None (Certificate provided)</li>
                             </ul>
 
@@ -54,7 +55,7 @@ function Internships() {
                                 <a href="./Images/open_internship.png" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
                                     <FiFileText /> View Details
                                 </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" 
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
                                    target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                     Apply Now
                                 </a>
@@ -74,21 +75,23 @@ function Internships() {
 
                         <div className={styles.cardBody}>
                             <p className={styles.desc}>
-                                CSU-funded project (Ashtadashi Scheme–2025) on identifying misinformation 
-                                in Indian scriptures using AI, NLP, and ML technologies.
+                                CSU-funded project (Ashtaadashi Scheme 2024–2025) on identifying misinformation
+                                in Indian scriptures using deep learning (XLNet, Attention Mechanisms, BiGRU).
                             </p>
 
                             <ul className={styles.detailsList}>
-                                <li><strong>Stipend:</strong> Up to ₹10,000/month</li>
-                                <li><strong>Focus:</strong> Fact validation models for Ramayana/Mahabharata</li>
-                                <li><strong>Eligibility:</strong> B.Tech 2nd year+ (ML knowledge) or Sanskrit Scholars</li>
+                                <li><strong>Positions:</strong> 10 (Engineers & Scholars combined)</li>
+                                <li><strong>Stipend:</strong> ₹10,000/month</li>
+                                <li><strong>Duration:</strong> 3 months (Apr 27 – Jul 31, 2026), extendable up to 6 months</li>
+                                <li><strong>Eligibility:</strong> B.Tech 3rd year or Dual Degree B.Tech 4th year (2025–2026) with ML knowledge, or BA/MA Sanskrit scholars. Age ≤ 23 years</li>
+                                <li><strong>Last Date:</strong> 17th April 2026, 12:00 PM</li>
                             </ul>
 
                             <div className={styles.buttonGroup}>
-                                <a href="./data/csu_astadashi.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                <a href="./data/CSU_ASHTADASHI_ADVERTISEMENT_07_04_2026.docx-1.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
                                     <FiDownload /> Advertisement
                                 </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" 
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
                                    target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                     Apply Now
                                 </a>
