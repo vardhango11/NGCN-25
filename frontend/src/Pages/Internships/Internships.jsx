@@ -111,21 +111,23 @@ function Internships() {
 
                         <div className={styles.cardBody}>
                             <p className={styles.desc}>
-                                IKS–MoE funded internship studying classical Indian logical frameworks (Tarka/Nyāya) 
-                                and their relevance to modern AI reasoning systems.
+                                IKS–MoE funded internship (IKS Institutional Internship Program 2025) researching
+                                the applicability of Nyāya Śāstras for Computer Science and Engineering concepts.
                             </p>
 
                             <ul className={styles.detailsList}>
-                                <li><strong>Stipend:</strong> Up to ₹10,000/month</li>
-                                <li><strong>Focus:</strong> Mapping ancient logic to computational models</li>
-                                <li><strong>Eligibility:</strong> Strong logic background & Sanskrit skills</li>
+                                <li><strong>Positions:</strong> 16 (Engineers & Scholars combined)</li>
+                                <li><strong>Stipend:</strong> ₹10,000/month</li>
+                                <li><strong>Duration:</strong> 3 months (Apr 27 – Jul 31, 2026), extendable up to 6 months</li>
+                                <li><strong>Eligibility:</strong> B.Tech 3rd year or Dual Degree B.Tech 4th year (2025–2026) with Propositional & Predicate Logic knowledge, or BA/MA Sanskrit scholars with Tarka Shastras knowledge. Age ≤ 23 years</li>
+                                <li><strong>Last Date:</strong> 17th April 2026, 12:00 PM</li>
                             </ul>
 
                             <div className={styles.buttonGroup}>
-                                <a href="./data/IKS_ADVERTISEMENT_13_11_2025.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                <a href="./data/IKS_ADVERTISEMENT_07_04_2026.docx.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
                                     <FiDownload /> Advertisement
                                 </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform" 
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
                                    target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                     Apply Now
                                 </a>
