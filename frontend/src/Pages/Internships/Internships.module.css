@@ -52,7 +52,7 @@
     position: relative;
     z-index: 10;
     text-align: center;
-    max-width: 900px;
+    max-width: 1100px;
 }
 
 .introCard h2 {
@@ -67,10 +67,60 @@
     font-size: 1.05rem;
 }
 
+.introDesc {
+    margin-bottom: 2rem;
+}
+
+/* --- Benefits Grid --- */
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.benefitItem {
+    padding: 1.25rem 1rem;
+    border-radius: 0.75rem;
+    background: #fdf7f5;
+    transition: transform 0.2s ease;
+}
+
+.benefitItem:hover {
+    transform: translateY(-3px);
+}
+
+.benefitIcon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 auto 0.75rem;
+}
+
+.benefitItem h4 {
+    color: var(--secondary);
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+}
+
+.benefitItem p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* --- Grid Layout for Cards --- */
 .gridContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
 }
@@ -80,7 +130,7 @@
     background: white;
     border-radius: 1rem;
     border: 1px solid #e0e0e0;
-    padding: 2rem;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -90,6 +140,32 @@
 .internshipCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Poster Image --- */
+.cardPoster {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cardPoster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cardPoster:hover img {
+    transform: scale(1.02);
+}
+
+.cardContent {
+    padding: 1.5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .cardHeader {
@@ -271,6 +347,18 @@
     .introCard {
         margin-top: -3rem;
         padding: 1.5rem;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .cardContent {
+        padding: 1.25rem 1.5rem 1.5rem;
     }
 
     .stepsContainer {

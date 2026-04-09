@@ -1,5 +1,5 @@
 import styles from "./Internships.module.css";
-import { FiExternalLink, FiDownload, FiFileText } from "react-icons/fi";
+import { FiExternalLink, FiDownload, FiFileText, FiAward, FiUsers, FiCpu, FiDollarSign } from "react-icons/fi";
 import { HiOutlineLightBulb, HiOutlineBriefcase } from "react-icons/hi";
 
 function Internships() {
@@ -16,121 +16,157 @@ function Internships() {
             {/* 2. Main Content Area */}
             <div className={styles.mainContent}>
 
-                {/* Overlapping Intro Card */}
+                {/* Why Intern with Us */}
                 <div className={styles.introCard}>
-                    <h2>Why Intern with NGCN?</h2>
-                    <p>
+                    <h2>Why Intern with Us?</h2>
+                    <p className={styles.introDesc}>
                         We offer a dynamic research environment where theoretical knowledge meets practical application.
-                        Whether you are looking for funded projects or self-driven research experience, NGCN provides
-                        the mentorship and resources to help you excel.
                     </p>
+                    <div className={styles.benefitsGrid}>
+                        <div className={styles.benefitItem}>
+                            <div className={styles.benefitIcon}><FiUsers /></div>
+                            <h4>Expert Mentorship</h4>
+                            <p>Guidance from experienced faculty on real-world research projects.</p>
+                        </div>
+                        <div className={styles.benefitItem}>
+                            <div className={styles.benefitIcon}><FiCpu /></div>
+                            <h4>Latest Technologies</h4>
+                            <p>Hands-on with AI, Deep Learning, IoT/6G, and IKS.</p>
+                        </div>
+                        <div className={styles.benefitItem}>
+                            <div className={styles.benefitIcon}><FiAward /></div>
+                            <h4>Certification</h4>
+                            <p>Official internship certificate on successful completion.</p>
+                        </div>
+                        <div className={styles.benefitItem}>
+                            <div className={styles.benefitIcon}><FiDollarSign /></div>
+                            <h4>Stipend Opportunities</h4>
+                            <p>Funded roles offer up to ₹10,000/month with full resources.</p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Grid Layout for Internship Types */}
                 <div className={styles.gridContainer}>
 
-                    {/* --- Card 1: Self-Funded --- */}
+                    {/* --- Card 1: Self-Funded Summer Internship 2026 --- */}
                     <div className={styles.internshipCard}>
-                        <div className={styles.cardHeader}>
-                            <div className={styles.iconBox}>
-                                <HiOutlineLightBulb className={styles.cardIcon} />
+                        <a href="/Images/self_funded_summer_2026.jpeg" target="_blank" rel="noopener noreferrer" className={styles.cardPoster}>
+                            <img src="/Images/self_funded_summer_2026.jpeg" alt="Self-Funded Summer Internship 2026 Poster" />
+                        </a>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardHeader}>
+                                <div className={styles.iconBox}>
+                                    <HiOutlineLightBulb className={styles.cardIcon} />
+                                </div>
+                                <h3>Self-Funded Summer Internship</h3>
                             </div>
-                            <h3>Self-Funded Research</h3>
-                        </div>
-
-                        <div className={styles.cardBody}>
-                            <p className={styles.desc}>
-                                Internships in AI, Machine Learning, Indian Knowledge Systems,
-                                and Advanced Computing. Guided by Dr. K. E. Srinivasa Desikan.
-                                In addition to core CSE domains, focused emphasis will be placed on emerging areas such as IKS and IoT/6G.
-                            </p>
-
-                            <ul className={styles.detailsList}>
-                                <li><strong>Duration:</strong> 3 months (extendable up to 6 months based on performance)</li>
-                                <li><strong>Eligibility:</strong> B.Tech 3rd year or Dual Degree B.Tech 4th year (Academic year 2025–2026). Age ≤ 23 years</li>
-                                <li><strong>Stipend:</strong> None (Certificate provided)</li>
-                            </ul>
-
-                            <div className={styles.buttonGroup}>
-                                <a href="./Images/open_internship.png" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
-                                    <FiFileText /> View Details
-                                </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
-                                   target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
-                                    Apply Now
-                                </a>
+                            <div className={styles.cardBody}>
+                                <ul className={styles.detailsList}>
+                                    <li><strong>Duration:</strong> May 1 – Jul 31, 2026 (3 months)</li>
+                                    <li><strong>Stipend:</strong> Unpaid (Certificate + mentorship provided)</li>
+                                    <li><strong>Last Date:</strong> 24th April 2026</li>
+                                </ul>
+                                <div className={styles.buttonGroup}>
+                                    <a href="https://forms.gle/GdBpbgVkwYFdb2YL8"
+                                       target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                        <FiExternalLink /> Apply Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* --- Card 2: Fake News Detection (Funded) --- */}
+                    {/* --- Card 2: Self-Funded Rolling Internship --- */}
                     <div className={styles.internshipCard}>
-                        <div className={styles.cardHeader}>
-                            <div className={styles.iconBox}>
-                                <HiOutlineBriefcase className={styles.cardIcon} />
+                        <a href="/Images/self_funded_rolling.jpeg" target="_blank" rel="noopener noreferrer" className={styles.cardPoster}>
+                            <img src="/Images/self_funded_rolling.jpeg" alt="Self-Funded Rolling Internship Poster" />
+                        </a>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardHeader}>
+                                <div className={styles.iconBox}>
+                                    <HiOutlineLightBulb className={styles.cardIcon} />
+                                </div>
+                                <h3>Self-Funded Rolling Internship</h3>
                             </div>
-                            <h3>Fake News Detection</h3>
-                            <span className={styles.badge}>Funded</span>
-                        </div>
-
-                        <div className={styles.cardBody}>
-                            <p className={styles.desc}>
-                                CSU-funded project (Ashtaadashi Scheme 2024–2025) on identifying misinformation
-                                in Indian scriptures using deep learning (XLNet, Attention Mechanisms, BiGRU).
-                            </p>
-
-                            <ul className={styles.detailsList}>
-                                <li><strong>Positions:</strong> 10 (Engineers & Scholars combined)</li>
-                                <li><strong>Stipend:</strong> ₹10,000/month</li>
-                                <li><strong>Duration:</strong> 3 months (Apr 27 – Jul 31, 2026), extendable up to 6 months</li>
-                                <li><strong>Eligibility:</strong> B.Tech 3rd year or Dual Degree B.Tech 4th year (2025–2026) with ML knowledge, or BA/MA Sanskrit scholars. Age ≤ 23 years</li>
-                                <li><strong>Last Date:</strong> 17th April 2026, 12:00 PM</li>
-                            </ul>
-
-                            <div className={styles.buttonGroup}>
-                                <a href="./data/CSU_ASHTADASHI_ADVERTISEMENT_07_04_2026.docx-1.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
-                                    <FiDownload /> Advertisement
-                                </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
-                                   target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
-                                    Apply Now
-                                </a>
+                            <div className={styles.cardBody}>
+                                <ul className={styles.detailsList}>
+                                    <li><strong>Duration:</strong> 3 months (extendable up to 6 months)</li>
+                                    <li><strong>Stipend:</strong> Unpaid (Certificate + mentorship provided)</li>
+                                    <li><strong>Deadline:</strong> 21st of every month (Year-round)</li>
+                                </ul>
+                                <div className={styles.buttonGroup}>
+                                    <a href="https://forms.gle/BRNJnJNSNK4Y8SQr7"
+                                       target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                        <FiExternalLink /> Apply Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* --- Card 3: Nyāya-Śāstra (Funded) --- */}
+                    {/* --- Card 3: IKS Summer Internship 2026 (Funded) --- */}
                     <div className={styles.internshipCard}>
-                        <div className={styles.cardHeader}>
-                            <div className={styles.iconBox}>
-                                <HiOutlineBriefcase className={styles.cardIcon} />
+                        <a href="/Images/iks_summer_2026.jpeg" target="_blank" rel="noopener noreferrer" className={styles.cardPoster}>
+                            <img src="/Images/iks_summer_2026.jpeg" alt="IKS Summer Internship 2026 Poster" />
+                        </a>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardHeader}>
+                                <div className={styles.iconBox}>
+                                    <HiOutlineBriefcase className={styles.cardIcon} />
+                                </div>
+                                <h3>IKS Summer Internship 2026</h3>
+                                <span className={styles.badge}>Funded</span>
                             </div>
-                            <h3>Nyāya-Śāstra Research</h3>
-                            <span className={styles.badge}>Funded</span>
+                            <div className={styles.cardBody}>
+                                <ul className={styles.detailsList}>
+                                    <li><strong>Positions:</strong> 16 (Engineers & Scholars combined)</li>
+                                    <li><strong>Stipend:</strong> ₹10,000/month</li>
+                                    <li><strong>Duration:</strong> Apr 27 – Jul 31, 2026 (3 months, extendable)</li>
+                                    <li><strong>Last Date:</strong> 17th April 2026, 12:00 PM</li>
+                                </ul>
+                                <div className={styles.buttonGroup}>
+                                    <a href="./data/IKS_ADVERTISEMENT_07_04_2026.docx.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                        <FiDownload /> Know More
+                                    </a>
+                                    <a href="https://forms.gle/6YSq4W8zgmEVVwbX8"
+                                       target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                        <FiExternalLink /> Apply Now
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <div className={styles.cardBody}>
-                            <p className={styles.desc}>
-                                IKS–MoE funded internship (IKS Institutional Internship Program 2025) researching
-                                the applicability of Nyāya Śāstras for Computer Science and Engineering concepts.
-                            </p>
-
-                            <ul className={styles.detailsList}>
-                                <li><strong>Positions:</strong> 16 (Engineers & Scholars combined)</li>
-                                <li><strong>Stipend:</strong> ₹10,000/month</li>
-                                <li><strong>Duration:</strong> 3 months (Apr 27 – Jul 31, 2026), extendable up to 6 months</li>
-                                <li><strong>Eligibility:</strong> B.Tech 3rd year or Dual Degree B.Tech 4th year (2025–2026) with Propositional & Predicate Logic knowledge, or BA/MA Sanskrit scholars with Tarka Shastras knowledge. Age ≤ 23 years</li>
-                                <li><strong>Last Date:</strong> 17th April 2026, 12:00 PM</li>
-                            </ul>
-
-                            <div className={styles.buttonGroup}>
-                                <a href="./data/IKS_ADVERTISEMENT_07_04_2026.docx.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
-                                    <FiDownload /> Advertisement
-                                </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkuNbGF2fwrLB6utg51IWPFHTBrZGouhvOiiIvKzP77RgDg/viewform"
-                                   target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
-                                    Apply Now
-                                </a>
+                    {/* --- Card 4: CSU Summer Internship 2026 (Funded) --- */}
+                    <div className={styles.internshipCard}>
+                        <a href="/Images/csu_summer_2026.jpeg" target="_blank" rel="noopener noreferrer" className={styles.cardPoster}>
+                            <img src="/Images/csu_summer_2026.jpeg" alt="CSU Summer Internship 2026 Poster" />
+                        </a>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardHeader}>
+                                <div className={styles.iconBox}>
+                                    <HiOutlineBriefcase className={styles.cardIcon} />
+                                </div>
+                                <h3>CSU Summer Internship 2026</h3>
+                                <span className={styles.badge}>Funded</span>
+                            </div>
+                            <div className={styles.cardBody}>
+                                <ul className={styles.detailsList}>
+                                    <li><strong>Positions:</strong> 10 (Engineers & Scholars combined)</li>
+                                    <li><strong>Stipend:</strong> ₹10,000/month</li>
+                                    <li><strong>Duration:</strong> Apr 27 – Jul 31, 2026 (3 months, extendable)</li>
+                                    <li><strong>Last Date:</strong> 17th April 2026, 12:00 PM</li>
+                                </ul>
+                                <div className={styles.buttonGroup}>
+                                    <a href="./data/CSU_ASHTADASHI_ADVERTISEMENT_07_04_2026.docx-1.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                                        <FiDownload /> Know More
+                                    </a>
+                                    <a href="https://forms.gle/7Kw7Ea4wKNALzfYbA"
+                                       target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                                        <FiExternalLink /> Apply Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,7 +193,7 @@ function Internships() {
                         </div>
                     </div>
                 </section>
-                
+
             </div>
         </div>
     );
