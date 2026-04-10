@@ -6,8 +6,10 @@ function News() {
     <div className={styles.container}>
       {/* Hero Header */}
       <div className={styles.hero}>
-        <h1>News & Updates</h1>
-        <p>Stay informed about our latest announcements, events, and research breakthroughs.</p>
+        <div className={styles.heroInner}>
+          <h1>News & Updates</h1>
+          <p>Stay informed about our latest announcements, events, and research breakthroughs.</p>
+        </div>
       </div>
 
       {/* Grid overlaps the header */}

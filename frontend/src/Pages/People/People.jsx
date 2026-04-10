@@ -73,8 +73,10 @@ function People() {
         <div className={styles.container}>
             {/* Hero Header */}
             <div className={styles.heading}>
-                <h1>The Minds Behind NGCN</h1>
-                <p>A diverse collective of researchers, educators, and innovators united by a shared passion for solving the complex challenges of tomorrow's digital infrastructure.</p>
+                <div className={styles.heroInner}>
+                    <h1>The Minds Behind NGCN</h1>
+                    <p>A diverse collective of researchers, educators, and innovators united by a shared passion for solving the complex challenges of tomorrow's digital infrastructure.</p>
+                </div>
             </div>
 
             {/* Overlapping Controls Section */}

@@ -6,20 +6,16 @@ export default function About() {
   return (
     <div className="ngcn-about-root">
       <div className="title">
-        <div>
+        <div className="title-inner">
           <h1>About NGCN</h1>
-        </div>
-        <div>
-          <center>
-            <p>
-              NGCN is a research group focused on advancing the state-of-the-art
-              in computing and networking technologies. Our work spans a wide
-              range of areas, from fundamental theoretical research to practical
-              system design and implementation. We are committed to pushing the
-              boundaries of what is possible and creating innovative solutions
-              to real-world problems.
-            </p>
-          </center>
+          <p>
+            NGCN is a research group focused on advancing the state-of-the-art
+            in computing and networking technologies. Our work spans a wide
+            range of areas, from fundamental theoretical research to practical
+            system design and implementation. We are committed to pushing the
+            boundaries of what is possible and creating innovative solutions
+            to real-world problems.
+          </p>
         </div>
       </div>
 

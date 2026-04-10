@@ -42,10 +42,12 @@ const Blogs = () => {
     <div className="blogs-container">
       {/* 1. Hero Header */}
       <div className="header-banner">
-        <h1 className="banner-title">Research Blogs</h1>
-        <p className="banner-description">
-          Insights, discoveries, and perspectives from our research team featuring blogs and Medium publications on cutting-edge technologies.
-        </p>
+        <div className="banner-inner">
+          <h1 className="banner-title">Research Blogs</h1>
+          <p className="banner-description">
+            Insights, discoveries, and perspectives from our research team featuring blogs and Medium publications on cutting-edge technologies.
+          </p>
+        </div>
       </div>
 
       {/* 2. Overlapping Search Card */}

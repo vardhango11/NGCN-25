@@ -18,39 +18,39 @@
 .research-page-wrapper {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--background);
+  background: linear-gradient(135deg, rgba(255, 245, 241, 0.9) 0%, var(--background) 42%, rgba(255, 255, 255, 0.92) 100%);
   color: var(--text);
   font-family: 'Lora', serif; 
 }
 
 /* --- Hero Section --- */
 .research-hero {
-  /* Using the orange gradient you liked */
-  background-image: linear-gradient(to left, var(--accent), var(--primary));
-  padding: 5rem 1.5rem 6rem 1.5rem;
+  background: linear-gradient(90deg, var(--background) 0%, rgba(244, 231, 225, 0.84) 44%, rgba(255, 199, 150, 0.32) 100%);
+  padding: 5rem 3rem 6rem;
   text-align: center;
-  color: var(--surface);
+  color: var(--secondary);
   margin-bottom: 2rem;
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .research-hero h1 {
-  font-family: 'Lora', serif; /* Ensure Heading uses Lora */
-  font-size: 3rem;
-  color: var(--surface);
+  font-family: 'Lora', serif;
+  font-size: 3.5rem;
+  color: var(--secondary);
   font-weight: 700;
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 .research-hero p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  opacity: 0.95;
-  max-width: 800px;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  opacity: 0.65;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -71,9 +71,9 @@
 /* --- Card Components --- */
 .research-card {
   background: var(--surface);
-  border-radius: var(--radius-lg);
+  border-radius: 0.75rem;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(82, 28, 13, 0.05);
+  box-shadow: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid var(--card-border);
   display: flex;
@@ -82,8 +82,8 @@
 }
 
 .research-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(82, 28, 13, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.09);
 }
 
 /* Card Header Area */
@@ -99,7 +99,7 @@
   width: 50px;
   height: 50px;
   background-color: #fff0eb; /* Very light orange bg */
-  border-radius: 12px;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

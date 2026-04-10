@@ -11,31 +11,35 @@
   --surface: #FFFFFF;
 }
 .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary);
-    background-image: linear-gradient(to left, var(--accent), var(--primary));
-    padding: 2rem 1rem; /* Adjusted padding for mobile */
+    background: linear-gradient(90deg, var(--background) 0%, rgba(244, 231, 225, 0.84) 44%, rgba(255, 199, 150, 0.32) 100%);
+    padding: 5rem 3rem 7rem;
     text-align: center;
 }
 
+.title-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .title h1 {
-    font-size: 2.2rem; /* Adjusted font size for mobile */
-    font-weight: bold;
-    color: var(--surface);
-    margin: 2rem 0 0 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
 }
 
 .title p {
-    font-size: 1rem; /* Adjusted font size for mobile */
-    color: var(--surface);
-    max-width: 90%;
+    font-size: 1.15rem;
+    color: var(--text);
+    opacity: 0.65;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.75;
 }
 /* Founders section */
 .about-founders {
-  background: var(--surface);
+  background: transparent;
   /* padding: 2rem 1rem; */
   margin : 0;
 }
@@ -46,8 +50,15 @@
   gap: 4rem;
   /* max-width: 1100px; */
   /* margin: 1rem auto; */
-  padding: 1.5rem;
-  background: var(--surface);
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(82, 28, 13, 0.1);
+  box-shadow: 0 12px 28px rgba(82, 28, 13, 0.08);
+  max-width: 1200px;
+  margin: -4rem auto 3rem;
+  position: relative;
+  z-index: 10;
 }
 .founder-card.reverse {
   flex-direction: row-reverse;
@@ -56,7 +67,7 @@
   /* width: 500px; */
   /* max-width: %; */
   height: 30rem;
-  border-radius: 8px;
+  border-radius: 0.75rem;
   object-fit: cover;
   /* box-shadow: 0 8px 30px rgba(15,37,46,0.06); */
 }
@@ -122,10 +133,13 @@
 /* Story */
 .about-story {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.25rem;
+  margin: 3rem auto;
+  padding: 2rem;
   text-align: center;
   color: var(--text);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(82, 28, 13, 0.1);
 }
 .about-story h3 {
   color: var(--secondary);
@@ -135,7 +149,7 @@
 
 /* Qualities */
 .about-quality {
-  background: var(--surface);
+  background: transparent;
   padding: 2rem 1rem 3rem 1rem;
 }
 .about-quality h3 {
@@ -160,6 +174,9 @@
   gap: 0.75rem;
   text-align: center;
   padding: 1rem;
+  background: var(--surface);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(82, 28, 13, 0.1);
 }
 .emoji {
   font-size: 2rem;
@@ -177,11 +194,11 @@
 /* Responsive */
 @media (max-width: 992px) {
      .title {
-        padding: 2rem 0rem;
+        padding: 4rem 1.5rem 5rem;
     }
 
     .title h1 {
-        font-size: 3rem; /* Restore larger font size */
+        font-size: 2.2rem;
     }
 
     .title p {

@@ -3,36 +3,39 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--background);
+  background: linear-gradient(135deg, rgba(255, 245, 241, 0.9) 0%, var(--background) 42%, rgba(255, 255, 255, 0.92) 100%);
   font-family: 'Lora', serif;
 }
 
 /* --- Hero Header --- */
 .header {
-  background-image: linear-gradient(to left, var(--accent), var(--primary));
-  padding: 5rem 1.5rem 8rem 1.5rem;
-  /* Extra padding for overlap */
+  background: linear-gradient(90deg, var(--background) 0%, rgba(244, 231, 225, 0.84) 44%, rgba(255, 199, 150, 0.32) 100%);
+  padding: 5rem 3rem 8rem;
   text-align: center;
-  color: var(--surface);
+  color: var(--secondary);
 }
 
 .headerContent {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .header h1 {
-  color: var(--surface);
-  font-size: 3rem;
+  color: var(--secondary);
+  font-size: 3.5rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
+  line-height: 1.1;
   font-family: 'Lora', serif;
 }
 
 .headerSub {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text);
+  opacity: 0.65;
+  max-width: 700px;
+  margin: 0 auto;
   font-family: 'Lora', serif;
 }
 
@@ -51,9 +54,10 @@
 .comingSoon {
   background: white;
   padding: 3rem;
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 28px rgba(82, 28, 13, 0.08);
+  border: 1px solid rgba(82, 28, 13, 0.1);
   border-top: 5px solid var(--primary);
   max-width: 700px;
   /* Specific width for the empty state */

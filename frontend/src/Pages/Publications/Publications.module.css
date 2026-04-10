@@ -3,40 +3,39 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--background);
+    background: linear-gradient(135deg, rgba(255, 245, 241, 0.9) 0%, var(--background) 42%, rgba(255, 255, 255, 0.92) 100%);
     font-family: 'Lora', serif;
 }
 
 /* --- Hero Header --- */
 .heading {
-    /* Orange Gradient */
-    background-image: linear-gradient(to left, var(--accent), var(--primary));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(90deg, var(--background) 0%, rgba(244, 231, 225, 0.84) 44%, rgba(255, 199, 150, 0.32) 100%);
+    padding: 5rem 3rem 7rem;
     text-align: center;
-
-    /* Increased padding to allow overlap */
-    padding: 5rem 1.5rem 7rem 1.5rem;
     margin-bottom: 0;
 }
 
+.heroInner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .heading h1 {
-    color: var(--surface);
-    /* White */
-    font-size: 2.5rem;
+    color: var(--secondary);
+    font-size: 3.5rem;
     margin: 0 0 1rem 0;
     font-weight: 700;
+    line-height: 1.1;
     font-family: 'Lora', serif;
 }
 
 .heading p {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.1rem;
-    text-align: center;
-    max-width: 800px;
-    line-height: 1.6;
+    color: var(--text);
+    opacity: 0.65;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.75;
     font-family: 'Lora', serif;
 }
 
@@ -49,9 +48,10 @@
     margin: -3.5rem auto 3rem auto;
 
     padding: 2rem;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(82, 28, 13, 0.1);
+    box-shadow: 0 12px 28px rgba(82, 28, 13, 0.08);
     z-index: 10;
     position: relative;
 }
@@ -79,8 +79,7 @@
     /* Padding for icon */
     font-size: 1rem;
     border: 1px solid #e0e0e0;
-    border-radius: 50px;
-    /* Pill shape */
+    border-radius: 0.375rem;
     background-color: #f9f9f9;
     outline: none;
     font-family: 'Lora', serif;
@@ -148,9 +147,9 @@
         max-width: 1300px;
         margin: -3.5rem auto 3rem auto;
         padding: 2rem;
-        background-color: white;
-        border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 0.75rem;
+        box-shadow: 0 12px 28px rgba(82, 28, 13, 0.08);
         z-index: 10;
         position: relative;
         box-sizing: border-box;

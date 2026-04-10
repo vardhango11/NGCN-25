@@ -15,37 +15,40 @@
 .contact-page-wrapper {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--color-background);
+    background: linear-gradient(135deg, rgba(255, 245, 241, 0.9) 0%, var(--color-background) 42%, rgba(255, 255, 255, 0.92) 100%);
     color: var(--color-secondary);
     display: flex;
     flex-direction: column;
 }
 
-/* --- 1. Hero Header (New Layout, Old Colors) --- */
+/* --- 1. Hero Header --- */
 .hero-header {
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-accent));
-    padding: 4rem 1.5rem 8rem 1.5rem; /* Extra bottom padding for overlap */
+    background: linear-gradient(90deg, var(--color-background) 0%, rgba(244, 231, 225, 0.84) 44%, rgba(255, 199, 150, 0.32) 100%);
+    padding: 5rem 3rem 8rem;
     text-align: center;
-    color: var(--color-surface);
+    color: var(--color-secondary);
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .hero-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    color: var(--color-surface);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+    line-height: 1.1;
 }
 
 .hero-header p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    opacity: 0.95;
-    color: var(--color-surface);
+    font-size: 1.15rem;
+    line-height: 1.75;
+    opacity: 0.65;
+    color: var(--color-text);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* --- Main Content Area --- */
@@ -60,11 +63,12 @@
 /* --- 2. Overlapping Form Card --- */
 .form-card-wrapper {
     background-color: var(--color-surface);
-    border-radius: var(--radius-lg);
+    border-radius: 0.75rem;
     /* The key to the new design: Negative Margin to overlap header */
     margin-top: -5rem; 
     padding: 2.5rem;
-    box-shadow: 0 10px 25px rgba(82, 28, 13, 0.15); /* using secondary color for shadow */
+    box-shadow: 0 12px 28px rgba(82, 28, 13, 0.08);
+    border: 1px solid rgba(82, 28, 13, 0.1);
     margin-bottom: 4rem;
     position: relative;
     z-index: 10;
@@ -139,7 +143,7 @@
 .form-submit button {
     background-color: var(--color-primary);
     background-image: none;
-    color: var(--color-surface);
+    color: var(--color-secondary);
     border: none;
     padding: 0.9rem 2rem;
     font-size: 0.95rem;
@@ -155,7 +159,7 @@
 
 .form-submit button:hover {
     background-color: #c03a14;
-    color: var(--color-surface);
+    color: var(--color-secondary);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(213, 69, 27, 0.3);
     text-decoration: none !important;
@@ -202,17 +206,18 @@
 /* Info Cards */
 .info-card {
     background-color: var(--color-surface);
-    border-radius: var(--radius-lg);
+    border-radius: 0.75rem;
     padding: 2rem;
     border: 1px solid rgba(82, 28, 13, 0.1); /* Subtle border */
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: var(--color-accent);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.09);
 }
 
 .icon-wrapper {
@@ -220,7 +225,7 @@
     height: 3rem;
     background-color: var(--color-background);
     color: var(--color-primary);
-    border-radius: var(--radius-md);
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,7 +384,7 @@
     }
     
     .hero-header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .form-card-wrapper {

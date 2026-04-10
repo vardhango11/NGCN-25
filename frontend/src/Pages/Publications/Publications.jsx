@@ -33,8 +33,10 @@ function Publications() {
         <div className={styles.container}>
             {/* Hero Header */}
             <div className={styles.heading}>
-                <h1>Publications & Impact</h1>
-                <p>A collection of peer-reviewed contributions to top-tier journals and conferences, documenting our journey in advancing the frontiers of computer science.</p>
+                <div className={styles.heroInner}>
+                    <h1>Publications & Impact</h1>
+                    <p>A collection of peer-reviewed contributions to top-tier journals and conferences, documenting our journey in advancing the frontiers of computer science.</p>
+                </div>
             </div>
 
             {/* Overlapping Search Card */}
