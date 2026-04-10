@@ -147,9 +147,6 @@ const Footer = () => {
         {/* </div> */}
         <div>
           <p className={styles["footer-credits"]} style={{ textDecoration: "none" }}>
-            Made with ❤️ by Vishwajeet, Shashwat, Jyoti & Aaditya
-          </p>
-          <p className={styles["footer-credits"]} style={{ textDecoration: "none" }}>
             Website maintenance by Shivamani G & Aditya
           </p>
         </div>

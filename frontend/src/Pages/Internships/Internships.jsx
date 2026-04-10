@@ -68,7 +68,7 @@ function Internships() {
                                     <li><strong>Last Date:</strong> 24th April 2026</li>
                                 </ul>
                                 <div className={styles.buttonGroup}>
-                                    <a href="https://forms.gle/GdBpbgVkwYFdb2YL8"
+                                    <a href="https://forms.gle/19bJZFWFMHR2WL196"
                                        target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                         <FiExternalLink /> Apply Now
                                     </a>
@@ -96,7 +96,7 @@ function Internships() {
                                     <li><strong>Deadline:</strong> 21st of every month (Year-round)</li>
                                 </ul>
                                 <div className={styles.buttonGroup}>
-                                    <a href="https://forms.gle/BRNJnJNSNK4Y8SQr7"
+                                    <a href="https://forms.gle/ZEAucu3Q9DXPFkY16"
                                        target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                         <FiExternalLink /> Apply Now
                                     </a>
@@ -129,7 +129,7 @@ function Internships() {
                                     <a href="./data/IKS_ADVERTISEMENT_07_04_2026.docx.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
                                         <FiDownload /> Know More
                                     </a>
-                                    <a href="https://forms.gle/6YSq4W8zgmEVVwbX8"
+                                    <a href="https://forms.gle/M4c1QNVkWWe3nekFA"
                                        target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                         <FiExternalLink /> Apply Now
                                     </a>
@@ -162,7 +162,7 @@ function Internships() {
                                     <a href="./data/CSU_ASHTADASHI_ADVERTISEMENT_07_04_2026.docx-1.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
                                         <FiDownload /> Know More
                                     </a>
-                                    <a href="https://forms.gle/7Kw7Ea4wKNALzfYbA"
+                                    <a href="https://forms.gle/SEu1s6ap2Nkm8GnK9"
                                        target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                         <FiExternalLink /> Apply Now
                                     </a>
