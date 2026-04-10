@@ -112,6 +112,7 @@ export default function Founder() {
       {/* 1. Hero Header Section */}
       <header className="founder-hero">
         <div className="hero-content">
+          <span className="hero-eyebrow">Founder Profile</span>
           <h1>Meet the Founder</h1>
           <p className="hero-subtitle">
             Leading the charge in Next-Gen Computing & Networking through innovation, education, and impactful research.
@@ -151,9 +152,11 @@ export default function Founder() {
                 <div className="social-row">
                   <a href="https://www.linkedin.com/in/srinivasa-desikan-kaniyambakkam-elayavilli-553449217/" aria-label="LinkedIn">
                     <i className="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
                   </a>
                   <a href="mailto:srinivasadesikan@iiitk.ac.in" aria-label="Email">
                     <i className="fa-solid fa-envelope"></i>
+                    <span>Email</span>
                   </a>
                 </div>
               </div>

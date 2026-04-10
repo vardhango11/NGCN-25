@@ -3,12 +3,19 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-radius: 1rem;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); 
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: none;
+    border: 1px solid rgba(82, 28, 13, 0.1);
+    padding: 1rem;
     background-color: white;
     width: 80%;
     margin: 0.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.09);
 }
 
 .top{
@@ -33,7 +40,7 @@
 
 .batch p{
     background-color: var(--background);
-    border-radius: 15px;
+    border-radius: 9999px;
     padding: 5px 10px;
     margin: 0.5rem 1rem 0 0;
 }
@@ -82,7 +89,7 @@
     background-color: var(--background);
     padding: 0 1rem;
     width: fit-content;
-    border-radius: 2rem
+    border-radius: 0.375rem;
 }
 
 .emailContainer img{
