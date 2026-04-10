@@ -9,14 +9,14 @@
 
 .blog-list-grid1 {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
 
 /* Responsive grid container */
 .blog-list-grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
   grid-template-columns: 1fr; /* Default: 1 column */
 }
 
@@ -31,7 +31,7 @@
     grid-template-columns: repeat(3, 1fr); 
   }
   .blog-list-grid1 {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
@@ -39,14 +39,10 @@
 /* Blog card hover effect */
 .blog-list-item:hover,
 .blog-list-item:focus-within {
-  transform: translateY(-4px);
-  border-radius: 0.5rem;
   z-index: 1;
 }
 .blog-list-item1:hover,
 .blog-list-item1:focus-within {
-  transform: translateY(-4px);
-  border-radius: 0.5rem; 
   z-index: 1;
 }
 

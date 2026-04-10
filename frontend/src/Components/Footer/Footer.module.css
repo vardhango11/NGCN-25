@@ -43,13 +43,13 @@ h4 {
   line-height: 1.6;
 }
 
-a {
+.footer a {
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
-a:hover {
-  color: var(--white);
+.footer a:hover {
+  color: var(--surface);
   text-decoration: underline;
 }
 

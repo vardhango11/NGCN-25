@@ -860,12 +860,12 @@
 
 .ytGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
 .ytCard {
-    background-color: var(--background);
+    background-color: var(--surface);
     border-radius: 0.75rem;
     overflow: hidden;
     text-decoration: none;
@@ -882,7 +882,7 @@
 .ytThumb {
     position: relative;
     width: 100%;
-    padding-top: 56.25%;
+    height: 180px;
     overflow: hidden;
     background-color: #000;
 }
@@ -919,10 +919,10 @@
 }
 
 .ytBody {
-    padding: 1.25rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.65rem;
     flex-grow: 1;
 }
 
@@ -1135,8 +1135,4 @@
     .sectionInner { max-width: 1600px; }
     .heroTitle    { font-size: 5.5rem; }
     .heroSub      { font-size: 1.35rem; max-width: 650px; }
-
-    .ytGrid {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
