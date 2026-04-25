@@ -1,47 +1,110 @@
 [
-{
+  {
     "id": 1,
-    "title": "What is Research?",
-    "description": "A concise explainer on the meaning and importance of research in various fields of study.",
-    "published": "Jan 2022",
-    "thumbnail": "https://img.youtube.com/vi/mV0bUQpz468/maxresdefault.jpg",
-    "url": "https://youtu.be/mV0bUQpz468",
-    "tag": "Education"
+    "title": "Limited average versus future discounted reward",
+    "description": "Explores the trade-off between limited average reward and future discounted reward in reinforcement learning settings.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/Z2PrHi4WwtY/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=Z2PrHi4WwtY",
+    "tag": "Research"
   },
   {
     "id": 2,
-    "title": "Beginners Guide to Writing a Research Paper",
-    "description": "An easy walkthrough explaining the parts of a research paper and how to approach writing one, ideal for students and beginners.",
-    "published": "March 2018",
-    "thumbnail": "https://img.youtube.com/vi/yRxFwMHS_A8/maxresdefault.jpg",
-    "url": "https://youtu.be/yRxFwMHS_A8",
-    "tag": "Education"
+    "title": "Shapley Value in Coalition Games",
+    "description": "An introduction to Shapley values and their role in fairly distributing payoffs among players in coalition games.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/oYKa6wKRksk/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=oYKa6wKRksk",
+    "tag": "Game Theory"
   },
   {
     "id": 3,
-    "title": "How to Build AI Agents from Scratch | AI Agents for Beginners",
-    "description": "Beginner-friendly step-by-step walkthrough of building artificial intelligence agents from scratch, covering foundational concepts.",
-    "published": "Summer 2025",
-    "thumbnail": "https://img.youtube.com/vi/nLkBNnnA8Ac/maxresdefault.jpg",
-    "url": "https://youtu.be/nLkBNnnA8Ac",
-    "tag": "Technology"
+    "title": "Mixed vs Behavioral Strategies",
+    "description": "Covers the distinction between mixed and behavioral strategies in game theory with illustrative examples.",
+    "published": "2026-04-03",
+    "thumbnail": "https://img.youtube.com/vi/05S_ad5SKa8/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=05S_ad5SKa8",
+    "tag": "Game Theory"
   },
-    {
+  {
     "id": 4,
-    "title": "Cloud Computing in 6 Minutes | What Is Cloud Computing? | Cloud Computing Explained",
-    "description": "A concise 6-minute overview that explains what cloud computing is, why it matters, key benefits like scalability and cost-effectiveness, and contrasts cloud vs traditional computing. The video is delivered by Simplilearn with clear visuals and examples for beginners.",
-    "published": "July 28, 2020",
-    "thumbnail": "https://img.youtube.com/vi/M988_fsOSWo/maxresdefault.jpg",
-    "url": "https://youtu.be/M988_fsOSWo",
-    "tag": "Education"
-    },
+    "title": "Intro to finite and infinite repeated games",
+    "description": "Introduction to the structure and equilibria of finite and infinite repeated games in game theory.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/EOapg_Oj08w/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=EOapg_Oj08w",
+    "tag": "Game Theory"
+  },
   {
     "id": 5,
-    "title": "How Decision Making is Actually Science: Game Theory Explained",
-    "description": "A clear overview of how decision-making processes relate to game theory and scientific thinking.",
-    "published": "2021",
-    "thumbnail": "https://img.youtube.com/vi/MHS-htjGgSY/maxresdefault.jpg",
-    "url": "https://youtu.be/MHS-htjGgSY",
-    "tag": "Science"
+    "title": "Introduction to repeated prisoner dilemma",
+    "description": "Discusses the repeated prisoner's dilemma, cooperation strategies, and equilibrium outcomes over multiple rounds.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/hlYl7lN13lo/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=hlYl7lN13lo",
+    "tag": "Game Theory"
+  },
+  {
+    "id": 6,
+    "title": "Application of Coalitional Games",
+    "description": "Real-world applications of coalitional game theory across networks, economics, and multi-agent systems.",
+    "published": "2026-04-19",
+    "thumbnail": "https://img.youtube.com/vi/-cXaxYhK1To/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=-cXaxYhK1To",
+    "tag": "Game Theory"
+  },
+  {
+    "id": 7,
+    "title": "Applications of game theory in Machine Learning, Economics and Geopolitics",
+    "description": "Surveys how game theory informs machine learning models, economic policy, and geopolitical strategy.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/LV26TflfBkY/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=LV26TflfBkY",
+    "tag": "Game Theory"
+  },
+  {
+    "id": 8,
+    "title": "Introduction to Stochastic Games and Learning",
+    "description": "An overview of stochastic games and how learning algorithms behave in dynamic, probabilistic environments.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/e6bqXtnUy0U/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=e6bqXtnUy0U",
+    "tag": "Research"
+  },
+  {
+    "id": 9,
+    "title": "Bayesian Games",
+    "description": "Introduction to Bayesian games where players have incomplete information about other players' types.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/1mx5dievHFg/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=1mx5dievHFg",
+    "tag": "Game Theory"
+  },
+  {
+    "id": 10,
+    "title": "Transferable Utility Cooperative Games",
+    "description": "Covers cooperative games with transferable utility, including core concepts, stability, and allocation rules.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/VR6ns0bStnU/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=VR6ns0bStnU",
+    "tag": "Game Theory"
+  },
+  {
+    "id": 11,
+    "title": "Folk Theorems in Game Theory",
+    "description": "Explains folk theorems and how they characterize the set of achievable payoffs in infinitely repeated games.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/rrJXCqrY8Xk/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=rrJXCqrY8Xk",
+    "tag": "Game Theory"
+  },
+  {
+    "id": 12,
+    "title": "Ex Ante Interim Bayesian Nash Equilibrium",
+    "description": "Deep dive into ex ante and interim Bayesian Nash equilibrium concepts in games of incomplete information.",
+    "published": "2026-04-21",
+    "thumbnail": "https://img.youtube.com/vi/-q2VAZPyAPI/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=-q2VAZPyAPI",
+    "tag": "Game Theory"
   }
 ]
