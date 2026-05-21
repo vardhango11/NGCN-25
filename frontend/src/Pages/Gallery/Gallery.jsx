@@ -26,6 +26,28 @@ const images = [
         thumbnail: "/Images/g5.jpg",
     },
     {
+        original: "/Images/g9.jpeg",
+        thumbnail: "/Images/g9.jpeg",
+        description: "NGCN Batch 2026 Team Photo" // Optional: Added description field support
+    },
+    {
+        original: "/Images/g10.jpeg",
+        thumbnail: "/Images/g10.jpeg",
+        description: "NGCN Batch 2026 Team Photo"
+    },
+    {
+        original: "/Images/g11.jpeg",
+        thumbnail: "/Images/g11.jpeg",
+    },
+    {
+        original: "/Images/g12.jpeg",
+        thumbnail: "/Images/g12.jpeg",
+    },
+    {
+        original: "/Images/g13.jpeg",
+        thumbnail: "/Images/g13.jpeg",
+    },
+    {
         original: "/Images/IMG_1730.JPG",
         thumbnail: "/Images/IMG_1730.JPG",
     },

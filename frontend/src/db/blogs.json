@@ -131,6 +131,106 @@
   "category": "Multimodal ML",
   "author": "Aditya Vardhan & Madhav Kartheek",
   "date": "January 15, 2024"
+},
+{
+  "id": 16,
+  "title": "Harmonies of History: A Deep Dive into Bollywood Music",
+  "excerpt": "A research exploration into the historical evolution of Bollywood music, analyzing how cultural shifts, demographics, and historical events shaped lyrical themes, melodies, and audience engagement.",
+  "content": "This research explores the historical evolution of Bollywood music and its transformation across decades. The study investigates how historical events, demographic changes, and cultural trends influenced lyrical structures, musical styles, and the popularity of Bollywood songs. It also examines the interplay between melody and lyrics and how their integration contributes to emotional engagement and long-term audience appeal. Furthermore, the project highlights the impact of Bollywood music on societal values and popular culture, emphasizing its role as both entertainment and a cultural narrative medium.",
+  "thumbnail": "bollywood_music.png",
+  "image": "https://medium.com/@ngcngroup/harmonies-of-history-a-deep-dive-into-bollywood-music-c3623723c393",
+  "category": "Music AI",
+  "author": "Deoansh & Himesh",
+  "date": "February 13, 2026"
+},
+{
+  "id": 17,
+  "title": "Efficient YOLO: A Lightweight Multi-Crop Disease Detection Framework with LLM-Based Treatment Advisory and Multilingual Decision Support",
+  "excerpt": "Efficient YOLO combines lightweight computer vision, LLM-driven treatment recommendations, and multilingual support to improve crop disease detection and agricultural accessibility.",
+  "content": "Efficient YOLO is a comprehensive agricultural decision-support framework designed to combat crop yield losses using lightweight disease detection models and multilingual treatment recommendations. The framework integrates EfficientNet backbones with attention mechanisms such as CBAM and Coordinate Attention for efficient mobile deployment. Beyond disease detection, the system uses Gemini 2.5 Flash to generate reliable treatment plans while IndicTrans2 enables multilingual support for local farmers. The project demonstrates strong accuracy improvements while maintaining low computational overhead suitable for real-world deployment.",
+  "thumbnail": "efficient_yolo.png",
+  "image": "https://medium.com/@ngcngroup/efficient-yolo-a-lightweight-multi-crop-disease-detection-framework-with-llm-based-treatment-b25fda3722d4",
+  "category": "Agricultural AI",
+  "author": "MD Yusuf Murtaza & Satyam Saurabh",
+  "date": "May 5, 2026"
+},
+{
+  "id": 18,
+  "title": "CogMaPOI: A Reader’s Guide",
+  "excerpt": "CogMaPOI introduces a dynamic multi-agent recommendation framework for next point-of-interest prediction using adaptive cognitive states and self-reflective reasoning.",
+  "content": "CogMaPOI proposes a novel next-point-of-interest recommendation system based on a five-agent cognitive architecture. Unlike static recommendation systems, the framework continuously updates a dynamic cognitive state through natural-language memory and reflection mechanisms. The architecture consists of Profiler, Retrieval, Memory, Reflection, and Reranker agents working collaboratively to adapt to changing user behavior during inference. Experimental evaluations show significant improvements in recommendation accuracy and Mean Reciprocal Rank without expensive retraining.",
+  "thumbnail": "cogmapoi.png",
+  "image": "https://medium.com/@ngcngroup/cogmapoi-a-readers-guide-aa7f9875f6fe",
+  "category": "Recommendation Systems",
+  "author": "Amrutha & Suguna Sri",
+  "date": "May 10, 2026"
+},
+{
+  "id": 19,
+  "title": "An Efficient Hybrid Vision-Language Framework Using Fine-Tuned Small Language Models for Controllable Diffusion-Based Image Generation",
+  "excerpt": "A lightweight hybrid vision-language framework that enhances diffusion-based image generation using fine-tuned small language models for semantic prompt refinement.",
+  "content": "This work presents a controllable text-to-image generation framework that integrates a fine-tuned Small Language Model with Stable Diffusion. Using Phi-2 fine-tuned via QLoRA, the framework transforms simple prompts into semantically richer descriptions without modifying the diffusion architecture itself. The approach significantly improves CLIP alignment scores, prompt richness, and image consistency while maintaining low inference latency and resource efficiency. The system demonstrates that compact SLMs can effectively replace computationally expensive LLM-based prompt refinement pipelines.",
+  "thumbnail": "vision_language_framework.png",
+  "image": "https://medium.com/@ngcngroup/an-efficient-hybrid-vision-language-framework-using-fine-tuned-small-language-models-for-a3cf1c025dca",
+  "category": "Vision-Language Models",
+  "author": "Aaditya & Pratyush",
+  "date": "May 10, 2026"
+},
+{
+  "id": 20,
+  "title": "Speech Emotion Recognition using ML",
+  "excerpt": "A machine learning-based speech emotion recognition system that combines acoustic feature extraction and classification models for emotion and gender prediction.",
+  "content": "This project focuses on Speech Emotion Recognition using machine learning techniques combined with gender classification. Using the RAVDESS dataset, the framework performs extensive audio preprocessing, feature extraction, and classification using MFCCs, Chroma features, and Mel Spectrograms. Multiple classifiers including SVM, CNN, and Random Forest were evaluated, with SVM delivering the strongest performance for emotion recognition. The system achieved highly accurate gender classification and demonstrates potential applications in mental health monitoring, empathetic assistants, and human-computer interaction.",
+  "thumbnail": "speech_emotion_recognition.png",
+  "image": "https://medium.com/@ngcngroup/speech-emotion-recognition-using-ml-c7e19fa59302",
+  "category": "Speech AI",
+  "author": "Blessy & Prathyusha",
+  "date": "May 2026"
+},
+{
+  "id": 21,
+  "title": "Instrument-Aware Interactive Audio Editing with Reinforcement Learning from Human Feedback",
+  "excerpt": "A reinforcement learning framework for interactive audio editing that enables instrument-aware sound manipulation guided by human feedback.",
+  "content": "This project introduces an interactive audio editing framework powered by reinforcement learning from human feedback. The system focuses on instrument-aware audio manipulation, enabling users to perform context-sensitive editing operations while preserving musical consistency. By integrating human preference optimization with audio generation techniques, the framework enhances controllability and responsiveness in music editing workflows.",
+  "thumbnail": "instrument_audio_editing.png",
+  "image": "https://medium.com/@ngcngroup/instrument-aware-interactive-audio-editing-with-reinforcement-learning-from-human-feedback-47f33877cd97",
+  "category": "Audio AI",
+  "author": "NGCN Group",
+  "date": "2026"
+},
+{
+  "id": 22,
+  "title": "Diffusion Residual Fingerprinting (DRF)",
+  "excerpt": "DRF introduces a diffusion-based residual fingerprinting mechanism for identifying generated media and improving synthetic content traceability.",
+  "content": "Diffusion Residual Fingerprinting proposes a framework for identifying and analyzing AI-generated media using residual patterns extracted from diffusion models. The approach leverages unique generative artifacts to create identifiable fingerprints that improve synthetic media detection and provenance tracking. The framework contributes toward responsible AI deployment and content authenticity verification.",
+  "thumbnail": "drf.png",
+  "image": "https://medium.com/@ngcngroup/diffusion-residual-fingerprinting-drf-7357160d34c3",
+  "category": "Generative AI",
+  "author": "NGCN Group",
+  "date": "2026"
+},
+{
+  "id": 23,
+  "title": "VINDICATE: Validity Insured NSGA-II Driven Iterative Counterfactual Alterations for Trajectory Optimization",
+  "excerpt": "VINDICATE leverages NSGA-II optimization and iterative counterfactual reasoning to generate valid and interpretable trajectory alterations.",
+  "content": "VINDICATE introduces an optimization-driven framework for generating valid counterfactual trajectory modifications using NSGA-II. The framework focuses on producing interpretable and realistic alterations while maintaining validity constraints across trajectory sequences. By integrating multi-objective optimization with iterative reasoning, the system enables robust trajectory analysis and decision support.",
+  "thumbnail": "vindicate.png",
+  "image": "https://medium.com/@ngcngroup/vindicate-validity-insured-nsga-ii-driven-iterative-counterfactual-alterations-for-trajectory-b4f10ca64aff",
+  "category": "Optimization AI",
+  "author": "NGCN Group",
+  "date": "2026"
+},
+{
+  "id": 24,
+  "title": "REL-IIoT: A Decentralized Edge Federated Framework for Predictive Maintenance",
+  "excerpt": "REL-IIoT presents a decentralized edge-federated architecture for predictive maintenance in industrial IoT systems with improved scalability and privacy.",
+  "content": "REL-IIoT introduces a decentralized federated learning framework for predictive maintenance in Industrial IoT environments. The framework distributes computation across edge devices to improve scalability, privacy, and fault tolerance while enabling real-time predictive analytics. By combining edge intelligence with federated optimization, REL-IIoT reduces centralized dependency and supports efficient industrial monitoring systems.",
+  "thumbnail": "rel_iiot.png",
+  "image": "https://medium.com/@ngcngroup/rel-iiot-a-decentralized-edge-federated-framework-for-predictive-maintenance-0e8fb199055c",
+  "category": "Industrial AI",
+  "author": "NGCN Group",
+  "date": "2026"
 }
 ]
+
 
