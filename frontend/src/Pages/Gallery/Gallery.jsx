@@ -33,6 +33,7 @@ const images = [
     {
         original: "/Images/g10.jpeg",
         thumbnail: "/Images/g10.jpeg",
+        description: "NGCN Batch 2026 Team Photo"
     },
     {
         original: "/Images/g11.jpeg",
